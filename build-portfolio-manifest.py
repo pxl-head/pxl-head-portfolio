@@ -4,7 +4,6 @@
 import argparse
 import json
 import re
-import subprocess
 import sys
 import unicodedata
 from pathlib import Path
@@ -56,14 +55,31 @@ def web_path(path: Path) -> str:
 
 
 def image_dimensions(path: Path):
-    result = subprocess.run(
-        ["identify", "-format", "%w %h", str(path)],
-        check=True,
-        capture_output=True,
-        text=True,
-    )
-    width, height = (int(value) for value in result.stdout.split())
-    return [width, height]
+    data = path.read_bytes()
+    if len(data) < 20 or data[:4] != b"RIFF" or data[8:12] != b"WEBP":
+        sys.exit(f"Повреждён или не поддерживается WebP: {path}")
+
+    offset = 12
+    while offset + 8 <= len(data):
+        chunk = data[offset:offset + 4]
+        size = int.from_bytes(data[offset + 4:offset + 8], "little")
+        payload = offset + 8
+        if payload + size > len(data):
+            sys.exit(f"Повреждён WebP-чанк: {path}")
+        if chunk == b"VP8X" and size >= 10:
+            width = int.from_bytes(data[payload + 4:payload + 7], "little") + 1
+            height = int.from_bytes(data[payload + 7:payload + 10], "little") + 1
+            return [width, height]
+        if chunk == b"VP8L" and size >= 5 and data[payload] == 0x2F:
+            bits = int.from_bytes(data[payload + 1:payload + 5], "little")
+            return [(bits & 0x3FFF) + 1, ((bits >> 14) & 0x3FFF) + 1]
+        if chunk == b"VP8 " and size >= 10 and data[payload + 3:payload + 6] == b"\x9d\x01\x2a":
+            width = int.from_bytes(data[payload + 6:payload + 8], "little") & 0x3FFF
+            height = int.from_bytes(data[payload + 8:payload + 10], "little") & 0x3FFF
+            return [width, height]
+        offset = payload + size + (size % 2)
+
+    sys.exit(f"Не удалось прочитать размеры WebP: {path}")
 
 
 def build_manifest():

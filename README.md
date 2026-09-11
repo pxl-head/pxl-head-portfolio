@@ -4,7 +4,7 @@
 
 ## Локальная разработка
 
-Требования: Node.js 20.19+ или 22.12+, Python 3 и ImageMagick (`identify`).
+Требования: Node.js 20.19+ или 22.12+ и Python 3.
 
 ```sh
 npm ci
