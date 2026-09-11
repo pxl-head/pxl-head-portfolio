@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pxl-head.github.io/pxl-head-portfolio/sitemap.xml
