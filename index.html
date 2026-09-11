@@ -1,916 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0e0e0e">
-<title>Видеограф — видео и фото для брендов, показов и событий</title>
-<meta name="description" content="Фотограф и видеограф: мода, показы, предметная съёмка, свадьбы, клипы. Фото + видео в одних руках.">
-<meta property="og:title" content="pxl_head — видеограф и фотограф, Москва">
-<meta property="og:description" content="Мода, показы, предметка, свадьбы, клипы. Фото + видео в одних руках, за одну съёмку.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="web-media/poster-xolt.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e0e0e'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23e3ff38' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23e3ff38'/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="pxl_head — фотограф и видеограф. Фотопроекты, видео, сайты и контакты.">
+<title>pxl_head — фото, видео и сайты</title>
+<link rel="icon" type="image/png" href="/assets/favicon-D2hjGXQl.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon-BtxnkMz2.png">
 <style>
-:root{
-  --bg:#0e0e0e;
-  --panel:#171717;
-  --cream:#f4f3ed;
-  --muted:#8a877f;
-  --line:rgba(244,243,237,.14);
-  --accent:#e3ff38;
-  --sans:"Helvetica Neue",Helvetica,Arial,"Segoe UI",Roboto,sans-serif;
-  --serif:Georgia,"Times New Roman",serif;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--cream);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-::selection{background:var(--accent);color:#0e0e0e}
-::-webkit-scrollbar{width:6px;height:6px}
-::-webkit-scrollbar-track{background:var(--bg)}
-::-webkit-scrollbar-thumb{background:#3a3a3a;border-radius:3px}
-
-/* ---------- preloader: timecode ---------- */
-#pre{position:fixed;inset:0;background:#000;z-index:1000;display:flex;align-items:center;justify-content:center;transition:opacity .5s ease}
-#pre.done{opacity:0;pointer-events:none}
-#pre .tc{font-size:clamp(28px,5vw,64px);font-weight:700;letter-spacing:.06em;font-variant-numeric:tabular-nums}
-#pre .tc em{color:var(--accent);font-style:normal}
-
-/* ---------- fixed chrome ---------- */
-.top{position:fixed;top:0;left:0;right:0;z-index:90;display:flex;justify-content:space-between;align-items:center;padding:16px 4vw;background:rgba(14,14,14,.55);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);border-bottom:1px solid var(--line)}
-.top .logo{font-weight:700;letter-spacing:.14em;font-size:13px;text-transform:uppercase}
-.top nav{display:flex;gap:28px}
-@media(max-width:860px){.top nav{display:none}}
-
-/* ---------- mobile nav ---------- */
-.burger{display:none;width:44px;height:44px;background:none;border:1px solid var(--line);border-radius:8px;cursor:pointer;position:relative;flex:none}
-.burger span{position:absolute;left:11px;right:11px;height:2px;background:var(--cream);transition:transform .3s cubic-bezier(.16,.03,.08,1),top .3s,bottom .3s}
-.burger span:first-child{top:16px}
-.burger span:last-child{bottom:16px}
-.burger.open span:first-child{top:21px;transform:rotate(45deg)}
-.burger.open span:last-child{bottom:20px;transform:rotate(-45deg)}
-@media(max-width:860px){.burger{display:block}}
-.mnav{position:fixed;inset:0;z-index:89;background:rgba(14,14,14,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);display:flex;flex-direction:column;justify-content:center;padding:0 8vw;opacity:0;pointer-events:none;transition:opacity .3s ease}
-.mnav.open{opacity:1;pointer-events:auto}
-.mnav a{color:var(--cream);text-decoration:none;font-size:clamp(28px,7vw,44px);font-weight:700;text-transform:uppercase;letter-spacing:.02em;padding:12px 0;border-bottom:1px solid var(--line);transition:color .25s}
-.mnav a:hover{color:var(--accent)}
-.mnav .mnav-tg{border-bottom:none;margin-top:3vh;font-size:13px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
-.mnav .mnav-tg:hover{color:var(--accent)}
-@media(prefers-reduced-motion:reduce){.mnav{transition:none}}
-.swap{position:relative;display:inline-block;overflow:hidden;height:1.2em;line-height:1.2em;text-decoration:none;color:var(--cream);font-size:13px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
-.swap span{display:block;transition:transform .35s cubic-bezier(.76,0,.24,1)}
-.swap span:last-child{position:absolute;top:100%;left:0}
-.swap:hover span{transform:translateY(-100%)}
-
-section{padding:0 4vw}
-
-/* ---------- hero ---------- */
-.hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:6vh;position:relative;background:linear-gradient(135deg,#0a0a0a 0%,#1a1a1a 100%)}
-.hero .bg{position:absolute;inset:0;overflow:hidden;background:#000}
-.hero .bg video{width:100%;height:100%;object-fit:cover;opacity:.42;display:block}
-@media(prefers-reduced-motion:reduce){.hero .bg{display:none}}
-.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 4%,transparent 55%)}
-.hero .inner{position:relative;z-index:2}
-.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:2.2vh;display:flex;gap:14px;align-items:center}
-.eyebrow::before{content:"";width:34px;height:1px;background:var(--accent)}
-h1{font-size:clamp(42px,9.2vw,150px);line-height:.92;font-weight:700;text-transform:uppercase;letter-spacing:-.015em}
-h1 .row{display:block;overflow:hidden}
-h1 .row>i{display:block;font-style:normal;transform:translateY(110%);animation:up .9s cubic-bezier(.16,.03,.08,1) forwards}
-h1 .row:nth-child(2)>i{animation-delay:.12s}
-h1 .row:nth-child(3)>i{animation-delay:.24s}
-h1 .accent{font-family:var(--serif);font-style:italic;text-transform:none;font-weight:400;letter-spacing:0;color:var(--accent)}
-@keyframes up{to{transform:translateY(0)}}
-.hero .sub{max-width:560px;margin-top:3.2vh;color:var(--muted);font-size:clamp(15px,1.35vw,19px);line-height:1.55}
-.hero .ctas{display:flex;gap:16px;margin-top:4vh;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;font-weight:700;transition:transform .3s cubic-bezier(.16,.03,.08,1),background .3s,color .3s,border-color .3s}
-.btn:active{transform:scale(.97)}
-.btn-a{background:var(--accent);color:#0e0e0e}
-.btn-a:hover{background:var(--cream)}
-.btn-b{border:1px solid var(--line);color:var(--cream)}
-.btn-b:hover{border-color:var(--cream)}
-.btn .arr{font-family:var(--serif)}
-
-/* ---------- trust strip ---------- */
-.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}
-@media(max-width:820px){.trust{grid-template-columns:repeat(2,1fr)}}
-.trust div{padding:26px 4vw;border-right:1px solid var(--line)}
-.trust div:last-child{border-right:none}
-.trust b{display:block;font-size:clamp(24px,2.6vw,40px);font-weight:700;font-variant-numeric:tabular-nums}
-.trust b i{font-style:normal;color:var(--accent)}
-.trust small{color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-
-/* ---------- section labels ---------- */
-.label{display:flex;justify-content:space-between;align-items:baseline;padding:6vh 0 3vh;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-.label b{color:var(--cream);font-weight:700}
-.label .num{font-variant-numeric:tabular-nums}
-
-/* ---------- video section ---------- */
-.vfeat{border:1px solid var(--line)}
-.vfeat .frame{position:relative;aspect-ratio:16/9;background:#000}
-.vfeat video{width:100%;height:100%;object-fit:contain;background:#000;display:block}
-.vmeta{display:flex;justify-content:space-between;gap:12px;padding:14px 18px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line);flex-wrap:wrap}
-.vmeta .tc{font-variant-numeric:tabular-nums;color:var(--cream)}
-.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;align-items:start}
-@media(max-width:820px){.vgrid{grid-template-columns:1fr}}
-.vcard{border:1px solid var(--line);background:#000}
-.vcard video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#000}
-.vcard.vert video{aspect-ratio:9/14;object-fit:cover}
-.vcard .vmeta{border-top:1px solid var(--line)}
-/* вертикальное видео + продающая заметка рядом */
-.vside{display:grid;grid-template-columns:minmax(260px,380px) 1fr;gap:4vw;margin-top:14px;align-items:center}
-@media(max-width:820px){.vside{grid-template-columns:1fr;gap:14px}.vside .vcard.vert{max-width:380px}}
-.vnote h3{font-size:clamp(20px,2.2vw,32px);text-transform:uppercase;font-weight:700;letter-spacing:.02em;line-height:1.05}
-.vnote h3 span{color:var(--muted);font-weight:400;font-size:.7em;display:block;margin-top:8px;letter-spacing:.06em}
-.vnote p{color:var(--muted);font-size:15px;line-height:1.6;max-width:480px;margin-top:2.4vh}
-
-/* ---------- photo rows ---------- */
-.proj{border-top:1px solid var(--line);padding:26px 0}
-.proj:last-child{border-bottom:1px solid var(--line)}
-.proj .head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px;gap:12px;flex-wrap:wrap}
-.proj h3{font-size:clamp(17px,1.7vw,24px);text-transform:uppercase;font-weight:700;letter-spacing:.02em}
-.proj h3 span{color:var(--muted);font-weight:400;font-size:.72em;letter-spacing:.08em;margin-left:12px}
-.proj .count{color:var(--muted);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-variant-numeric:tabular-nums}
-.prow{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
-.prow img{height:min(46vw,380px);width:auto;scroll-snap-align:start;display:block;flex:none;border:1px solid var(--line);cursor:zoom-in}
-.prow::-webkit-scrollbar{height:4px}
-
-/* ---------- packages ---------- */
-.split{display:grid;grid-template-columns:5fr 7fr;gap:4vw;align-items:start}
-@media(max-width:820px){.split{grid-template-columns:1fr}}
-.split .sticky{position:sticky;top:14vh}
-@media(max-width:820px){.split .sticky{position:static}}
-h2{font-size:clamp(30px,4.4vw,64px);line-height:.98;text-transform:uppercase;font-weight:700;letter-spacing:-.01em}
-h2 .accent{font-family:var(--serif);font-style:italic;text-transform:none;font-weight:400;color:var(--accent)}
-.split .note{color:var(--muted);margin-top:2.4vh;font-size:14px;line-height:1.6;max-width:340px}
-.pack{border-top:1px solid var(--line);padding:30px 0;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:baseline}
-.pack:last-child{border-bottom:1px solid var(--line)}
-.pack h3{font-size:clamp(18px,1.8vw,26px);text-transform:uppercase;font-weight:700;letter-spacing:.02em}
-.pack h3 span{color:var(--muted);font-weight:400;font-size:.7em;display:block;margin-top:6px;letter-spacing:.06em}
-.pack p{grid-column:1;color:var(--muted);font-size:14px;line-height:1.6;max-width:520px;margin-top:8px}
-.pack .price{font-size:clamp(16px,1.6vw,22px);font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
-.pack .price i{font-style:normal;color:var(--accent);font-size:.75em;display:block;text-align:right;letter-spacing:.08em}
-.pack-note{margin-top:18px;font-size:12px;color:var(--muted);letter-spacing:.04em;line-height:1.5;max-width:520px}
-
-/* ---------- cases ---------- */
-.case{display:grid;grid-template-columns:1fr 1fr;gap:4vw;padding:6vh 0;border-top:1px solid var(--line);align-items:center}
-.case:last-of-type{border-bottom:1px solid var(--line)}
-.case:nth-child(even) .media{order:2}
-@media(max-width:820px){.case{grid-template-columns:1fr}.case:nth-child(even) .media{order:0}}
-.case .media{border:1px solid var(--line);position:relative;overflow:hidden;background:#000;line-height:0}
-.case .media img{width:100%;height:auto;display:block}
-.case .tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block}
-.case h3{font-size:clamp(22px,2.4vw,36px);text-transform:uppercase;line-height:1.05;font-weight:700}
-.case dl{margin-top:3vh;display:grid;gap:14px}
-.case dt{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-.case dd{font-size:15px;line-height:1.55;margin-top:4px}
-.case .res{border-left:2px solid var(--accent);padding-left:14px}
-
-/* ---------- stack strip ---------- */
-.stack{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 4vw;display:flex;flex-wrap:wrap;gap:12px 34px;justify-content:space-between}
-.stack span{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.stack b{color:var(--cream);font-weight:700}
-
-/* ---------- about ---------- */
-.about{display:grid;grid-template-columns:5fr 7fr;gap:4vw;padding:8vh 4vw;border-bottom:1px solid var(--line)}
-@media(max-width:820px){.about{grid-template-columns:1fr}}
-.about .portrait{border:1px solid var(--line);position:relative;overflow:hidden;background:#111;line-height:0}
-.about .portrait img{width:100%;height:100%;object-fit:cover;display:block}
-.about .txt p{font-size:clamp(16px,1.5vw,21px);line-height:1.6;color:var(--cream);margin-bottom:2vh;max-width:60ch}
-.about .txt p.dim{color:var(--muted);font-size:15px}
-.about .facts{margin-top:4vh;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
-.about .facts div{background:var(--bg);padding:18px}
-.about .facts b{display:block;font-size:20px;font-variant-numeric:tabular-nums}
-.about .facts small{color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
-
-/* ---------- contact ---------- */
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:6vw;padding:9vh 4vw}
-@media(max-width:820px){.contact{grid-template-columns:1fr}}
-.contact .fast{margin-top:4vh;display:grid;gap:2px}
-.contact .fast a{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);color:var(--cream);text-decoration:none;font-size:15px;letter-spacing:.04em}
-.contact .fast a:hover{color:var(--accent)}
-.contact .fast small{color:var(--muted);letter-spacing:.1em;text-transform:uppercase;font-size:11px}
-form{display:grid;gap:26px;padding:0}
-.fld{display:grid;gap:8px;padding:0}
-.fld label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-.fld input,.fld textarea{background:transparent;border:none;border-bottom:1px solid var(--line);color:var(--cream);font-family:var(--sans);font-size:16px;padding:12px 0;outline:none;transition:border-color .3s;resize:vertical}
-.fld input:focus,.fld textarea:focus{border-color:var(--accent)}
-.budget{display:flex;flex-wrap:wrap;gap:10px}
-.budget input{display:none}
-.budget label{border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;color:var(--muted);transition:.25s}
-.budget input:checked+label{background:var(--accent);color:#0e0e0e;border-color:var(--accent);font-weight:700}
-.budget label:hover{border-color:var(--cream)}
-.consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted);line-height:1.5;cursor:pointer}
-.consent input{margin-top:2px;accent-color:var(--accent);width:16px;height:16px;flex:none;cursor:pointer}
-.consent a{color:var(--accent);text-decoration:underline}
-form button{justify-self:start}
-.form-note{font-size:12px;color:var(--muted);letter-spacing:.04em}
-
-/* ---------- footer ---------- */
-footer{border-top:1px solid var(--line);padding:8vh 4vw 4vh;text-align:center}
-footer .mail{display:block;font-size:clamp(26px,7.4vw,120px);font-weight:700;text-transform:uppercase;letter-spacing:-.02em;color:var(--cream);text-decoration:none;line-height:1;transition:color .3s}
-footer .mail:hover{color:var(--accent)}
-footer .row{display:flex;justify-content:space-between;margin-top:6vh;color:var(--muted);font-size:11px;letter-spacing:.14em;text-transform:uppercase;flex-wrap:wrap;gap:12px}
-
-/* ---------- cookie consent ---------- */
-.cookie-banner{position:fixed;bottom:0;left:0;right:0;background:#171717;border-top:1px solid var(--line);padding:24px 4vw;z-index:95;display:flex;justify-content:space-between;align-items:center;gap:24px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);flex-wrap:wrap;animation:slideUp .4s cubic-bezier(.16,.03,.08,1)}
-.cookie-banner.hidden{display:none}
-@keyframes slideUp{from{transform:translateY(100%)}}
-.cookie-banner .text{flex:1;min-width:280px}
-.cookie-banner .text p{font-size:14px;line-height:1.5;color:var(--cream);margin-bottom:8px}
-.cookie-banner .text small{display:block;font-size:12px;color:var(--muted);letter-spacing:.04em;margin-top:6px}
-.cookie-banner .actions{display:flex;gap:12px;flex-wrap:wrap;white-space:nowrap}
-.cookie-banner .btn{padding:10px 18px;font-size:12px}
-.cookie-banner .btn-b{background:#262626;border-color:rgba(244,243,237,.45);color:var(--cream)}
-.cookie-banner .btn-b:hover{border-color:var(--cream);background:#2e2e2e}
-@media(max-width:820px){.cookie-banner{flex-direction:column;align-items:flex-start}.cookie-banner .actions{width:100%;justify-content:flex-end}}
-
-/* ---------- modal overlay ---------- */
-.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:100;display:none;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto}
-.modal-overlay.active{display:flex;animation:fadeIn .3s}
-@keyframes fadeIn{from{opacity:0}}
-.modal-overlay .modal{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:40px;max-width:700px;margin:60px auto 40px;animation:slideDown .4s cubic-bezier(.16,.03,.08,1)}
-@media(max-width:640px){.modal-overlay .modal{padding:24px;margin:30px auto 20px}}
-.modal-overlay .modal h2{margin-bottom:20px;font-size:28px}
-.modal-overlay .modal p{margin-bottom:16px;line-height:1.6;font-size:15px}
-.modal-overlay .modal h3{margin-top:24px;margin-bottom:12px;font-size:16px}
-.modal-overlay .modal ul{margin-left:20px;margin-bottom:16px;font-size:15px}
-.modal-overlay .modal li{margin-bottom:8px;line-height:1.5}
-.modal-overlay .modal .close{position:sticky;top:0;float:right;background:none;border:none;color:var(--cream);font-size:28px;cursor:pointer;transition:color .3s;margin-bottom:16px}
-.modal-overlay .modal .close:hover{color:var(--accent)}
-.modal-overlay .modal-actions{display:flex;gap:12px;margin-top:30px}
-.modal-overlay .modal-actions .btn{flex:1}
-
-/* ---------- socials ---------- */
-.socials{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-bottom:2vh}
-.soc{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:22px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--cream)}
-.soc:last-child{border-bottom:none}
-.soc .net{font-size:clamp(19px,2.2vw,30px);font-weight:700;text-transform:uppercase;letter-spacing:.02em;transition:color .3s,transform .3s}
-.soc .net em{font-family:var(--serif);font-style:italic;text-transform:none;font-weight:400;color:var(--muted);font-size:.6em;margin-left:12px;letter-spacing:.04em}
-.soc .handle{color:var(--muted);font-size:13px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;transition:color .3s}
-.soc:hover .net{color:var(--accent);transform:translateX(6px)}
-.soc:hover .handle{color:var(--cream)}
-
-/* ---------- lightbox ---------- */
-.lb{position:fixed;inset:0;z-index:110;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;flex-direction:column;animation:fadeIn .25s ease}
-.lb.open{display:flex}
-.lb img{max-width:92vw;max-height:80vh;object-fit:contain;border:1px solid var(--line);user-select:none;-webkit-user-select:none}
-.lb .lb-meta{display:flex;justify-content:space-between;gap:18px;width:92vw;margin-top:14px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.lb .lb-meta .num{font-variant-numeric:tabular-nums;color:var(--cream)}
-.lb button{background:rgba(23,23,23,.85);border:1px solid var(--line);color:var(--cream);cursor:pointer;transition:border-color .25s,color .25s;font-family:var(--sans)}
-.lb button:hover{border-color:var(--accent);color:var(--accent)}
-.lb .lb-btn{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;font-size:20px;line-height:1}
-.lb .lb-prev{left:2vw}
-.lb .lb-next{right:2vw}
-.lb .lb-close{position:absolute;top:18px;right:2vw;width:44px;height:44px;border-radius:50%;font-size:16px}
-@media(max-width:640px){.lb .lb-btn{width:44px;height:44px;top:auto;bottom:70px;transform:none}}
-@media(prefers-reduced-motion:reduce){.lb{animation:none}}
-
-/* ---------- reveal on scroll ---------- */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,.03,.08,1)}
-.rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}h1 .row>i{animation:none;transform:none}}
+:root { color-scheme:light; --paper:#f4f3ef; --ink:#20211f; --muted:#74756d; --line:#d7d8ce; --edge:clamp(20px,4vw,64px); --ease:cubic-bezier(.2,.7,.2,1); }
+* { box-sizing:border-box; }
+body { margin:0; color:var(--ink); background:var(--paper); font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
+button,a { font:inherit; color:inherit; -webkit-tap-highlight-color:transparent; }
+button { cursor:pointer; } a { text-decoration:none; }
+button { background:none; border:0; padding:0; } img { display:block; max-width:100%; }
+:focus-visible { outline:2px solid currentColor; outline-offset:6px; }
+[hidden] { display:none!important; }
+.site-header { padding:26px var(--edge); display:flex; align-items:center; justify-content:space-between; gap:20px; border-bottom:1px solid var(--line); }
+.brand { display:flex; gap:12px; align-items:center; font-size:24px; font-weight:600; letter-spacing:-1.1px; }
+.brand img { width:29px; height:29px; object-fit:contain; }
+#mode-switch { --mode-position:0; position:fixed; left:50%; bottom:28px; z-index:20; transform:translateX(-50%); isolation:isolate; display:grid; grid-template-columns:repeat(4,1fr); width:390px; height:52px; padding:4px; background:#eeeee7ed; border:1px solid #d0d1c5; border-radius:999px; box-shadow:0 6px 28px #00000012; backdrop-filter:blur(16px); touch-action:none; user-select:none; -webkit-user-select:none; }
+#mode-indicator { position:absolute; z-index:-1; left:4px; top:4px; bottom:4px; width:calc((100% - 8px)/4); background:var(--ink); border-radius:999px; transform:translateX(calc(var(--mode-position)*100%)); transition:transform .4s var(--ease); }
+.mode-tab { border-radius:999px; font-size:12px; transition:color .25s; }
+.mode-tab[aria-selected="true"] { color:#fff; }
+#mode-switch.is-dragging #mode-indicator { transition:none; }
+main { min-height:calc(100svh - 200px); }
+.mode-panel { padding:54px var(--edge) 64px; max-width:1800px; margin:auto; }
+.section-heading { display:flex; align-items:end; gap:20px; justify-content:space-between; margin-bottom:40px; }
+.kicker { margin:0 0 15px; font-size:10px; text-transform:uppercase; letter-spacing:.15em; color:var(--muted); }
+h1 { font-size:clamp(52px,8vw,112px); font-weight:400; letter-spacing:-.065em; line-height:.92; margin:0; }
+.section-note { max-width:230px; margin:0; color:var(--muted); font-size:12px; }
+.case-group + .case-group { margin-top:70px; }
+.group-heading { display:flex; align-items:center; justify-content:space-between; padding:14px 0; border-top:1px solid var(--line); }
+.group-heading h2 { font-size:12px; font-weight:500; margin:0; }
+.group-heading span { font-size:10px; color:var(--muted); }
+.case-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:34px 24px; }
+.case-card { display:block; text-align:left; width:100%; }
+.case-image { position:relative; display:block; overflow:hidden; background:#e8e8e1; aspect-ratio:2/3; }
+.case-image::before,#gallery-grid button::before { content:""; position:absolute; z-index:1; inset:0; pointer-events:none; background:linear-gradient(100deg,#e8e8e1 20%,#f0f0ea 45%,#e8e8e1 70%); background-size:200% 100%; opacity:0; }
+.case-image.is-loading::before,#gallery-grid button.is-loading::before { opacity:1; animation:gallery-image-loading 1.5s linear infinite; }
+.case-image img { width:100%; height:100%; object-fit:cover; opacity:0; transform:scale(1.015); transition:opacity .55s var(--ease),transform .7s var(--ease); }
+.case-image.is-loaded img { opacity:1; transform:none; }
+.case-image.is-error img { opacity:.45; transform:none; }
+.case-image--subject-right img { object-position:80% center; }
+.case-card:hover .case-image.is-loaded img { transform:scale(1.025); }
+.case-caption { display:grid; grid-template-columns:1fr auto; gap:7px 16px; padding-top:14px; }
+.case-title { font-size:14px; font-weight:400; }
+.case-number { grid-column:2; grid-row:1/3; color:var(--muted); font-size:18px; }
+.case-meta { color:var(--muted); font-size:10px; }
+.video-card { border-top:1px solid var(--line); padding-top:20px; }
+.video-frame { width:100%; aspect-ratio:16/9; background:#171816; }
+.video-frame iframe { width:100%; height:100%; border:0; }
+.video-copy { display:grid; grid-template-columns:1fr 1fr; gap:30px; padding-top:24px; }
+.video-copy h2 { margin:0 0 10px; font-size:clamp(26px,4vw,48px); font-weight:400; letter-spacing:-.04em; }
+.video-copy p { margin:0 0 16px; max-width:530px; font-size:12px; color:var(--muted); }
+.text-link { display:inline-block; border-bottom:1px solid currentColor; padding:4px 0; font-size:12px; }
+.site-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.site-card { min-width:0; border-top:1px solid var(--line); padding-top:20px; }
+.site-preview { position:relative; display:flex; min-height:300px; flex-direction:column; justify-content:space-between; overflow:hidden; padding:24px; border:1px solid var(--line); background:#dedfd8; }
+.site-preview::before { content:""; position:absolute; inset:0 0 auto; height:34px; border-bottom:1px solid #c8c9c0; background:#e9e9e2; }
+.site-preview::after { content:"↗"; position:absolute; right:22px; top:42px; color:#77786f; font-size:18px; }
+.site-preview > * { position:relative; }
+.site-preview-bar { display:flex; gap:5px; margin-top:-5px; }
+.site-preview-bar span { display:block; width:6px; height:6px; border-radius:50%; background:#a9aaa1; }
+.site-preview-title { margin:0; font-size:clamp(38px,7vw,90px); font-weight:400; letter-spacing:-.08em; line-height:.9; }
+.site-preview-domain { margin:0; color:#6f7068; font-size:11px; }
+.site-caption { display:grid; grid-template-columns:1fr auto; gap:12px 20px; padding-top:18px; }
+.site-caption h2 { margin:0; font-size:clamp(24px,3vw,38px); font-weight:400; letter-spacing:-.05em; }
+.site-caption p { grid-column:1/-1; max-width:520px; margin:0; color:var(--muted); font-size:13px; }
+.site-links { display:flex; flex-wrap:wrap; gap:18px; align-items:start; justify-content:flex-end; }
+.site-links .text-link { white-space:nowrap; }
+.contacts-layout { display:grid; grid-template-columns:1fr 1fr; gap:8vw; padding-top:35px; border-top:1px solid var(--line); }
+.about { font-size:clamp(21px,2.5vw,34px); line-height:1.3; letter-spacing:-.025em; margin:0 0 24px; max-width:650px; }
+.about-detail { max-width:470px; color:var(--muted); font-size:13px; }
+.contact-list { margin:0; }
+.contact-list div { padding:22px 0; border-bottom:1px solid var(--line); }
+.contact-list div:first-child { padding-top:0; }
+.contact-list dt { margin-bottom:9px; color:var(--muted); font-size:10px; }
+.contact-list dd { margin:0; font-size:clamp(18px,2.4vw,32px); letter-spacing:-.035em; overflow-wrap:anywhere; }
+.contact-list a { display:flex; justify-content:space-between; gap:10px; }
+dialog { border:0; color:var(--ink); background:var(--paper); }
+dialog::backdrop { background:#171816a6; }
+#gallery { width:100vw; max-width:100vw; height:100svh; max-height:100svh; margin:0; padding:0 var(--edge) 60px; }
+.dialog-toolbar { position:sticky; top:0; z-index:2; display:flex; justify-content:space-between; align-items:center; gap:20px; padding:20px 0; background:var(--paper); border-bottom:1px solid var(--line); }
+.dialog-toolbar button { font-size:12px; min-height:32px; }
+#gallery-head { padding:42px 0 32px; }
+#gallery-title { font-size:clamp(32px,5vw,70px); font-weight:400; letter-spacing:-.05em; line-height:1.05; margin:0 0 14px; }
+#gallery-group { color:var(--muted); font-size:12px; }
+#gallery-grid { columns:3; column-gap:20px; }
+#gallery-grid button { position:relative; display:block; width:100%; margin:0 0 20px; break-inside:avoid; overflow:hidden; background:#e8e8e1; }
+#gallery-grid button.is-loaded::before,#gallery-grid button.is-error::before { animation:none; opacity:0; }
+#gallery-grid img { position:relative; z-index:2; width:100%; height:auto; opacity:0; transform:scale(1.015); transition:opacity .5s var(--ease),transform .7s var(--ease); }
+#gallery-grid img.is-loaded { opacity:1; transform:none; }
+@keyframes gallery-image-loading { from { background-position:200% 0; } to { background-position:-50% 0; } }
+#gallery-next { display:flex; width:100%; justify-content:space-between; align-items:center; margin-top:28px; padding:18px 0 4px; border-top:1px solid var(--line); text-align:left; font-size:12px; }
+#gallery-next > span:last-child { font-size:20px; }
+body:has(dialog[open]) { overflow:hidden; }
+#viewer { width:100vw; max-width:100vw; height:100svh; max-height:100svh; margin:0; padding:65px 80px; background:#151614; color:#f4f3ef; overflow:hidden; }
+#viewer-img { width:100%; height:100%; object-fit:contain; touch-action:pan-y; }
+#viewer-close { position:absolute; top:20px; right:24px; padding:8px; font-size:12px; }
+.frame-arrow { position:absolute; top:50%; transform:translateY(-50%); width:56px; height:64px; font-size:34px; }
+#view-prev { left:10px; } #view-next { right:10px; }
+#counter { position:absolute; bottom:23px; left:50%; transform:translateX(-50%); font-size:12px; }
+#load-status { padding:30px 0; color:var(--muted); }
+#retry { margin-left:14px; text-decoration:underline; }
+#image-status { position:absolute; bottom:50px; left:20px; right:20px; text-align:center; font-size:12px; }
+@media(min-width:1300px) { .case-grid { gap:42px 32px; } }
+@media(max-width:800px) { #photo-section .case-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 16px; } .contacts-layout { grid-template-columns:1fr; gap:36px; } .site-grid { grid-template-columns:1fr; } #gallery-grid { columns:2; column-gap:12px; } #gallery-grid button { margin-bottom:12px; } }
+@media(max-width:520px) { .site-header { padding-top:20px; padding-bottom:20px; } .brand { font-size:22px; } .mode-panel { padding-top:36px; } .section-heading { display:block; margin-bottom:30px; } .section-note { margin-top:20px; max-width:none; font-size:11px; } #photo-section .case-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px 12px; } .case-group + .case-group { margin-top:45px; } #photo-section .case-caption { gap:5px 8px; padding-top:10px; } .case-title { font-size:14px; } .case-image { aspect-ratio:2/3; } #mode-switch { width:min(390px,calc(100vw - 32px)); bottom:calc(18px + env(safe-area-inset-bottom)); } .mode-tab { font-size:11px; } .video-copy { grid-template-columns:1fr; gap:14px; } .site-preview { min-height:230px; padding:20px; } .site-caption { display:block; } .site-caption h2 { margin-bottom:12px; } .site-caption p { margin-bottom:16px; } .site-links { justify-content:flex-start; } #viewer { padding:70px 14px; } .frame-arrow { top:auto; bottom:10px; transform:none; height:42px; } #viewer-close { right:12px; } }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none!important; animation:none!important; scroll-behavior:auto!important; } }
 </style>
+  <script type="module" crossorigin src="/assets/index-rmIoDBIO.js"></script>
 </head>
-<body>
-
-<div id="pre"><div class="tc">00:00:00<em>:00</em></div></div>
-
-<header class="top">
-  <div class="logo">pxl_head<span style="color:var(--accent)">.</span></div>
-  <nav>
-    <a class="swap" href="#video"><span>Видео</span><span>Видео</span></a>
-    <a class="swap" href="#photo"><span>Фото</span><span>Фото</span></a>
-    <a class="swap" href="#packs"><span>Услуги</span><span>Услуги</span></a>
-    <a class="swap" href="#about"><span>Обо мне</span><span>Обо мне</span></a>
-    <a class="swap" href="#socials"><span>Соцсети</span><span>Соцсети</span></a>
-    <a class="swap" href="#contact"><span>Контакт</span><span>Контакт</span></a>
-  </nav>
-  <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
+<body data-mode="photo">
+<header class="site-header">
+<a class="brand" href="#photo" aria-label="pxl_head — на главную"><img src="/assets/logo-512-B-wg7S3E.webp" alt=""><span>pxl_head</span></a>
 </header>
-
-<!-- ============ MOBILE NAV ============ -->
-<div class="mnav" id="mnav">
-  <a href="#video">Видео</a>
-  <a href="#photo">Фото</a>
-  <a href="#packs">Услуги</a>
-  <a href="#about">Обо мне</a>
-  <a href="#socials">Соцсети</a>
-  <a href="#contact">Контакт</a>
-  <a class="mnav-tg" href="https://t.me/pxl_head" target="_blank" rel="noopener">Telegram — @pxl_head</a>
+<nav id="mode-switch" aria-label="Разделы портфолио" role="tablist">
+<span id="mode-indicator" aria-hidden="true"></span>
+<button id="mode-photo" class="mode-tab" role="tab" aria-selected="true" aria-controls="photo-section" data-mode="photo">Фото</button>
+<button id="mode-video" class="mode-tab" role="tab" aria-selected="false" aria-controls="video-section" data-mode="video" tabindex="-1">Видео</button>
+<button id="mode-sites" class="mode-tab" role="tab" aria-selected="false" aria-controls="sites-section" data-mode="sites" tabindex="-1">Сайты</button>
+<button id="mode-contacts" class="mode-tab" role="tab" aria-selected="false" aria-controls="contacts-section" data-mode="contacts" tabindex="-1">Контакты</button>
+</nav>
+<main>
+<section id="photo-section" class="mode-panel" role="tabpanel" aria-labelledby="mode-photo">
+<header class="section-heading"><div><p class="kicker">01 / Фотография</p><h1>Фото<span aria-hidden="true">.</span></h1></div><p class="section-note">Показы, кампейны, портреты.<br><span id="project-count">Фотопроекты</span></p></header>
+<div id="load-status" role="status">Загружаем проекты…<button id="retry" hidden>Попробовать ещё раз</button></div>
+<div id="cases"></div>
+</section>
+<section id="video-section" class="mode-panel" role="tabpanel" aria-labelledby="mode-video" hidden>
+<header class="section-heading"><div><p class="kicker">02 / Движение</p><h1>Видео<span aria-hidden="true">.</span></h1></div><p class="section-note">Образ, ритм, состояние.</p></header>
+<article class="video-card"><div class="video-frame"><iframe data-src="https://www.youtube-nocookie.com/embed/DY0SAY92pFU?rel=0" title="XOLT – верить" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div class="video-copy"><div><p class="kicker">YouTube / X-REALiTY</p><h2>XOLT – верить</h2></div><div><p>Внешний материал. Ролик опубликован на YouTube каналом X-REALiTY и размещён здесь для просмотра; загрузка выполнена не мной.</p><a class="text-link" href="https://www.youtube.com/watch?v=DY0SAY92pFU" target="_blank" rel="noopener noreferrer">Смотреть на YouTube ↗</a></div></div></article>
+</section>
+<section id="sites-section" class="mode-panel" role="tabpanel" aria-labelledby="mode-sites" hidden>
+<header class="section-heading"><div><p class="kicker">03 / Веб-проекты</p><h1>Сайты<span aria-hidden="true">.</span></h1></div><p class="section-note">Сайты, собранные и опубликованные через GitHub.</p></header>
+<div class="site-grid">
+<article class="site-card"><a class="site-preview" href="https://pxl-head.github.io/montan-me-portfolio/" target="_blank" rel="noopener noreferrer" aria-label="Открыть сайт MONTAN.ME"><div class="site-preview-bar" aria-hidden="true"><span></span><span></span><span></span></div><p class="site-preview-title">MONTAN</p><p class="site-preview-domain">pxl-head.github.io / montan-me-portfolio</p></a><div class="site-caption"><h2>MONTAN.ME</h2><div class="site-links"><a class="text-link" href="https://pxl-head.github.io/montan-me-portfolio/" target="_blank" rel="noopener noreferrer">Открыть сайт ↗</a><a class="text-link" href="https://github.com/pxl-head/montan-me-portfolio" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><p>Персональное визуальное портфолио с фотопроектами, видео и авторской подачей.</p></div></article>
+<article class="site-card"><a class="site-preview" href="https://pxl-head.github.io/vika_piratova/" target="_blank" rel="noopener noreferrer" aria-label="Открыть сайт PIRATOVA"><div class="site-preview-bar" aria-hidden="true"><span></span><span></span><span></span></div><p class="site-preview-title">PIRATOVA</p><p class="site-preview-domain">pxl-head.github.io / vika_piratova</p></a><div class="site-caption"><h2>VIKA PIRATOVA</h2><div class="site-links"><a class="text-link" href="https://pxl-head.github.io/vika_piratova/" target="_blank" rel="noopener noreferrer">Открыть сайт ↗</a><a class="text-link" href="https://github.com/pxl-head/vika_piratova" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><p>Портфолио визуального художника и фотографа с каталогом проектов и фотокейсами.</p></div></article>
 </div>
-
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="bg">
-    <video src="web-media/hero-bg-web.mp4" poster="web-media/poster-xolt.jpg" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video>
-  </div>
-  <div class="inner">
-    <div class="eyebrow">Фотограф · Видеограф · Москва <!-- смените город при необходимости --></div>
-    <h1>
-      <span class="row"><i>Снимаю видео,</i></span>
-      <span class="row"><i>которое</i></span>
-      <span class="row"><i><span class="accent">досматривают</span></i></span>
-    </h1>
-    <p class="sub">Два года в фотографии — мода, показы, предметка, события. Теперь добавил к этому движение и звук: клипы, свадебные фильмы, репортажи и Reels. Фото и видео — в одних руках, за одну съёмку.</p>
-    <div class="ctas">
-      <a class="btn btn-a" href="#video">Смотреть работы <span class="arr">→</span></a>
-      <a class="btn btn-b" href="#contact">Обсудить проект</a>
-    </div>
-  </div>
 </section>
-
-<!-- ============ TRUST ============ -->
-<div class="trust">
-  <div><b>2<i>+</i></b><small>года в визуале</small></div>
-  <div><b>50<i>+</i></b><small>фотопроектов сдано</small></div>
-  <div><b>2<i>в1</i></b><small>фото + видео за одну съёмку</small></div>
-  <div><b>48<i>ч</i></b><small>первый тизер после съёмки</small></div>
-</div>
-
-<!-- ============ VIDEO ============ -->
-<section id="video">
-  <div class="label rv"><b>Видео</b><span class="num">01 · клипы · свадьбы · показы · бекстейдж</span></div>
-
-  <div class="vfeat rv">
-    <div class="frame">
-      <video src="web-media/clip-xolt-web.mp4" poster="web-media/poster-xolt.jpg" controls preload="none" playsinline></video>
-    </div>
-    <div class="vmeta"><span>Клип XOLT</span><span class="tc">02:24</span><span>съёмка · монтаж · цветокоррекция</span></div>
-  </div>
-
-  <div class="vgrid rv">
-    <div class="vcard">
-      <video src="web-media/svadba-web.mp4" poster="web-media/poster-svadba.jpg" controls preload="none" playsinline></video>
-      <div class="vmeta"><span>Свадьба Кристины</span><span class="tc">01:32</span></div>
-    </div>
-    <div class="vcard">
-      <video src="web-media/pokaz-web.mp4" poster="web-media/poster-pokaz.jpg" controls preload="none" playsinline></video>
-      <div class="vmeta"><span>Показ O'Soiel</span><span class="tc">00:26</span></div>
-    </div>
-  </div>
-
-  <div class="vside rv">
-    <div class="vcard vert">
-      <video src="web-media/les-beki-web.mp4" poster="web-media/poster-les.jpg" controls preload="none" playsinline></video>
-      <div class="vmeta"><span>Бекстейдж · лес</span><span class="tc">00:33</span></div>
-    </div>
-    <div class="vnote">
-      <h3>Вертикальные форматы<span>Reels · Shorts · TikTok</span></h3>
-      <p>Снимаю и монтирую под телефон: динамично, с субтитрами и музыкой. Вертикальные нарезки делаю из той же съёмки — без отдельного дня и отдельного бюджета.</p>
-    </div>
-  </div>
+<section id="contacts-section" class="mode-panel" role="tabpanel" aria-labelledby="mode-contacts" hidden>
+<header class="section-heading"><div><p class="kicker">04 / На связи</p><h1>Контакты<span aria-hidden="true">.</span></h1></div></header>
+<div class="contacts-layout"><div><p class="about">Меня зовут pxl_head.<br>Я фотограф и видеограф из Москвы.</p><p class="about-detail">Снимаю показы и бекстейджи, каталоги для брендов, портреты в городе и предметку — всё, где важен свет и вовремя нажатая кнопка.</p><p class="about-detail">Работал с Московской неделей моды, брендами O'Soiel, Atomickitten, Angel Bless, Fabrikator.</p></div>
+<dl class="contact-list"><div><dt>Телеграм</dt><dd><a href="https://t.me/pxl_head" target="_blank" rel="noopener noreferrer">@pxl_head <span aria-hidden="true">↗</span></a></dd></div><div><dt>Почта</dt><dd><a href="mailto:pxl_head@internet.ru">pxl_head@internet.ru <span aria-hidden="true">↗</span></a></dd></div><div><dt>Город</dt><dd>Москва</dd></div></dl></div>
 </section>
-
-<!-- ============ PHOTO ============ -->
-<section id="photo">
-  <div class="label rv"><b>Фото</b><span class="num">02 · листайте вбок →</span></div>
-  <div id="portfolioContainer"></div>
-</section>
-
-<!-- ============ CASES ============ -->
-<section id="cases">
-  <div class="label rv"><b>Как я работаю</b><span class="num">03 · задача → что сделано</span></div>
-
-  <article class="case rv">
-    <div class="media"><img src="web-media/poster-xolt.jpg" loading="lazy" decoding="async" alt="Кадр из клипа XOLT"></div>
-    <div>
-      <span class="tag">Клип · музыка</span>
-      <h3>Клип XOLT — от идеи до экрана</h3>
-      <dl>
-        <div><dt>Задача</dt><dd>Снять музыкальный клип для артиста: динамика, ритм, характер.</dd></div>
-        <div><dt>Что сделано</dt><dd>Съёмка, монтаж в ритме трека, цветокоррекция. Хронометраж 2:24.</dd></div>
-        <div><dt class="res">Формат сдачи</dt><dd class="res">Мастер-файл + вертикальные нарезки для соцсетей артиста.</dd></div>
-      </dl>
-    </div>
-  </article>
-
-  <article class="case rv">
-    <div class="media"><img src="web-media/poster-svadba.jpg" loading="lazy" decoding="async" alt="Кадр со свадьбы Кристины"></div>
-    <div>
-      <span class="tag">Свадьба · событие</span>
-      <h3>Свадебный фильм Кристины</h3>
-      <dl>
-        <div><dt>Задача</dt><dd>Сохранить день так, чтобы его хотелось пересматривать: эмоции, детали, гости.</dd></div>
-        <div><dt>Что сделано</dt><dd>Съёмка полного дня, монтаж фильма 1:32, работа со звуком и музыкой.</dd></div>
-        <div><dt class="res">Формат сдачи</dt><dd class="res">Фильм + возможность добавить фоторепортаж из той же съёмки.</dd></div>
-      </dl>
-    </div>
-  </article>
-
-  <article class="case rv">
-    <div class="media"><img src="web-media/poster-pokaz.jpg" loading="lazy" decoding="async" alt="Кадр с показа O'Soiel"></div>
-    <div>
-      <span class="tag">Мода · репортаж</span>
-      <h3>Показ O'Soiel — фото и видео за один день</h3>
-      <dl>
-        <div><dt>Задача</dt><dd>Бренду нужен был и репортаж с показа, и видео для соцсетей — быстро.</dd></div>
-        <div><dt>Что сделано</dt><dd>Снял оба формата в один день: фоторепортаж + динамичный видеоролик 0:26.</dd></div>
-        <div><dt class="res">Формат сдачи</dt><dd class="res">Фотосерия для каталога/прессы + ролик для соцсетей бренда.</dd></div>
-      </dl>
-    </div>
-  </article>
-</section>
-
-<!-- ============ PACKAGES ============ -->
-<section id="packs">
-  <div class="label rv"><b>Услуги и пакеты</b><span class="num">04</span></div>
-  <div class="split">
-    <div class="sticky rv">
-      <h2>Честные<br><span class="accent">цены</span></h2>
-      <p class="note">Стартовые пакеты — чтобы проверить, как нам работается вместе. Точная смета — после короткого брифа: объём, сроки и количество правок фиксирую до старта.</p>
-    </div>
-    <div class="rv">
-      <div class="pack">
-        <h3>Reels / Shorts<span>контент для соцсетей</span></h3>
-        <div class="price"><i>от</i>2 000 ₽</div>
-        <p>Монтаж вашего материала: нарезка, субтитры, музыка, базовый цветокор, формат 9:16. Пакет 4 ролика — от 7 000 ₽. Съёмка под ключ обсуждается отдельно.</p>
-      </div>
-      <div class="pack">
-        <h3>Свадьба / ивент<span>видео или комбо фото + видео</span></h3>
-        <div class="price"><i>от</i>25 000 ₽</div>
-        <p>Съёмка дня, фильм 2–4 минуты + тизер для соцсетей. Комбо с фоторепортажем из той же съёмки — выгоднее, чем два подрядчика.</p>
-      </div>
-      <div class="pack">
-        <h3>Контент для бренда<span>фото + видео, регулярно</span></h3>
-        <div class="price"><i>от</i>20 000 ₽/мес</div>
-        <p>Предметка, каталог, бекстейдж, нарезки для соцсетей — один съёмочный день = контент на недели. Подходит локальным брендам одежды и аксессуаров.</p>
-      </div>
-      <p class="pack-note">* Все цены ориентировочные: итоговая смета зависит от объёма работ, сроков и количества правок и фиксируется до старта — без сюрпризов в процессе.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ STACK ============ -->
-<div class="stack rv">
-  <span>Монтаж: <b>DaVinci Resolve</b></span>
-  <span>Фото: <b>Capture One · Photoshop</b></span>
-  <span>ИИ: <b>автосубтитры · апскейл</b></span>
-  <span>Свет: <b>2 источника</b></span>
-  <span>Звук: <b>профессиональный</b></span>
-</div>
-
-<!-- ============ ABOUT ============ -->
-<section class="about" id="about">
-  <div class="portrait rv">
-    <!-- ЗАМЕНИТЕ на своё фото: положите portrait.jpg в web-media/ -->
-    <img src="web-media/photos/citymall-1.jpg" alt="Портрет со съёмки">
-  </div>
-  <div class="txt rv">
-    <div class="label" style="padding-top:0"><b>Обо мне</b><span class="num">05</span></div>
-    <p>Я два года снимаю фото: мода, показы, предметка, события — от Московской недели моды до локальных брендов и свадеб. Свет, композиция и цвет для меня — ежедневная практика, а не теория из курсов. Сейчас добавил к этому движение и звук.</p>
-    <p class="dim">Что это даёт вам: один человек закрывает фото и видео за одну съёмку — дешевле, быстрее и стилистически цельно. Я фиксирую объём, сроки и количество правок до старта, отвечаю быстро и отдаю первый тизер в течение 48 часов после съёмки.</p>
-    <div class="facts">
-      <div><b>48 ч</b><small>первый тизер</small></div>
-      <div><b>2 правки</b><small>включены в цену</small></div>
-      <div><b>Самозанятый</b><small>чек и договор</small></div>
-      <div><b>Выезд</b><small>Москва + область</small></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SOCIALS ============ -->
-<section id="socials">
-  <div class="label rv"><b>Соцсети</b><span class="num">06 · посты, бекстейдж, процесс</span></div>
-  <div class="socials rv">
-    <a class="soc" href="https://t.me/pxl_head" target="_blank" rel="noopener">
-      <span class="net">Telegram<em>посты и бекстейджи</em></span><span class="handle">@pxl_head →</span>
-    </a>
-    <a class="soc" href="https://www.instagram.com/pxl_head/" target="_blank" rel="noopener">
-      <span class="net">Instagram*<em>рилсы и лента</em></span><span class="handle">@pxl_head →</span>
-    </a>
-    <!-- Когда будут готовы остальные сети — раскомментируй и подставь ссылки:
-    <a class="soc" href="https://vk.com/username" target="_blank" rel="noopener">
-      <span class="net">VK<em>портфолио и альбомы</em></span><span class="handle">vk.com/username →</span>
-    </a>
-    <a class="soc" href="https://www.tiktok.com/@username" target="_blank" rel="noopener">
-      <span class="net">TikTok<em>короткие видео</em></span><span class="handle">@username →</span>
-    </a>
-    <a class="soc" href="https://youtube.com/@username" target="_blank" rel="noopener">
-      <span class="net">YouTube<em>клипы и фильмы</em></span><span class="handle">@username →</span>
-    </a>
-    <a class="soc" href="https://pinterest.com/username" target="_blank" rel="noopener">
-      <span class="net">Pinterest<em>мудборды и референсы</em></span><span class="handle">@username →</span>
-    </a>
-    -->
-  </div>
-  <p class="form-note rv" style="margin-top:14px">*принадлежит Meta, признанной экстремистской и запрещённой в РФ</p>
-</section>
-<section class="contact" id="contact">
-  <div class="rv">
-    <div class="label" style="padding-top:0"><b>Контакт</b><span class="num">07</span></div>
-    <h2>Обсудим<br><span class="accent">проект?</span></h2>
-    <div class="fast">
-      <a href="https://t.me/pxl_head" target="_blank" rel="noopener"><span>Telegram — самый быстрый канал</span><small>@pxl_head</small></a>
-      <a href="https://www.instagram.com/pxl_head/" target="_blank" rel="noopener"><span>Instagram — лента и рилсы</span><small>@pxl_head</small></a>
-      <a href="mailto:pxl_head@internet.ru"><span>Почта</span><small>pxl_head@internet.ru</small></a>
-    </div>
-    <p class="form-note" style="margin-top:20px">Отвечаю в течение 2 часов в рабочее время. Если проект срочный — пишите в Telegram с пометкой «горит».</p>
-  </div>
-  <form id="brief" class="rv">
-    <div class="fld"><label>Как вас зовут</label><input type="text" name="name" placeholder="Имя" required></div>
-    <div class="fld"><label>Что снимаем</label><input type="text" name="what" placeholder="Например: свадьба 12 сентября / каталог для бренда"></div>
-    <div class="fld">
-      <label>Бюджет</label>
-      <div class="budget">
-        <input type="radio" name="budget" id="b0" value="до 5 000 ₽"><label for="b0">до 5 000 ₽</label>
-        <input type="radio" name="budget" id="b1" value="до 10 000 ₽"><label for="b1">до 10 000 ₽</label>
-        <input type="radio" name="budget" id="b2" value="10–30 000 ₽" checked><label for="b2">10–30 000 ₽</label>
-        <input type="radio" name="budget" id="b3" value="30 000+ ₽"><label for="b3">30 000+ ₽</label>
-        <input type="radio" name="budget" id="b4" value="пока не знаю"><label for="b4">пока не знаю</label>
-      </div>
-    </div>
-    <div class="fld"><label>Пара слов о задаче</label><textarea name="msg" rows="3" placeholder="Локация, дата, сколько роликов или кадров нужно, есть ли референсы"></textarea></div>
-    <label class="consent"><input type="checkbox" name="agree" required><span>Согласен на обработку персональных данных (<a href="#" id="formPrivacyLink">политика конфиденциальности</a>)</span></label>
-    <button class="btn btn-a" type="submit">Отправить заявку <span class="arr">→</span></button>
-    <p class="form-note" id="formHint">Текст заявки скопируется и откроется Telegram — останется вставить и отправить.</p>
-  </form>
-</section>
-
-<!-- ============ FOOTER ============ -->
-<footer>
-  <a class="mail" href="mailto:pxl_head@internet.ru">pxl_head@internet.ru</a>
-  <div class="row">
-    <span>© 2026 · pxl_head</span>
-    <span>Фото · Видео · Монтаж</span>
-    <span>Мода · События · Бренды</span>
-    <a href="#" id="privacyLink" style="color:var(--muted);text-decoration:none;transition:color .3s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Политика конфиденциальности</a>
-  </div>
-</footer>
-
-<!-- ============ COOKIE BANNER ============ -->
-<div class="cookie-banner" id="cookieBanner">
-  <div class="text">
-    <p>Мы используем файлы cookies для улучшения работы сайта и анализа вашего поведения.</p>
-    <small>Продолжая использовать сайт, вы соглашаетесь с нашей <a href="#" id="cookiePrivacyLink" style="color:var(--accent);text-decoration:underline;cursor:pointer">политикой конфиденциальности</a></small>
-  </div>
-  <div class="actions">
-    <button class="btn btn-b" id="cookieDecline">Только необходимые</button>
-    <button class="btn btn-a" id="cookieAccept">Принять все</button>
-  </div>
-</div>
-
-<!-- ============ PRIVACY MODAL ============ -->
-<div class="modal-overlay" id="privacyModal">
-  <div class="modal" style="position:relative">
-    <button class="close" onclick="document.getElementById('privacyModal').classList.remove('active')">✕</button>
-    <h2>Политика конфиденциальности</h2>
-    
-    <p><strong>Дата последнего обновления:</strong> 5 августа 2026 г.</p>
-    
-    <h3>1. Общая информация</h3>
-    <p>Сайт pxl_head (далее — «Сайт») обрабатывает персональные данные в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О защите персональных данных» (ФЗ-152).</p>
-    <p>Администратор данных: pxl_head (самозанятый). Контакты: <a href="mailto:pxl_head@internet.ru" style="color:var(--accent)">pxl_head@internet.ru</a>, Telegram <a href="https://t.me/pxl_head" style="color:var(--accent)">@pxl_head</a></p>
-    
-    <h3>2. Какие данные мы собираем</h3>
-    <ul>
-      <li><strong>При заполнении контактной формы:</strong> имя, информация о проекте, выбранный бюджет, текстовые описания. Текст заявки копируется на ваше устройство и отправляется вами в Telegram — на наших серверах он не хранится.</li>
-      <li><strong>Автоматически:</strong> IP-адрес, тип браузера, время посещения, страницы для улучшения аналитики и удобства Сайта.</li>
-      <li><strong>Cookies:</strong> файлы, которые сохраняют ваши предпочтения и историю посещений.</li>
-    </ul>
-    
-    <h3>3. Цель обработки данных</h3>
-    <ul>
-      <li>Ответ на вашу заявку через контактную форму</li>
-      <li>Аналитика: улучшение удобства Сайта</li>
-      <li>Персонализация контента</li>
-      <li>Соответствие требованиям закона</li>
-    </ul>
-    
-    <h3>4. Cookies на Сайте</h3>
-    <p><strong>Необходимые cookies:</strong> помогают работать основным функциям (формы, навигация). Удалять их нельзя.</p>
-    <p><strong>Аналитические cookies:</strong> помогают понять, как люди используют Сайт. Отключаются в настройках браузера.</p>
-    
-    <h3>5. Передача данных третьим лицам</h3>
-    <p>Заявка из формы отправляется вами напрямую в Telegram и обрабатывается по правилам этого мессенджера. Мы не передаём данные рекламным сетям без вашего согласия.</p>
-    
-    <h3>6. Сроки хранения</h3>
-    <ul>
-      <li>Данные из контактной формы: до разрешения вашей задачи + 3 года (по налоговому законодательству)</li>
-      <li>Cookies: сессионные (до закрытия браузера) или долгосрочные (до 1 года)</li>
-    </ul>
-    
-    <h3>7. Ваши права</h3>
-    <ul>
-      <li>Право доступа: узнать, какие данные мы собрали о вас</li>
-      <li>Право на удаление: попросить стереть ваши данные</li>
-      <li>Право на отказ: не согласиться с обработкой</li>
-      <li>Право на исправление: изменить неверные данные</li>
-    </ul>
-    <p>Для реализации прав: <a href="mailto:pxl_head@internet.ru" style="color:var(--accent)">pxl_head@internet.ru</a> с пометкой «ПДн» или Telegram <a href="https://t.me/pxl_head" style="color:var(--accent)">@pxl_head</a>.</p>
-    
-    <h3>8. Безопасность</h3>
-    <p>Мы используем стандартные меры защиты (HTTPS, шифрование). Однако гарантировать полную безопасность при передаче через интернет невозможно.</p>
-    
-    <h3>9. Изменения политики</h3>
-    <p>Мы можем обновить эту политику. Важные изменения будут опубликованы на Сайте.</p>
-    
-    <h3>10. Контакты</h3>
-    <p>Вопросы о персональных данных: <a href="mailto:pxl_head@internet.ru" style="color:var(--accent)">pxl_head@internet.ru</a></p>
-    <p>Telegram: <a href="https://t.me/pxl_head" style="color:var(--accent)">@pxl_head</a></p>
-  </div>
-</div>
-
-<!-- ============ LIGHTBOX ============ -->
-<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии">
-  <button class="lb-close" id="lbClose" aria-label="Закрыть">✕</button>
-  <img id="lbImg" alt="">
-  <div class="lb-meta"><span id="lbTitle"></span><span class="num" id="lbCount"></span></div>
-  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Предыдущее фото">←</button>
-  <button class="lb-btn lb-next" id="lbNext" aria-label="Следующее фото">→</button>
-</div>
-
-<script>
-/* preloader: timecode counter — быстрый, пропускается при повторном визите в сессии */
-(function(){
-  var pre=document.getElementById('pre'),el=document.querySelector('#pre .tc');
-  try{if(sessionStorage.getItem('px_seen')){pre.classList.add('done');return}}catch(e){}
-  try{sessionStorage.setItem('px_seen','1')}catch(e){}
-  document.body.style.overflow='hidden';
-  function finish(){pre.classList.add('done');document.body.style.overflow=''}
-  var f=0;
-  var t=setInterval(function(){
-    f+=3;if(f>99){f=99}
-    var s=String(Math.floor(f/25)).padStart(2,'0'),fr=String(f%25).padStart(2,'0'),ms=String(Math.floor(f/25/60)).padStart(2,'0');
-    el.innerHTML='00:'+ms+':'+s+'<em>:'+fr+'</em>';
-    if(f>=99){clearInterval(t);setTimeout(finish,300)}
-  },14);
-  setTimeout(function(){clearInterval(t);finish()},2500); /* страховка от зависания */
-})();
-
-/* pause other videos when one starts */
-document.querySelectorAll('video[controls]').forEach(function(v){
-  v.addEventListener('play',function(){
-    document.querySelectorAll('video[controls]').forEach(function(o){if(o!==v&&!o.paused)o.pause()});
-  });
-});
-
-/* reveal on scroll */
-(function(){
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
-  },{threshold:.12});
-  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
-})();
-
-/* mobile nav toggle */
-(function(){
-  var b=document.getElementById('burger'),m=document.getElementById('mnav');
-  if(!b||!m)return;
-  function toggle(open){
-    var willOpen=(typeof open==='boolean')?open:!m.classList.contains('open');
-    m.classList.toggle('open',willOpen);
-    b.classList.toggle('open',willOpen);
-    b.setAttribute('aria-expanded',String(willOpen));
-    document.body.style.overflow=willOpen?'hidden':'';
-  }
-  b.addEventListener('click',function(){toggle()});
-  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){toggle(false)})});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')toggle(false)});
-})();
-
-/* ============ PORTFOLIO LOADER ============
-   Рендер по манифесту реальных файлов (portfolio-manifest.json).
-   Манифест пересобирается скриптом build-portfolio-manifest.py. */
-(function(){
-  function renderPortfolio(projects) {
-    const container = document.getElementById('portfolioContainer');
-    if (!container) return;
-
-    projects.forEach(function(p) {
-      const proj = document.createElement('div');
-      proj.className = 'proj rv';
-
-      const head = document.createElement('div');
-      head.className = 'head';
-      head.innerHTML = '<h3>' + p.title + '<span>' + p.cat + '</span></h3>' +
-        '<span class="count">' + p.files.length + ' фото</span>';
-      proj.appendChild(head);
-
-      const prow = document.createElement('div');
-      prow.className = 'prow';
-
-      p.files.forEach(function(name, i) {
-        const img = document.createElement('img');
-        img.loading = 'lazy';
-        img.decoding = 'async';
-        img.alt = p.title + ' — кадр ' + (i + 1);
-        img.src = encodeURI(p.dir + '/' + name);
-        img.onerror = function() { this.style.display = 'none'; };
-        prow.appendChild(img);
-      });
-
-      proj.appendChild(prow);
-      container.appendChild(proj);
-    });
-
-    // Re-run reveal on scroll
-    const io = new IntersectionObserver(function(es) {
-      es.forEach(function(e) {
-        if (e.isIntersecting) {
-          e.target.classList.add('in');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: .12 });
-    document.querySelectorAll('.proj').forEach(function(el) {
-      io.observe(el);
-    });
-  }
-
-  function loadPortfolio() {
-    fetch('portfolio-manifest.json')
-      .then(function(r) { return r.ok ? r.json() : Promise.reject(r.status); })
-      .then(renderPortfolio)
-      .catch(function(err) { console.warn('Портфолио: манифест не загружен', err); });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadPortfolio);
-  } else {
-    loadPortfolio();
-  }
-})();
-
-
-(function(){
-  const COOKIE_CONSENT_KEY = 'cookie_consent_v1';
-  const PRIVACY_LINK = document.getElementById('privacyLink');
-  const COOKIE_PRIVACY_LINK = document.getElementById('cookiePrivacyLink');
-  const COOKIE_BANNER = document.getElementById('cookieBanner');
-  const PRIVACY_MODAL = document.getElementById('privacyModal');
-  const COOKIE_ACCEPT = document.getElementById('cookieAccept');
-  const COOKIE_DECLINE = document.getElementById('cookieDecline');
-
-  // Открыть политику конфиденциальности
-  function openPrivacy() {
-    PRIVACY_MODAL.classList.add('active');
-  }
-
-  // Закрыть при клике на оверлей
-  PRIVACY_MODAL.addEventListener('click', function(e) {
-    if (e.target === this) {
-      this.classList.remove('active');
-    }
-  });
-
-  // Закрыть по Escape
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      PRIVACY_MODAL.classList.remove('active');
-    }
-  });
-
-  // Установить cookies согласие
-  function setCookieConsent(accepted) {
-    const data = {
-      accepted: accepted,
-      date: new Date().toISOString(),
-      version: '1'
-    };
-    localStorage.setItem(COOKIE_CONSENT_KEY, JSON.stringify(data));
-    COOKIE_BANNER.classList.add('hidden');
-    
-    if (accepted) {
-      // Загрузить аналитику только если пользователь согласился
-      loadAnalytics();
-    }
-  }
-
-  // Загрузить аналитику (например, Яндекс.Метрика)
-  function loadAnalytics() {
-    // Пример: Яндекс.Метрика
-    // window.ym(xxxxxxx, 'init', {...});
-    // Или Google Analytics v4
-    // window.gtag('consent', 'update', {'analytics_storage': 'granted'});
-    console.log('Analytics enabled by user consent');
-  }
-
-  // Проверить, согласился ли пользователь
-  function checkCookieConsent() {
-    const stored = localStorage.getItem(COOKIE_CONSENT_KEY);
-    if (!stored) {
-      COOKIE_BANNER.classList.remove('hidden');
-    } else {
-      COOKIE_BANNER.classList.add('hidden');
-      const data = JSON.parse(stored);
-      if (data.accepted) {
-        loadAnalytics();
-      }
-    }
-  }
-
-  // События
-  COOKIE_ACCEPT.addEventListener('click', () => setCookieConsent(true));
-  COOKIE_DECLINE.addEventListener('click', () => setCookieConsent(false));
-  PRIVACY_LINK.addEventListener('click', (e) => {
-    e.preventDefault();
-    openPrivacy();
-  });
-  COOKIE_PRIVACY_LINK.addEventListener('click', (e) => {
-    e.preventDefault();
-    openPrivacy();
-  });
-  document.getElementById('formPrivacyLink').addEventListener('click', (e) => {
-    e.preventDefault();
-    openPrivacy();
-  });
-
-  // Инициализировать при загрузке
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', checkCookieConsent);
-  } else {
-    checkCookieConsent();
-  }
-})();
-
-/* ============ LIGHTBOX ============ */
-(function(){
-  var lb=document.getElementById('lightbox'),img=document.getElementById('lbImg'),
-      title=document.getElementById('lbTitle'),count=document.getElementById('lbCount'),
-      btnClose=document.getElementById('lbClose'),btnPrev=document.getElementById('lbPrev'),
-      btnNext=document.getElementById('lbNext');
-  if(!lb)return;
-  var list=[],idx=0,projTitle='';
-
-  function show(i){
-    idx=(i+list.length)%list.length;
-    img.src=list[idx].src;
-    img.alt=list[idx].alt;
-    title.textContent=projTitle;
-    count.textContent=(idx+1)+' / '+list.length;
-    /* предзагрузка соседних кадров */
-    [idx-1,idx+1].forEach(function(n){
-      var k=(n+list.length)%list.length;
-      if(list[k]){var p=new Image();p.src=list[k].src}
-    });
-  }
-  function open(row,i,proj){
-    list=row;projTitle=proj;
-    lb.classList.add('open');
-    document.body.style.overflow='hidden';
-    show(i);
-    btnClose.focus();
-  }
-  function close(){
-    lb.classList.remove('open');
-    document.body.style.overflow='';
-  }
-
-  /* делегирование: клик по фото в любом фоторяду */
-  document.getElementById('portfolioContainer').addEventListener('click',function(e){
-    if(e.target.tagName!=='IMG')return;
-    var prow=e.target.closest('.prow');
-    var proj=e.target.closest('.proj');
-    var imgs=Array.prototype.slice.call(prow.querySelectorAll('img')).filter(function(im){return im.style.display!=='none'});
-    var titleEl=proj?proj.querySelector('h3'):null;
-    open(imgs,imgs.indexOf(e.target),titleEl?titleEl.childNodes[0].textContent:'');
-  });
-
-  btnClose.addEventListener('click',close);
-  btnPrev.addEventListener('click',function(){show(idx-1)});
-  btnNext.addEventListener('click',function(){show(idx+1)});
-  lb.addEventListener('click',function(e){if(e.target===lb)close()});
-  document.addEventListener('keydown',function(e){
-    if(!lb.classList.contains('open'))return;
-    if(e.key==='Escape')close();
-    else if(e.key==='ArrowLeft')show(idx-1);
-    else if(e.key==='ArrowRight')show(idx+1);
-  });
-  /* свайпы */
-  var tx=0;
-  lb.addEventListener('touchstart',function(e){tx=e.changedTouches[0].clientX},{passive:true});
-  lb.addEventListener('touchend',function(e){
-    var dx=e.changedTouches[0].clientX-tx;
-    if(Math.abs(dx)>40){dx>0?show(idx-1):show(idx+1)}
-  },{passive:true});
-})();
-
-/* ============ FORM → TELEGRAM ============ */
-// Собирает заявку, копирует в буфер и открывает Telegram-чат.
-// Почты на сайте нет — когда появится отдельная, можно вернуть mailto.
-document.getElementById('brief').addEventListener('submit',function(e){
-  e.preventDefault();
-  var d=new FormData(e.target);
-  var body='Заявка с сайта pxl_head\n'
-    +'Имя: '+(d.get('name')||'')+'\n'
-    +'Задача: '+(d.get('what')||'')+'\n'
-    +'Бюджет: '+(d.get('budget')||'не указан')+'\n'
-    +'Описание: '+(d.get('msg')||'');
-  var hint=document.getElementById('formHint');
-  function openTG(){ window.open('https://t.me/pxl_head','_blank','noopener'); }
-  function fallback(){
-    hint.textContent='Не получилось скопировать автоматически — напишите в Telegram: @pxl_head';
-    openTG();
-  }
-  if(navigator.clipboard&&navigator.clipboard.writeText){
-    navigator.clipboard.writeText(body).then(function(){
-      hint.textContent='Заявка скопирована. Открылся Telegram — вставьте текст (Ctrl/Cmd+V) и отправьте.';
-      openTG();
-    },fallback);
-  }else{
-    fallback();
-  }
-});
-</script>
+</main>
+<dialog id="gallery" aria-labelledby="gallery-title"><div class="dialog-toolbar"><button id="gallery-close" autofocus>← Все кейсы</button><span id="gallery-total"></span></div><header id="gallery-head"><h2 id="gallery-title"></h2><div id="gallery-group"></div></header><div id="gallery-grid"></div><button id="gallery-next" type="button"><span id="gallery-next-label">Следующий кейс</span><span aria-hidden="true">→</span></button></dialog>
+<dialog id="viewer" aria-label="Просмотр фотографии"><button id="viewer-close" autofocus>Закрыть ×</button><img id="viewer-img" alt=""><button id="view-prev" class="frame-arrow" aria-label="Предыдущее фото">←</button><button id="view-next" class="frame-arrow" aria-label="Следующее фото">→</button><div id="image-status" role="status"></div><div id="counter" aria-live="polite"></div></dialog>
+<noscript><p>Для просмотра фотокейсов включите JavaScript. Связаться: <a href="mailto:pxl_head@internet.ru">pxl_head@internet.ru</a>.</p></noscript>
 </body>
 </html>

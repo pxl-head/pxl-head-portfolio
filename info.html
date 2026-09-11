@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Контакты — pxl_head</title>
+<meta http-equiv="refresh" content="0;url=index.html#contacts">
+<link rel="icon" type="image/png" href="web-media/favicon.png">
+<link rel="apple-touch-icon" href="web-media/apple-touch-icon.png">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { background:#fff; }
+  body { background:#fff; color:#000; font-family:system-ui, -apple-system, "Segoe UI", sans-serif;
+         font-size:18px; letter-spacing:0.05em; line-height:1.7; }
+  a { color:inherit; }
+  a:hover { opacity:0.6; }
+
+  .corner { position:fixed; z-index:10; font-size:14px; color:#fff; mix-blend-mode:difference; }
+  .tl { top:24px; left:26px; }
+  .tr { top:22px; right:26px; display:flex; align-items:center; gap:12px;
+        font-size:20px; letter-spacing:0.06em; }
+  .tr .mark { height:26px; width:auto; display:block; filter:invert(1); }
+
+  main { max-width:640px; margin:0 auto; padding:18vh 26px 20vh; }
+  .eyebrow { font-size:13px; letter-spacing:0.14em; text-transform:uppercase; opacity:0.5; margin-bottom:26px; }
+  h1 { font-weight:500;
+       font-size:clamp(40px, 6.4vw, 68px); line-height:1.08; letter-spacing:0.01em; margin-bottom:56px; }
+  p { margin-bottom:26px; }
+  .contacts { margin-top:72px; list-style:none; }
+  .contacts li { display:flex; justify-content:space-between; gap:24px; padding:14px 0; }
+  .contacts li + li { border-top:1px solid rgba(0,0,0,0.12); }
+  .contacts .k { opacity:0.5; font-size:15px; }
+</style>
+</head>
+<body>
+
+<div class="corner tl"><a href="index.html">Галерея</a></div>
+<div class="corner tr"><a href="index.html">pxl_head</a><img class="mark" src="web-media/logo-512.webp" alt="логотип pxl_head"></div>
+
+<main>
+  <div class="eyebrow">Инфо</div>
+  <h1>Фотограф,<br>который снимает<br>как дышит</h1>
+
+  <p>Меня зовут pxl_head. Я фотограф и видеограф из Москвы. Снимаю показы и бекстейджи,
+     каталоги для брендов, портреты в городе и предметку — всё, где важен свет
+     и вовремя нажатая кнопка.</p>
+
+  <p>Работал с Московской неделей моды, брендами O'Soiel, Atomickitten, Angel Bless,
+     Fabrikator. Люблю, когда в кадре есть воздух, а в процессе — доверие:
+     лучшие фотографии получаются между постановками.</p>
+
+  <p>Галерея на главной собрана из отдельных проектов. Открывайте серии и пишите, чтобы обсудить съёмку.</p>
+
+  <ul class="contacts">
+    <li><span class="k">Почта</span> <a href="mailto:pxl_head@internet.ru">pxl_head@internet.ru</a></li>
+    <li><span class="k">Телеграм</span> <a href="https://t.me/pxl_head" rel="noopener">t.me/pxl_head</a></li>
+    <li><span class="k">Город</span> <span>Москва</span></li>
+  </ul>
+</main>
+
+</body>
+</html>

@@ -1,556 +1,2404 @@
-[
-  {
-    "title": "Московская неделя моды",
-    "cat": "мода · репортаж",
-    "dir": "Портфолио/Фото/Москвоская неделя моды",
-    "files": [
-      "0446.jpg",
-      "0451.jpg",
-      "0467.jpg",
-      "0496.jpg",
-      "0537.jpg",
-      "0544.jpg",
-      "0566.jpg",
-      "0570.jpg",
-      "0576.jpg",
-      "0610.jpg",
-      "0639.jpg",
-      "0644.jpg",
-      "0647.jpg",
-      "0694.jpg",
-      "0704.jpg",
-      "0711.jpg",
-      "0743.jpg",
-      "0757.jpg",
-      "0782.jpg",
-      "0792.jpg",
-      "0878.jpg",
-      "0906.jpg",
-      "0908.jpg",
-      "0909.jpg",
-      "0948.jpg",
-      "0957.jpg",
-      "1004.jpg",
-      "1031.jpg",
-      "1040.jpg",
-      "1048.jpg",
-      "1063.jpg",
-      "1076.jpg",
-      "1161.jpg",
-      "1166.jpg",
-      "1200.jpg",
-      "1212.jpg",
-      "1240.jpg",
-      "1274.jpg",
-      "1277.jpg",
-      "1415.jpg",
-      "1446.jpg",
-      "1463.jpg",
-      "1468.jpg",
-      "1496.jpg",
-      "1538.jpg",
-      "1567.jpg",
-      "1593.jpg",
-      "1677.jpg",
-      "1717.jpg",
-      "2030.jpg",
-      "2034.jpg"
-    ]
-  },
-  {
-    "title": "O'Soiel — каталог и обложка",
-    "cat": "бренд · каталог",
-    "dir": "Портфолио/Фото/Проекты O'Soiel/Каталог + обложка",
-    "files": [
-      "_MG_1509-compressed.jpg",
-      "_MG_1514-compressed.jpg",
-      "_MG_1519-compressed.jpg",
-      "_MG_1558-compressed.jpg",
-      "_MG_1569-compressed.jpg",
-      "_MG_1592-compressed.jpg",
-      "_MG_1595-редакт-compressed.jpg",
-      "_MG_1637-compressed.jpg",
-      "_MG_1667-редакт-compressed.jpg",
-      "_MG_1670-compressed.jpg",
-      "_MG_1692-compressed.jpg",
-      "_MG_1701-редакт-compressed.jpg",
-      "_MG_1744-редакт-compressed.jpg",
-      "_MG_1767-compressed.jpg",
-      "_MG_1768-compressed.jpg",
-      "_MG_1802-compressed.jpg",
-      "_MG_1805-compressed.jpg",
-      "_MG_1842-compressed.jpg",
-      "_MG_1869-редакт-compressed.jpg",
-      "_MG_1881-редакт-compressed.jpg",
-      "_MG_1897-compressed.jpg",
-      "_MG_1904-compressed.jpg",
-      "_MG_1961-редакт-compressed.jpg",
-      "_MG_1965-compressed.jpg",
-      "_MG_1971-compressed.jpg",
-      "_MG_1989-compressed.jpg",
-      "_MG_2010-compressed.jpg",
-      "_MG_2023-compressed.jpg",
-      "_MG_2052-compressed.jpg",
-      "_MG_2061-compressed.jpg",
-      "_MG_2066-compressed.jpg",
-      "_MG_2097-compressed.jpg",
-      "_MG_2106-compressed.jpg",
-      "_MG_2152-compressed.jpg",
-      "_MG_2171-compressed.jpg",
-      "_MG_2184-compressed.jpg",
-      "_MG_2210-compressed.jpg",
-      "_MG_2212-compressed.jpg",
-      "_MG_2354-редакт-compressed.jpg",
-      "_MG_2361-редакт-compressed.jpg",
-      "_MG_2384-compressed.jpg"
-    ]
-  },
-  {
-    "title": "O'Soiel — показ Fabrikator",
-    "cat": "мода · репортаж",
-    "dir": "Портфолио/Фото/Проекты O'Soiel/Показ FABRIKATOR",
-    "files": [
-      "_MG_0655-compressed.jpg",
-      "_MG_0658-compressed.jpg",
-      "_MG_0659-compressed.jpg",
-      "_MG_0663-compressed.jpg",
-      "_MG_0664-compressed.jpg",
-      "_MG_0665-compressed.jpg",
-      "_MG_0667-compressed.jpg",
-      "_MG_0668-compressed.jpg",
-      "_MG_0670-compressed.jpg",
-      "_MG_0671-compressed.jpg",
-      "_MG_0674-compressed.jpg",
-      "_MG_0675-compressed.jpg",
-      "_MG_0676-compressed.jpg",
-      "_MG_0682-compressed.jpg",
-      "_MG_0683-compressed.jpg",
-      "_MG_0684-compressed.jpg",
-      "_MG_0686-compressed.jpg",
-      "_MG_0688-compressed.jpg",
-      "_MG_0689-compressed.jpg",
-      "_MG_0695-compressed.jpg",
-      "_MG_0696-compressed.jpg",
-      "_MG_0697-compressed.jpg",
-      "_MG_0698-compressed.jpg",
-      "_MG_0700-compressed.jpg",
-      "_MG_0701-compressed.jpg",
-      "_MG_0704-compressed.jpg",
-      "_MG_0707-compressed.jpg",
-      "_MG_0710-compressed.jpg",
-      "_MG_0712-compressed.jpg",
-      "_MG_0713-compressed.jpg",
-      "_MG_0714-compressed.jpg",
-      "_MG_0715-compressed.jpg",
-      "_MG_0720-compressed.jpg",
-      "_MG_0721-compressed.jpg",
-      "_MG_0727-compressed.jpg"
-    ]
-  },
-  {
-    "title": "O'Soiel — бекстейдж",
-    "cat": "бренд · бекстейдж",
-    "dir": "Портфолио/Фото/Проекты O'Soiel/Фотосессия бекстейдж",
-    "files": [
-      "_MG_9713-compressed.jpg",
-      "_MG_9717-compressed.jpg",
-      "_MG_9719-compressed.jpg",
-      "_MG_9722-compressed.jpg",
-      "_MG_9731-compressed.jpg",
-      "_MG_9733-compressed.jpg",
-      "_MG_9735-compressed.jpg",
-      "_MG_9739-compressed.jpg",
-      "_MG_9741-compressed.jpg",
-      "_MG_9743-compressed.jpg",
-      "_MG_9744-compressed.jpg",
-      "_MG_9745-compressed.jpg",
-      "_MG_9746-compressed.jpg",
-      "_MG_9749-compressed.jpg",
-      "_MG_9751-compressed.jpg",
-      "_MG_9758-compressed.jpg",
-      "_MG_9759-compressed.jpg",
-      "_MG_9765-compressed.jpg",
-      "_MG_9768-compressed.jpg",
-      "_MG_9826-compressed.jpg",
-      "_MG_9855-compressed.jpg",
-      "_MG_9858-compressed.jpg",
-      "_MG_9860-compressed.jpg",
-      "_MG_9861-compressed.jpg",
-      "_MG_9863-compressed.jpg",
-      "_MG_9869-compressed.jpg",
-      "_MG_9871-compressed.jpg",
-      "_MG_9883-compressed.jpg",
-      "_MG_9884-compressed.jpg",
-      "_MG_9890-compressed.jpg",
-      "_MG_9897-compressed.jpg",
-      "_MG_9918-compressed.jpg",
-      "_MG_9919-compressed.jpg",
-      "_MG_9935-compressed.jpg",
-      "_MG_9936-compressed.jpg",
-      "_MG_9937-compressed.jpg",
-      "_MG_9940-compressed.jpg",
-      "_MG_9945-compressed.jpg"
-    ]
-  },
-  {
-    "title": "Atomickitten — SKINS",
-    "cat": "бренд · имиджевая",
-    "dir": "Портфолио/Фото/Проекты ATOMICKITTEN/Проект SKINS",
-    "files": [
-      "_MG_5145-compressed.jpg",
-      "_MG_5150-compressed.jpg",
-      "_MG_5157-compressed.jpg",
-      "_MG_5158-compressed.jpg",
-      "_MG_5159-compressed.jpg",
-      "_MG_5163-compressed.jpg",
-      "_MG_5164-compressed.jpg",
-      "_MG_5168-compressed.jpg",
-      "_MG_5176-compressed.jpg",
-      "_MG_5180-compressed.jpg",
-      "_MG_5217-compressed.jpg",
-      "_MG_5229-compressed.jpg",
-      "_MG_5247-compressed.jpg",
-      "_MG_5249-compressed.jpg",
-      "_MG_5256-compressed.jpg",
-      "_MG_5259-compressed.jpg",
-      "_MG_5260-compressed.jpg",
-      "_MG_5261-compressed.jpg",
-      "_MG_5263-compressed.jpg",
-      "_MG_5264-compressed.jpg",
-      "_MG_5268-compressed.jpg",
-      "_MG_5269 2-compressed.jpg",
-      "_MG_5269-compressed.jpg",
-      "_MG_5270-compressed.jpg",
-      "_MG_5272-compressed.jpg",
-      "_MG_5275-compressed.jpg",
-      "_MG_5279-compressed.jpg",
-      "_MG_5280-compressed.jpg",
-      "_MG_5281-compressed.jpg",
-      "_MG_5288-compressed.jpg",
-      "_MG_5340-compressed.jpg",
-      "_MG_5384-compressed.jpg",
-      "_MG_5389-compressed.jpg",
-      "_MG_5442-compressed.jpg",
-      "_MG_5444-compressed.jpg"
-    ]
-  },
-  {
-    "title": "Atomickitten — Angel Bless",
-    "cat": "бренд · контент",
-    "dir": "Портфолио/Фото/Проекты ATOMICKITTEN/Проект в AGELBLESS",
-    "files": [
-      "_MG_0221-compressed.jpg",
-      "_MG_0222-compressed.jpg",
-      "_MG_0223-compressed.jpg",
-      "_MG_0224-compressed.jpg",
-      "_MG_0225-compressed.jpg",
-      "_MG_0226-compressed.jpg",
-      "_MG_0227-compressed.jpg",
-      "_MG_0228-compressed.jpg",
-      "_MG_0229-compressed.jpg",
-      "_MG_0230-compressed.jpg",
-      "_MG_0231-compressed.jpg",
-      "_MG_0232-compressed.jpg",
-      "_MG_0233-compressed.jpg",
-      "_MG_0234-compressed.jpg",
-      "_MG_0235-compressed.jpg",
-      "_MG_0236-compressed.jpg",
-      "_MG_0237-compressed.jpg",
-      "_MG_0238-compressed.jpg",
-      "_MG_0239-compressed.jpg",
-      "_MG_0240-compressed.jpg",
-      "_MG_0241-compressed.jpg",
-      "_MG_0242-compressed.jpg",
-      "_MG_0243-compressed.jpg",
-      "_MG_0252-compressed.jpg",
-      "_MG_0253-compressed.jpg",
-      "_MG_0256-compressed.jpg",
-      "_MG_0257-compressed.jpg",
-      "_MG_0259-compressed.jpg",
-      "_MG_0313-compressed.jpg",
-      "_MG_0315-compressed.jpg",
-      "_MG_0316-compressed.jpg",
-      "_MG_0317-compressed.jpg",
-      "_MG_0318-compressed.jpg",
-      "_MG_0326-compressed.jpg"
-    ]
-  },
-  {
-    "title": "Angel Bless с блогерами",
-    "cat": "бренд · контент",
-    "dir": "Портфолио/Фото/Съемка энджел блесс с блогерами",
-    "files": [
-      "_MG_0007-compressed.jpg",
-      "_MG_0014-compressed.jpg",
-      "_MG_0018-compressed.jpg",
-      "_MG_0020-compressed.jpg",
-      "_MG_0023-compressed.jpg",
-      "_MG_0024-compressed.jpg",
-      "_MG_0047-compressed.jpg",
-      "_MG_0051-compressed.jpg",
-      "_MG_0077-compressed.jpg",
-      "_MG_0092-compressed.jpg",
-      "_MG_0103-compressed.jpg",
-      "_MG_0112-compressed.jpg",
-      "_MG_0156-compressed.jpg",
-      "_MG_0167-compressed.jpg",
-      "_MG_0170-compressed.jpg",
-      "_MG_0187-compressed.jpg",
-      "_MG_0203-compressed.jpg",
-      "_MG_0228-compressed.jpg",
-      "_MG_0232-compressed.jpg",
-      "_MG_0247-compressed.jpg",
-      "_MG_0253-compressed.jpg",
-      "_MG_0256-compressed.jpg",
-      "_MG_0261-compressed.jpg",
-      "_MG_0285-compressed.jpg",
-      "_MG_0289-compressed.jpg",
-      "_MG_0319-compressed.jpg",
-      "_MG_0333-compressed.jpg",
-      "_MG_0380-compressed.jpg",
-      "_MG_0397-compressed.jpg",
-      "_MG_0401-compressed.jpg",
-      "_MG_0450-compressed.jpg",
-      "_MG_9997-compressed.jpg"
-    ]
-  },
-  {
-    "title": "«Хогвартс»",
-    "cat": "арт-проект · костюм",
-    "dir": "Портфолио/Фото/Фотосесия \"Хогвартс\"",
-    "files": [
-      "_MG_0002-compressed.jpg",
-      "_MG_0006-compressed.jpg",
-      "_MG_0009-compressed.jpg",
-      "_MG_0010-compressed.jpg",
-      "_MG_0011-compressed.jpg",
-      "_MG_0019-compressed.jpg",
-      "_MG_0022-compressed.jpg",
-      "_MG_0073-compressed.jpg",
-      "_MG_0078-compressed.jpg",
-      "_MG_0079-compressed.jpg",
-      "_MG_0087-compressed.jpg",
-      "_MG_0090-compressed.jpg",
-      "_MG_0096-compressed.jpg",
-      "_MG_9801-compressed.jpg",
-      "_MG_9803-compressed.jpg",
-      "_MG_9805-compressed.jpg",
-      "_MG_9808-compressed.jpg",
-      "_MG_9811-compressed.jpg",
-      "_MG_9812-compressed.jpg",
-      "_MG_9813-compressed.jpg",
-      "_MG_9814-compressed.jpg",
-      "_MG_9816-compressed.jpg",
-      "_MG_9818-compressed.jpg",
-      "_MG_9822-compressed.jpg",
-      "_MG_9823-compressed.jpg",
-      "_MG_9828-compressed.jpg",
-      "_MG_9829-compressed.jpg",
-      "_MG_9830-compressed.jpg",
-      "_MG_9831-compressed.jpg",
-      "_MG_9833-compressed.jpg",
-      "_MG_9834-compressed.jpg",
-      "_MG_9835-compressed.jpg",
-      "_MG_9837-compressed.jpg",
-      "_MG_9838-compressed.jpg",
-      "_MG_9839-compressed.jpg",
-      "_MG_9841-compressed.jpg",
-      "_MG_9842-compressed.jpg",
-      "_MG_9844-compressed.jpg",
-      "_MG_9984-compressed.jpg",
-      "_MG_9985-compressed.jpg",
-      "_MG_9986-compressed.jpg",
-      "_MG_9993-compressed.jpg",
-      "_MG_9994-compressed.jpg",
-      "_MG_9996-compressed.jpg"
-    ]
-  },
-  {
-    "title": "Предметная съёмка чокеров",
-    "cat": "предметка · e-commerce",
-    "dir": "Портфолио/Фото/Предметная съемка чокеров",
-    "files": [
-      "_MG_2457-compressed.jpg",
-      "_MG_2466-compressed.jpg",
-      "_MG_2469-compressed.jpg",
-      "_MG_2487-compressed.jpg",
-      "_MG_2492-compressed.jpg",
-      "_MG_2499-compressed.jpg",
-      "_MG_2504-compressed.jpg",
-      "_MG_2509-compressed.jpg",
-      "_MG_2531-compressed.jpg",
-      "_MG_2566-compressed.jpg",
-      "_MG_2569-compressed.jpg",
-      "_MG_2572-compressed.jpg",
-      "_MG_2574-compressed.jpg",
-      "_MG_2587-compressed.jpg",
-      "_MG_2590-compressed.jpg",
-      "_MG_2594-compressed.jpg",
-      "_MG_2596-compressed.jpg",
-      "Семка_Чекеры_-010-compressed.jpg",
-      "Семка_Чекеры_-013-2-compressed.jpg",
-      "Семка_Чекеры_-022-compressed.jpg",
-      "Семка_Чекеры_-055-compressed.jpg",
-      "Семка_Чекеры_-062-compressed.jpg",
-      "Семка_Чекеры_-081-compressed.jpg",
-      "Семка_Чекеры_-086-2-compressed.jpg",
-      "Семка_Чекеры_-093-compressed.jpg",
-      "Семка_Чекеры_-100-compressed.jpg",
-      "Семка_Чекеры_-102-compressed.jpg",
-      "Семка_Чекеры_-112-compressed.jpg",
-      "Семка_Чекеры_-116-compressed.jpg",
-      "Семка_Чекеры_-125-compressed.jpg",
-      "Семка_Чекеры_-129-compressed.jpg",
-      "Семка_Чекеры_-137-compressed.jpg",
-      "Семка_Чекеры_-144-compressed.jpg",
-      "Семка_Чекеры_-152-compressed.jpg",
-      "Семка_Чекеры_-157-compressed.jpg",
-      "Семка_Чекеры_-193-compressed.jpg",
-      "Семка_Чекеры_-207-compressed.jpg"
-    ]
-  },
-  {
-    "title": "Мастеркласс шары",
-    "cat": "контент · мастеркласс",
-    "dir": "Портфолио/Фото/Мастеркласс шары",
-    "files": [
-      "_MG_1056-compressed.jpg",
-      "_MG_1121-compressed.jpg",
-      "_MG_1124-compressed.jpg",
-      "_MG_1129-compressed.jpg",
-      "_MG_9337-compressed.jpg",
-      "_MG_9350-compressed.jpg",
-      "_MG_9354-compressed.jpg",
-      "_MG_9358-compressed.jpg",
-      "_MG_9365-compressed.jpg",
-      "_MG_9373-compressed.jpg",
-      "_MG_9374-compressed.jpg",
-      "_MG_9407-compressed.jpg",
-      "_MG_9420-compressed.jpg",
-      "_MG_9459-compressed.jpg",
-      "_MG_9474-compressed.jpg",
-      "_MG_9505-compressed.jpg",
-      "_MG_9514-compressed.jpg",
-      "_MG_9516-compressed.jpg",
-      "_MG_9526-compressed.jpg",
-      "_MG_9540-compressed.jpg",
-      "_MG_9575-compressed.jpg",
-      "_MG_9636-compressed.jpg",
-      "_MG_9675-compressed.jpg",
-      "_MG_9679-compressed.jpg",
-      "_MG_9681-compressed.jpg",
-      "_MG_9682-compressed.jpg",
-      "_MG_9685-compressed.jpg",
-      "_MG_9689-compressed.jpg",
-      "_MG_9695-compressed.jpg",
-      "_MG_9698-compressed.jpg",
-      "_MG_9700-compressed.jpg",
-      "_MG_9701-compressed.jpg",
-      "_MG_9713-compressed.jpg",
-      "_MG_9716-compressed.jpg"
-    ]
-  },
-  {
-    "title": "Фотосессии Piratova",
-    "cat": "портрет · съёмка",
-    "dir": "Портфолио/Фото/Фотосессии piratova",
-    "files": [
-      "_MG_5070-compressed.jpg",
-      "_MG_5464-compressed.jpg",
-      "_MG_5564-compressed.jpg",
-      "_MG_5565-compressed.jpg",
-      "_MG_5566-compressed.jpg",
-      "_MG_5567-compressed.jpg",
-      "_MG_5568-compressed.jpg",
-      "_MG_5569-compressed.jpg",
-      "_MG_5570-compressed.jpg",
-      "_MG_5574-compressed.jpg",
-      "_MG_5575-compressed.jpg",
-      "_MG_5576-compressed.jpg",
-      "_MG_5582-compressed.jpg",
-      "_MG_5583-compressed.jpg",
-      "_MG_5584-compressed.jpg",
-      "_MG_5585-compressed.jpg",
-      "_MG_5586-compressed.jpg",
-      "_MG_5587-compressed.jpg",
-      "_MG_7431-compressed.jpg",
-      "_MG_7434-compressed.jpg",
-      "_MG_7437-compressed.jpg",
-      "_MG_7441-compressed.jpg"
-    ]
-  },
-  {
-    "title": "Съёмка в центре",
-    "cat": "портрет · город",
-    "dir": "Портфолио/Фото/Фотосессия в центре ",
-    "files": [
-      "_MG_9819-compressed.jpg",
-      "_MG_9835 2-compressed.jpg",
-      "_MG_9838 2-compressed.jpg",
-      "_MG_9839 2-compressed.jpg",
-      "_MG_9842 2-compressed.jpg",
-      "_MG_9844 2-compressed.jpg",
-      "_MG_9850-compressed.jpg",
-      "_MG_9854-compressed.jpg",
-      "_MG_9874 2-compressed.jpg",
-      "_MG_9877 2-compressed.jpg",
-      "_MG_9880-compressed.jpg",
-      "_MG_9881-compressed.jpg",
-      "_MG_9882-compressed.jpg",
-      "_MG_9883 2-compressed.jpg",
-      "_MG_9887-compressed.jpg",
-      "_MG_9898-compressed.jpg",
-      "_MG_9899 2-compressed.jpg",
-      "_MG_9933 2-compressed.jpg",
-      "_MG_9935 2-compressed.jpg",
-      "_MG_9937 2-compressed.jpg",
-      "_MG_9938-compressed.jpg",
-      "_MG_9940 2-compressed.jpg"
-    ]
-  },
-  {
-    "title": "Съёмка в СитиМоле",
-    "cat": "портрет · город",
-    "dir": "Портфолио/Фото/Съемка в СитиМОЛЕ",
-    "files": [
-      "_MG_9447-compressed.jpg",
-      "_MG_9456-compressed.jpg",
-      "_MG_9464-compressed.jpg",
-      "_MG_9489-compressed.jpg",
-      "_MG_9504-compressed.jpg",
-      "_MG_9521-compressed.jpg",
-      "_MG_9533-compressed.jpg",
-      "_MG_9549-compressed.jpg",
-      "_MG_9566-compressed.jpg",
-      "_MG_9571-compressed.jpg",
-      "_MG_9574-compressed.jpg",
-      "_MG_9576-compressed.jpg",
-      "_MG_9660-compressed.jpg",
-      "_MG_9682-compressed.jpg",
-      "_MG_9693-compressed.jpg",
-      "_MG_9732-compressed.jpg",
-      "_MG_9743-compressed.jpg"
-    ]
-  },
-  {
-    "title": "Показ Fabrikator",
-    "cat": "мода · репортаж",
-    "dir": "Портфолио/Фото/Показ Fabrikator",
-    "files": [
-      "_MG_0417-compressed.jpg",
-      "_MG_0435-compressed.jpg",
-      "_MG_0450-compressed.jpg",
-      "_MG_0456-compressed.jpg",
-      "_MG_0460-compressed.jpg",
-      "_MG_0485-compressed.jpg",
-      "_MG_0509-compressed.jpg",
-      "_MG_0517-compressed.jpg",
-      "_MG_0529-compressed.jpg",
-      "_MG_0553-compressed.jpg",
-      "_MG_0560-compressed.jpg",
-      "_MG_0596-compressed.jpg",
-      "_MG_0606-compressed.jpg",
-      "_MG_0609-compressed.jpg"
-    ]
-  }
-]
+{
+  "projects": [
+    {
+      "title": "Мастеркласс шары",
+      "group": "",
+      "dir": "web-media/Портфолио/Фото/Мастеркласс шары",
+      "files": [
+        "_MG_1056-compressed.webp",
+        "_MG_1121-compressed.webp",
+        "_MG_1124-compressed.webp",
+        "_MG_1129-compressed.webp",
+        "_MG_9337-compressed.webp",
+        "_MG_9350-compressed.webp",
+        "_MG_9354-compressed.webp",
+        "_MG_9358-compressed.webp",
+        "_MG_9365-compressed.webp",
+        "_MG_9373-compressed.webp",
+        "_MG_9374-compressed.webp",
+        "_MG_9407-compressed.webp",
+        "_MG_9420-compressed.webp",
+        "_MG_9459-compressed.webp",
+        "_MG_9474-compressed.webp",
+        "_MG_9505-compressed.webp",
+        "_MG_9514-compressed.webp",
+        "_MG_9516-compressed.webp",
+        "_MG_9526-compressed.webp",
+        "_MG_9540-compressed.webp",
+        "_MG_9575-compressed.webp",
+        "_MG_9636-compressed.webp",
+        "_MG_9675-compressed.webp",
+        "_MG_9679-compressed.webp",
+        "_MG_9681-compressed.webp",
+        "_MG_9682-compressed.webp",
+        "_MG_9685-compressed.webp",
+        "_MG_9689-compressed.webp",
+        "_MG_9695-compressed.webp",
+        "_MG_9698-compressed.webp",
+        "_MG_9700-compressed.webp",
+        "_MG_9701-compressed.webp",
+        "_MG_9713-compressed.webp",
+        "_MG_9716-compressed.webp"
+      ],
+      "dimensions": {
+        "_MG_1056-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_1121-compressed.webp": [
+          1600,
+          1083
+        ],
+        "_MG_1124-compressed.webp": [
+          1600,
+          1098
+        ],
+        "_MG_1129-compressed.webp": [
+          1600,
+          1115
+        ],
+        "_MG_9337-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9350-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9354-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9358-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9365-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9373-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9374-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9407-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9420-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9459-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9474-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9505-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9514-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9516-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9526-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9540-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9575-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9636-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9675-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9679-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9681-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9682-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9685-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9689-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9695-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9698-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9700-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9701-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9713-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9716-compressed.webp": [
+          1067,
+          1600
+        ]
+      },
+      "cover": "_MG_9681-compressed.webp"
+    },
+    {
+      "title": "Москвоская неделя моды",
+      "group": "",
+      "dir": "web-media/Портфолио/Фото/Москвоская неделя моды",
+      "files": [
+        "0446.webp",
+        "0451.webp",
+        "0467.webp",
+        "0496.webp",
+        "0537.webp",
+        "0544.webp",
+        "0566.webp",
+        "0570.webp",
+        "0576.webp",
+        "0610.webp",
+        "0639.webp",
+        "0644.webp",
+        "0647.webp",
+        "0694.webp",
+        "0704.webp",
+        "0711.webp",
+        "0743.webp",
+        "0757.webp",
+        "0782.webp",
+        "0792.webp",
+        "0878.webp",
+        "0906.webp",
+        "0908.webp",
+        "0909.webp",
+        "0948.webp",
+        "0957.webp",
+        "1004.webp",
+        "1031.webp",
+        "1040.webp",
+        "1048.webp",
+        "1063.webp",
+        "1076.webp",
+        "1161.webp",
+        "1166.webp",
+        "1200.webp",
+        "1212.webp",
+        "1240.webp",
+        "1274.webp",
+        "1277.webp",
+        "1415.webp",
+        "1446.webp",
+        "1463.webp",
+        "1468.webp",
+        "1496.webp",
+        "1538.webp",
+        "1567.webp",
+        "1593.webp",
+        "1677.webp",
+        "1717.webp",
+        "2030.webp",
+        "2034.webp"
+      ],
+      "dimensions": {
+        "0446.webp": [
+          1067,
+          1600
+        ],
+        "0451.webp": [
+          1600,
+          1067
+        ],
+        "0467.webp": [
+          1067,
+          1600
+        ],
+        "0496.webp": [
+          1067,
+          1600
+        ],
+        "0537.webp": [
+          1067,
+          1600
+        ],
+        "0544.webp": [
+          1600,
+          1067
+        ],
+        "0566.webp": [
+          1600,
+          1067
+        ],
+        "0570.webp": [
+          1600,
+          1067
+        ],
+        "0576.webp": [
+          1067,
+          1600
+        ],
+        "0610.webp": [
+          1067,
+          1600
+        ],
+        "0639.webp": [
+          1067,
+          1600
+        ],
+        "0644.webp": [
+          1067,
+          1600
+        ],
+        "0647.webp": [
+          1600,
+          1067
+        ],
+        "0694.webp": [
+          1067,
+          1600
+        ],
+        "0704.webp": [
+          1067,
+          1600
+        ],
+        "0711.webp": [
+          1067,
+          1600
+        ],
+        "0743.webp": [
+          1600,
+          1067
+        ],
+        "0757.webp": [
+          1067,
+          1600
+        ],
+        "0782.webp": [
+          1600,
+          1067
+        ],
+        "0792.webp": [
+          1067,
+          1600
+        ],
+        "0878.webp": [
+          1067,
+          1600
+        ],
+        "0906.webp": [
+          1067,
+          1600
+        ],
+        "0908.webp": [
+          1067,
+          1600
+        ],
+        "0909.webp": [
+          1067,
+          1600
+        ],
+        "0948.webp": [
+          1067,
+          1600
+        ],
+        "0957.webp": [
+          1067,
+          1600
+        ],
+        "1004.webp": [
+          1067,
+          1600
+        ],
+        "1031.webp": [
+          1067,
+          1600
+        ],
+        "1040.webp": [
+          1067,
+          1600
+        ],
+        "1048.webp": [
+          1600,
+          1067
+        ],
+        "1063.webp": [
+          1067,
+          1600
+        ],
+        "1076.webp": [
+          1067,
+          1600
+        ],
+        "1161.webp": [
+          1067,
+          1600
+        ],
+        "1166.webp": [
+          1067,
+          1600
+        ],
+        "1200.webp": [
+          1067,
+          1600
+        ],
+        "1212.webp": [
+          1067,
+          1600
+        ],
+        "1240.webp": [
+          1067,
+          1600
+        ],
+        "1274.webp": [
+          1600,
+          1067
+        ],
+        "1277.webp": [
+          1600,
+          1067
+        ],
+        "1415.webp": [
+          1067,
+          1600
+        ],
+        "1446.webp": [
+          1067,
+          1600
+        ],
+        "1463.webp": [
+          1067,
+          1600
+        ],
+        "1468.webp": [
+          1067,
+          1600
+        ],
+        "1496.webp": [
+          1067,
+          1600
+        ],
+        "1538.webp": [
+          1067,
+          1600
+        ],
+        "1567.webp": [
+          1067,
+          1600
+        ],
+        "1593.webp": [
+          1067,
+          1600
+        ],
+        "1677.webp": [
+          1067,
+          1600
+        ],
+        "1717.webp": [
+          1067,
+          1600
+        ],
+        "2030.webp": [
+          1600,
+          1067
+        ],
+        "2034.webp": [
+          1600,
+          1067
+        ]
+      },
+      "cover": "0908.webp"
+    },
+    {
+      "title": "Показ Fabrikator",
+      "group": "",
+      "dir": "web-media/Портфолио/Фото/Показ Fabrikator",
+      "files": [
+        "_MG_0417-compressed.webp",
+        "_MG_0435-compressed.webp",
+        "_MG_0450-compressed.webp",
+        "_MG_0456-compressed.webp",
+        "_MG_0460-compressed.webp",
+        "_MG_0485-compressed.webp",
+        "_MG_0509-compressed.webp",
+        "_MG_0517-compressed.webp",
+        "_MG_0529-compressed.webp",
+        "_MG_0553-compressed.webp",
+        "_MG_0560-compressed.webp",
+        "_MG_0596-compressed.webp",
+        "_MG_0606-compressed.webp",
+        "_MG_0609-compressed.webp"
+      ],
+      "dimensions": {
+        "_MG_0417-compressed.webp": [
+          1081,
+          1600
+        ],
+        "_MG_0435-compressed.webp": [
+          1064,
+          1600
+        ],
+        "_MG_0450-compressed.webp": [
+          1103,
+          1600
+        ],
+        "_MG_0456-compressed.webp": [
+          1011,
+          1600
+        ],
+        "_MG_0460-compressed.webp": [
+          1418,
+          1600
+        ],
+        "_MG_0485-compressed.webp": [
+          1120,
+          1600
+        ],
+        "_MG_0509-compressed.webp": [
+          1308,
+          1600
+        ],
+        "_MG_0517-compressed.webp": [
+          1029,
+          1600
+        ],
+        "_MG_0529-compressed.webp": [
+          1085,
+          1600
+        ],
+        "_MG_0553-compressed.webp": [
+          1123,
+          1600
+        ],
+        "_MG_0560-compressed.webp": [
+          1245,
+          1600
+        ],
+        "_MG_0596-compressed.webp": [
+          1086,
+          1600
+        ],
+        "_MG_0606-compressed.webp": [
+          1314,
+          1600
+        ],
+        "_MG_0609-compressed.webp": [
+          1088,
+          1600
+        ]
+      },
+      "cover": "_MG_0417-compressed.webp"
+    },
+    {
+      "title": "Предметная съемка чокеров",
+      "group": "",
+      "dir": "web-media/Портфолио/Фото/Предметная съемка чокеров",
+      "files": [
+        "_MG_2457-compressed.webp",
+        "_MG_2466-compressed.webp",
+        "_MG_2469-compressed.webp",
+        "_MG_2487-compressed.webp",
+        "_MG_2492-compressed.webp",
+        "_MG_2499-compressed.webp",
+        "_MG_2504-compressed.webp",
+        "_MG_2509-compressed.webp",
+        "_MG_2531-compressed.webp",
+        "_MG_2566-compressed.webp",
+        "_MG_2569-compressed.webp",
+        "_MG_2572-compressed.webp",
+        "_MG_2574-compressed.webp",
+        "_MG_2587-compressed.webp",
+        "_MG_2590-compressed.webp",
+        "_MG_2594-compressed.webp",
+        "_MG_2596-compressed.webp",
+        "Семка_Чекеры_-010-compressed.webp",
+        "Семка_Чекеры_-013-2-compressed.webp",
+        "Семка_Чекеры_-022-compressed.webp",
+        "Семка_Чекеры_-055-compressed.webp",
+        "Семка_Чекеры_-062-compressed.webp",
+        "Семка_Чекеры_-081-compressed.webp",
+        "Семка_Чекеры_-086-2-compressed.webp",
+        "Семка_Чекеры_-093-compressed.webp",
+        "Семка_Чекеры_-100-compressed.webp",
+        "Семка_Чекеры_-102-compressed.webp",
+        "Семка_Чекеры_-112-compressed.webp",
+        "Семка_Чекеры_-116-compressed.webp",
+        "Семка_Чекеры_-125-compressed.webp",
+        "Семка_Чекеры_-129-compressed.webp",
+        "Семка_Чекеры_-137-compressed.webp",
+        "Семка_Чекеры_-144-compressed.webp",
+        "Семка_Чекеры_-152-compressed.webp",
+        "Семка_Чекеры_-157-compressed.webp",
+        "Семка_Чекеры_-193-compressed.webp",
+        "Семка_Чекеры_-207-compressed.webp"
+      ],
+      "dimensions": {
+        "_MG_2457-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2466-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2469-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2487-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2492-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2499-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2504-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2509-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2531-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2566-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2569-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2572-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2574-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2587-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2590-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2594-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2596-compressed.webp": [
+          1067,
+          1600
+        ],
+        "Семка_Чекеры_-010-compressed.webp": [
+          1067,
+          1600
+        ],
+        "Семка_Чекеры_-013-2-compressed.webp": [
+          1067,
+          1600
+        ],
+        "Семка_Чекеры_-022-compressed.webp": [
+          1067,
+          1600
+        ],
+        "Семка_Чекеры_-055-compressed.webp": [
+          1067,
+          1600
+        ],
+        "Семка_Чекеры_-062-compressed.webp": [
+          1067,
+          1600
+        ],
+        "Семка_Чекеры_-081-compressed.webp": [
+          1067,
+          1600
+        ],
+        "Семка_Чекеры_-086-2-compressed.webp": [
+          1067,
+          1600
+        ],
+        "Семка_Чекеры_-093-compressed.webp": [
+          1600,
+          1067
+        ],
+        "Семка_Чекеры_-100-compressed.webp": [
+          1600,
+          1067
+        ],
+        "Семка_Чекеры_-102-compressed.webp": [
+          1600,
+          1067
+        ],
+        "Семка_Чекеры_-112-compressed.webp": [
+          1600,
+          1067
+        ],
+        "Семка_Чекеры_-116-compressed.webp": [
+          1600,
+          1067
+        ],
+        "Семка_Чекеры_-125-compressed.webp": [
+          1600,
+          1067
+        ],
+        "Семка_Чекеры_-129-compressed.webp": [
+          1600,
+          1067
+        ],
+        "Семка_Чекеры_-137-compressed.webp": [
+          1600,
+          1067
+        ],
+        "Семка_Чекеры_-144-compressed.webp": [
+          1600,
+          1067
+        ],
+        "Семка_Чекеры_-152-compressed.webp": [
+          1600,
+          1067
+        ],
+        "Семка_Чекеры_-157-compressed.webp": [
+          1067,
+          1600
+        ],
+        "Семка_Чекеры_-193-compressed.webp": [
+          1067,
+          1600
+        ],
+        "Семка_Чекеры_-207-compressed.webp": [
+          1067,
+          1600
+        ]
+      },
+      "cover": "Семка_Чекеры_-086-2-compressed.webp"
+    },
+    {
+      "title": "Проект unicorn",
+      "group": "",
+      "dir": "web-media/Портфолио/Фото/Проект unicorn",
+      "files": [
+        "IMG_8602.webp",
+        "IMG_8619.webp",
+        "IMG_8621.webp",
+        "IMG_8625.webp",
+        "IMG_8630.webp",
+        "IMG_8662.webp",
+        "IMG_8666.webp",
+        "IMG_8703.webp",
+        "IMG_8748.webp",
+        "IMG_8749.webp",
+        "IMG_8754.webp",
+        "IMG_8757.webp",
+        "IMG_8758.webp",
+        "IMG_8769.webp",
+        "IMG_8829.webp",
+        "IMG_8832.webp",
+        "IMG_8833.webp",
+        "IMG_8841.webp"
+      ],
+      "dimensions": {
+        "IMG_8602.webp": [
+          1067,
+          1600
+        ],
+        "IMG_8619.webp": [
+          1600,
+          1600
+        ],
+        "IMG_8621.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8625.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8630.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8662.webp": [
+          1067,
+          1600
+        ],
+        "IMG_8666.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8703.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8748.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8749.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8754.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8757.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8758.webp": [
+          1600,
+          1600
+        ],
+        "IMG_8769.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8829.webp": [
+          1067,
+          1600
+        ],
+        "IMG_8832.webp": [
+          1067,
+          1600
+        ],
+        "IMG_8833.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8841.webp": [
+          1600,
+          1067
+        ]
+      },
+      "cover": "IMG_8602.webp"
+    },
+    {
+      "title": "Проект SKINS",
+      "group": "Проекты ATOMICKITTEN",
+      "dir": "web-media/Портфолио/Фото/Проекты ATOMICKITTEN/Проект SKINS",
+      "files": [
+        "_MG_5145-compressed.webp",
+        "_MG_5150-compressed.webp",
+        "_MG_5157-compressed.webp",
+        "_MG_5158-compressed.webp",
+        "_MG_5159-compressed.webp",
+        "_MG_5163-compressed.webp",
+        "_MG_5164-compressed.webp",
+        "_MG_5168-compressed.webp",
+        "_MG_5176-compressed.webp",
+        "_MG_5180-compressed.webp",
+        "_MG_5217-compressed.webp",
+        "_MG_5229-compressed.webp",
+        "_MG_5247-compressed.webp",
+        "_MG_5249-compressed.webp",
+        "_MG_5256-compressed.webp",
+        "_MG_5259-compressed.webp",
+        "_MG_5260-compressed.webp",
+        "_MG_5261-compressed.webp",
+        "_MG_5263-compressed.webp",
+        "_MG_5264-compressed.webp",
+        "_MG_5268-compressed.webp",
+        "_MG_5269 2-compressed.webp",
+        "_MG_5269-compressed.webp",
+        "_MG_5270-compressed.webp",
+        "_MG_5272-compressed.webp",
+        "_MG_5275-compressed.webp",
+        "_MG_5279-compressed.webp",
+        "_MG_5280-compressed.webp",
+        "_MG_5281-compressed.webp",
+        "_MG_5288-compressed.webp",
+        "_MG_5340-compressed.webp",
+        "_MG_5384-compressed.webp",
+        "_MG_5389-compressed.webp",
+        "_MG_5442-compressed.webp",
+        "_MG_5444-compressed.webp"
+      ],
+      "dimensions": {
+        "_MG_5145-compressed.webp": [
+          1600,
+          1315
+        ],
+        "_MG_5150-compressed.webp": [
+          1600,
+          1075
+        ],
+        "_MG_5157-compressed.webp": [
+          1600,
+          1041
+        ],
+        "_MG_5158-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_5159-compressed.webp": [
+          1578,
+          1600
+        ],
+        "_MG_5163-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_5164-compressed.webp": [
+          1600,
+          875
+        ],
+        "_MG_5168-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_5176-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_5180-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_5217-compressed.webp": [
+          1600,
+          951
+        ],
+        "_MG_5229-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_5247-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_5249-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_5256-compressed.webp": [
+          1600,
+          1111
+        ],
+        "_MG_5259-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_5260-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_5261-compressed.webp": [
+          1600,
+          1600
+        ],
+        "_MG_5263-compressed.webp": [
+          1600,
+          1600
+        ],
+        "_MG_5264-compressed.webp": [
+          1600,
+          1413
+        ],
+        "_MG_5268-compressed.webp": [
+          1600,
+          720
+        ],
+        "_MG_5269 2-compressed.webp": [
+          1600,
+          1600
+        ],
+        "_MG_5269-compressed.webp": [
+          1600,
+          1381
+        ],
+        "_MG_5270-compressed.webp": [
+          1600,
+          1600
+        ],
+        "_MG_5272-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_5275-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_5279-compressed.webp": [
+          1600,
+          1600
+        ],
+        "_MG_5280-compressed.webp": [
+          1600,
+          1600
+        ],
+        "_MG_5281-compressed.webp": [
+          1600,
+          1600
+        ],
+        "_MG_5288-compressed.webp": [
+          1600,
+          1600
+        ],
+        "_MG_5340-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_5384-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_5389-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_5442-compressed.webp": [
+          1600,
+          1600
+        ],
+        "_MG_5444-compressed.webp": [
+          1600,
+          1600
+        ]
+      },
+      "cover": "_MG_5279-compressed.webp"
+    },
+    {
+      "title": "Проект в AGELBLESS",
+      "group": "Проекты ATOMICKITTEN",
+      "dir": "web-media/Портфолио/Фото/Проекты ATOMICKITTEN/Проект в AGELBLESS",
+      "files": [
+        "_MG_0221-compressed.webp",
+        "_MG_0222-compressed.webp",
+        "_MG_0223-compressed.webp",
+        "_MG_0224-compressed.webp",
+        "_MG_0225-compressed.webp",
+        "_MG_0226-compressed.webp",
+        "_MG_0227-compressed.webp",
+        "_MG_0228-compressed.webp",
+        "_MG_0229-compressed.webp",
+        "_MG_0230-compressed.webp",
+        "_MG_0231-compressed.webp",
+        "_MG_0232-compressed.webp",
+        "_MG_0233-compressed.webp",
+        "_MG_0234-compressed.webp",
+        "_MG_0235-compressed.webp",
+        "_MG_0236-compressed.webp",
+        "_MG_0237-compressed.webp",
+        "_MG_0238-compressed.webp",
+        "_MG_0239-compressed.webp",
+        "_MG_0240-compressed.webp",
+        "_MG_0241-compressed.webp",
+        "_MG_0242-compressed.webp",
+        "_MG_0243-compressed.webp",
+        "_MG_0252-compressed.webp",
+        "_MG_0253-compressed.webp",
+        "_MG_0256-compressed.webp",
+        "_MG_0257-compressed.webp",
+        "_MG_0259-compressed.webp",
+        "_MG_0313-compressed.webp",
+        "_MG_0315-compressed.webp",
+        "_MG_0316-compressed.webp",
+        "_MG_0317-compressed.webp",
+        "_MG_0318-compressed.webp",
+        "_MG_0326-compressed.webp"
+      ],
+      "dimensions": {
+        "_MG_0221-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0222-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0223-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0224-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0225-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0226-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0227-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0228-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0229-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0230-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0231-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0232-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0233-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0234-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0235-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0236-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0237-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0238-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0239-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0240-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0241-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0242-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0243-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0252-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0253-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0256-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0257-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0259-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0313-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0315-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0316-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0317-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0318-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0326-compressed.webp": [
+          1600,
+          1067
+        ]
+      },
+      "cover": "_MG_0221-compressed.webp"
+    },
+    {
+      "title": "Каталог + обложка",
+      "group": "Проекты O'Soiel",
+      "dir": "web-media/Портфолио/Фото/Проекты O'Soiel/Каталог + обложка",
+      "files": [
+        "_MG_1509-compressed.webp",
+        "_MG_1514-compressed.webp",
+        "_MG_1519-compressed.webp",
+        "_MG_1558-compressed.webp",
+        "_MG_1569-compressed.webp",
+        "_MG_1592-compressed.webp",
+        "_MG_1595-редакт-compressed.webp",
+        "_MG_1637-compressed.webp",
+        "_MG_1667-редакт-compressed.webp",
+        "_MG_1670-compressed.webp",
+        "_MG_1692-compressed.webp",
+        "_MG_1701-редакт-compressed.webp",
+        "_MG_1744-редакт-compressed.webp",
+        "_MG_1767-compressed.webp",
+        "_MG_1768-compressed.webp",
+        "_MG_1802-compressed.webp",
+        "_MG_1805-compressed.webp",
+        "_MG_1842-compressed.webp",
+        "_MG_1869-редакт-compressed.webp",
+        "_MG_1881-редакт-compressed.webp",
+        "_MG_1897-compressed.webp",
+        "_MG_1904-compressed.webp",
+        "_MG_1961-редакт-compressed.webp",
+        "_MG_1965-compressed.webp",
+        "_MG_1971-compressed.webp",
+        "_MG_1989-compressed.webp",
+        "_MG_2010-compressed.webp",
+        "_MG_2023-compressed.webp",
+        "_MG_2052-compressed.webp",
+        "_MG_2061-compressed.webp",
+        "_MG_2066-compressed.webp",
+        "_MG_2097-compressed.webp",
+        "_MG_2106-compressed.webp",
+        "_MG_2152-compressed.webp",
+        "_MG_2171-compressed.webp",
+        "_MG_2184-compressed.webp",
+        "_MG_2210-compressed.webp",
+        "_MG_2212-compressed.webp",
+        "_MG_2354-редакт-compressed.webp",
+        "_MG_2361-редакт-compressed.webp",
+        "_MG_2384-compressed.webp"
+      ],
+      "dimensions": {
+        "_MG_1509-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1514-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1519-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1558-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1569-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1592-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1595-редакт-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1637-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1667-редакт-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1670-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1692-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1701-редакт-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1744-редакт-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1767-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1768-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1802-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1805-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1842-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1869-редакт-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1881-редакт-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1897-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1904-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1961-редакт-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_1965-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1971-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_1989-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_2010-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2023-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2052-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2061-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2066-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2097-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2106-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2152-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2171-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_2184-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2210-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2212-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2354-редакт-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_2361-редакт-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_2384-compressed.webp": [
+          1067,
+          1600
+        ]
+      },
+      "cover": "_MG_1509-compressed.webp"
+    },
+    {
+      "title": "Показ FABRIKATOR",
+      "group": "Проекты O'Soiel",
+      "dir": "web-media/Портфолио/Фото/Проекты O'Soiel/Показ FABRIKATOR",
+      "files": [
+        "_MG_0655-compressed.webp",
+        "_MG_0658-compressed.webp",
+        "_MG_0659-compressed.webp",
+        "_MG_0663-compressed.webp",
+        "_MG_0664-compressed.webp",
+        "_MG_0665-compressed.webp",
+        "_MG_0667-compressed.webp",
+        "_MG_0668-compressed.webp",
+        "_MG_0670-compressed.webp",
+        "_MG_0671-compressed.webp",
+        "_MG_0674-compressed.webp",
+        "_MG_0675-compressed.webp",
+        "_MG_0676-compressed.webp",
+        "_MG_0682-compressed.webp",
+        "_MG_0683-compressed.webp",
+        "_MG_0684-compressed.webp",
+        "_MG_0686-compressed.webp",
+        "_MG_0688-compressed.webp",
+        "_MG_0689-compressed.webp",
+        "_MG_0695-compressed.webp",
+        "_MG_0696-compressed.webp",
+        "_MG_0697-compressed.webp",
+        "_MG_0698-compressed.webp",
+        "_MG_0700-compressed.webp",
+        "_MG_0701-compressed.webp",
+        "_MG_0704-compressed.webp",
+        "_MG_0707-compressed.webp",
+        "_MG_0710-compressed.webp",
+        "_MG_0712-compressed.webp",
+        "_MG_0713-compressed.webp",
+        "_MG_0714-compressed.webp",
+        "_MG_0715-compressed.webp",
+        "_MG_0720-compressed.webp",
+        "_MG_0721-compressed.webp",
+        "_MG_0727-compressed.webp"
+      ],
+      "dimensions": {
+        "_MG_0655-compressed.webp": [
+          1537,
+          1600
+        ],
+        "_MG_0658-compressed.webp": [
+          1537,
+          1600
+        ],
+        "_MG_0659-compressed.webp": [
+          1524,
+          1600
+        ],
+        "_MG_0663-compressed.webp": [
+          1208,
+          1600
+        ],
+        "_MG_0664-compressed.webp": [
+          1112,
+          1600
+        ],
+        "_MG_0665-compressed.webp": [
+          1210,
+          1600
+        ],
+        "_MG_0667-compressed.webp": [
+          1124,
+          1600
+        ],
+        "_MG_0668-compressed.webp": [
+          1072,
+          1600
+        ],
+        "_MG_0670-compressed.webp": [
+          1553,
+          1600
+        ],
+        "_MG_0671-compressed.webp": [
+          1600,
+          1546
+        ],
+        "_MG_0674-compressed.webp": [
+          1190,
+          1600
+        ],
+        "_MG_0675-compressed.webp": [
+          1115,
+          1600
+        ],
+        "_MG_0676-compressed.webp": [
+          1174,
+          1600
+        ],
+        "_MG_0682-compressed.webp": [
+          1112,
+          1600
+        ],
+        "_MG_0683-compressed.webp": [
+          1107,
+          1600
+        ],
+        "_MG_0684-compressed.webp": [
+          1097,
+          1600
+        ],
+        "_MG_0686-compressed.webp": [
+          1407,
+          1600
+        ],
+        "_MG_0688-compressed.webp": [
+          1105,
+          1600
+        ],
+        "_MG_0689-compressed.webp": [
+          1090,
+          1600
+        ],
+        "_MG_0695-compressed.webp": [
+          1127,
+          1600
+        ],
+        "_MG_0696-compressed.webp": [
+          1570,
+          1600
+        ],
+        "_MG_0697-compressed.webp": [
+          1257,
+          1600
+        ],
+        "_MG_0698-compressed.webp": [
+          1205,
+          1600
+        ],
+        "_MG_0700-compressed.webp": [
+          1221,
+          1600
+        ],
+        "_MG_0701-compressed.webp": [
+          1390,
+          1600
+        ],
+        "_MG_0704-compressed.webp": [
+          1314,
+          1600
+        ],
+        "_MG_0707-compressed.webp": [
+          1168,
+          1600
+        ],
+        "_MG_0710-compressed.webp": [
+          1375,
+          1600
+        ],
+        "_MG_0712-compressed.webp": [
+          1290,
+          1600
+        ],
+        "_MG_0713-compressed.webp": [
+          1204,
+          1600
+        ],
+        "_MG_0714-compressed.webp": [
+          1150,
+          1600
+        ],
+        "_MG_0715-compressed.webp": [
+          1150,
+          1600
+        ],
+        "_MG_0720-compressed.webp": [
+          1120,
+          1600
+        ],
+        "_MG_0721-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0727-compressed.webp": [
+          1600,
+          1313
+        ]
+      },
+      "cover": "_MG_0663-compressed.webp"
+    },
+    {
+      "title": "Фотосессия бекстейдж",
+      "group": "Проекты O'Soiel",
+      "dir": "web-media/Портфолио/Фото/Проекты O'Soiel/Фотосессия бекстейдж",
+      "files": [
+        "_MG_9713-compressed.webp",
+        "_MG_9717-compressed.webp",
+        "_MG_9719-compressed.webp",
+        "_MG_9722-compressed.webp",
+        "_MG_9731-compressed.webp",
+        "_MG_9733-compressed.webp",
+        "_MG_9735-compressed.webp",
+        "_MG_9739-compressed.webp",
+        "_MG_9741-compressed.webp",
+        "_MG_9743-compressed.webp",
+        "_MG_9744-compressed.webp",
+        "_MG_9745-compressed.webp",
+        "_MG_9746-compressed.webp",
+        "_MG_9749-compressed.webp",
+        "_MG_9751-compressed.webp",
+        "_MG_9758-compressed.webp",
+        "_MG_9759-compressed.webp",
+        "_MG_9765-compressed.webp",
+        "_MG_9768-compressed.webp",
+        "_MG_9826-compressed.webp",
+        "_MG_9855-compressed.webp",
+        "_MG_9858-compressed.webp",
+        "_MG_9860-compressed.webp",
+        "_MG_9861-compressed.webp",
+        "_MG_9863-compressed.webp",
+        "_MG_9869-compressed.webp",
+        "_MG_9871-compressed.webp",
+        "_MG_9883-compressed.webp",
+        "_MG_9884-compressed.webp",
+        "_MG_9890-compressed.webp",
+        "_MG_9897-compressed.webp",
+        "_MG_9918-compressed.webp",
+        "_MG_9919-compressed.webp",
+        "_MG_9935-compressed.webp",
+        "_MG_9936-compressed.webp",
+        "_MG_9937-compressed.webp",
+        "_MG_9940-compressed.webp",
+        "_MG_9945-compressed.webp"
+      ],
+      "dimensions": {
+        "_MG_9713-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9717-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9719-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9722-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9731-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9733-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9735-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9739-compressed.webp": [
+          1600,
+          1103
+        ],
+        "_MG_9741-compressed.webp": [
+          1160,
+          1600
+        ],
+        "_MG_9743-compressed.webp": [
+          1225,
+          1600
+        ],
+        "_MG_9744-compressed.webp": [
+          1216,
+          1600
+        ],
+        "_MG_9745-compressed.webp": [
+          1221,
+          1600
+        ],
+        "_MG_9746-compressed.webp": [
+          1176,
+          1600
+        ],
+        "_MG_9749-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9751-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9758-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9759-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9765-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9768-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9826-compressed.webp": [
+          1276,
+          1600
+        ],
+        "_MG_9855-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9858-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9860-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9861-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9863-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9869-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9871-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9883-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9884-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9890-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9897-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9918-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9919-compressed.webp": [
+          1600,
+          1180
+        ],
+        "_MG_9935-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9936-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9937-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9940-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9945-compressed.webp": [
+          1600,
+          1067
+        ]
+      },
+      "cover": "_MG_9765-compressed.webp"
+    },
+    {
+      "title": "Съемка в СитиМОЛЕ",
+      "group": "",
+      "dir": "web-media/Портфолио/Фото/Съемка в СитиМОЛЕ",
+      "files": [
+        "_MG_9447-compressed.webp",
+        "_MG_9456-compressed.webp",
+        "_MG_9464-compressed.webp",
+        "_MG_9489-compressed.webp",
+        "_MG_9504-compressed.webp",
+        "_MG_9521-compressed.webp",
+        "_MG_9533-compressed.webp",
+        "_MG_9549-compressed.webp",
+        "_MG_9566-compressed.webp",
+        "_MG_9571-compressed.webp",
+        "_MG_9574-compressed.webp",
+        "_MG_9576-compressed.webp",
+        "_MG_9660-compressed.webp",
+        "_MG_9682-compressed.webp",
+        "_MG_9693-compressed.webp",
+        "_MG_9732-compressed.webp",
+        "_MG_9743-compressed.webp"
+      ],
+      "dimensions": {
+        "_MG_9447-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9456-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9464-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9489-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9504-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9521-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9533-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9549-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9566-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9571-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9574-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9576-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9660-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9682-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9693-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9732-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9743-compressed.webp": [
+          1600,
+          1067
+        ]
+      },
+      "cover": "_MG_9533-compressed.webp"
+    },
+    {
+      "title": "Съемка энджел блесс с блогерами",
+      "group": "",
+      "dir": "web-media/Портфолио/Фото/Съемка энджел блесс с блогерами",
+      "files": [
+        "_MG_0007-compressed.webp",
+        "_MG_0014-compressed.webp",
+        "_MG_0018-compressed.webp",
+        "_MG_0020-compressed.webp",
+        "_MG_0023-compressed.webp",
+        "_MG_0024-compressed.webp",
+        "_MG_0047-compressed.webp",
+        "_MG_0051-compressed.webp",
+        "_MG_0077-compressed.webp",
+        "_MG_0092-compressed.webp",
+        "_MG_0103-compressed.webp",
+        "_MG_0112-compressed.webp",
+        "_MG_0156-compressed.webp",
+        "_MG_0167-compressed.webp",
+        "_MG_0170-compressed.webp",
+        "_MG_0187-compressed.webp",
+        "_MG_0203-compressed.webp",
+        "_MG_0228-compressed.webp",
+        "_MG_0232-compressed.webp",
+        "_MG_0247-compressed.webp",
+        "_MG_0253-compressed.webp",
+        "_MG_0256-compressed.webp",
+        "_MG_0261-compressed.webp",
+        "_MG_0285-compressed.webp",
+        "_MG_0289-compressed.webp",
+        "_MG_0319-compressed.webp",
+        "_MG_0333-compressed.webp",
+        "_MG_0380-compressed.webp",
+        "_MG_0397-compressed.webp",
+        "_MG_0401-compressed.webp",
+        "_MG_0450-compressed.webp",
+        "_MG_9997-compressed.webp"
+      ],
+      "dimensions": {
+        "_MG_0007-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0014-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0018-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0020-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0023-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0024-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0047-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0051-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0077-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0092-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0103-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0112-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0156-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0167-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0170-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0187-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0203-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0228-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0232-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0247-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0253-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0256-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0261-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0285-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0289-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0319-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0333-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0380-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0397-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0401-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0450-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9997-compressed.webp": [
+          1600,
+          1067
+        ]
+      },
+      "cover": "_MG_0020-compressed.webp"
+    },
+    {
+      "title": "Фотосесия \"Хогвартс\"",
+      "group": "",
+      "dir": "web-media/Портфолио/Фото/Фотосесия \"Хогвартс\"",
+      "files": [
+        "_MG_0002-compressed.webp",
+        "_MG_0006-compressed.webp",
+        "_MG_0009-compressed.webp",
+        "_MG_0010-compressed.webp",
+        "_MG_0011-compressed.webp",
+        "_MG_0019-compressed.webp",
+        "_MG_0022-compressed.webp",
+        "_MG_0073-compressed.webp",
+        "_MG_0078-compressed.webp",
+        "_MG_0079-compressed.webp",
+        "_MG_0087-compressed.webp",
+        "_MG_0090-compressed.webp",
+        "_MG_0096-compressed.webp",
+        "_MG_9801-compressed.webp",
+        "_MG_9803-compressed.webp",
+        "_MG_9805-compressed.webp",
+        "_MG_9808-compressed.webp",
+        "_MG_9811-compressed.webp",
+        "_MG_9812-compressed.webp",
+        "_MG_9813-compressed.webp",
+        "_MG_9814-compressed.webp",
+        "_MG_9816-compressed.webp",
+        "_MG_9818-compressed.webp",
+        "_MG_9822-compressed.webp",
+        "_MG_9823-compressed.webp",
+        "_MG_9828-compressed.webp",
+        "_MG_9829-compressed.webp",
+        "_MG_9830-compressed.webp",
+        "_MG_9831-compressed.webp",
+        "_MG_9833-compressed.webp",
+        "_MG_9834-compressed.webp",
+        "_MG_9835-compressed.webp",
+        "_MG_9837-compressed.webp",
+        "_MG_9838-compressed.webp",
+        "_MG_9839-compressed.webp",
+        "_MG_9841-compressed.webp",
+        "_MG_9842-compressed.webp",
+        "_MG_9844-compressed.webp",
+        "_MG_9984-compressed.webp",
+        "_MG_9985-compressed.webp",
+        "_MG_9986-compressed.webp",
+        "_MG_9993-compressed.webp",
+        "_MG_9994-compressed.webp",
+        "_MG_9996-compressed.webp"
+      ],
+      "dimensions": {
+        "_MG_0002-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0006-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0009-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0010-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0011-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0019-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0022-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0073-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0078-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0079-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_0087-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0090-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_0096-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9801-compressed.webp": [
+          1200,
+          1600
+        ],
+        "_MG_9803-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9805-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9808-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9811-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9812-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9813-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9814-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9816-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9818-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9822-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9823-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9828-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9829-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9830-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9831-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9833-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9834-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9835-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9837-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9838-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9839-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9841-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9842-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9844-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9984-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9985-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9986-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9993-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9994-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9996-compressed.webp": [
+          1067,
+          1600
+        ]
+      },
+      "cover": "_MG_9831-compressed.webp"
+    },
+    {
+      "title": "Фотосессия в центре ",
+      "group": "",
+      "dir": "web-media/Портфолио/Фото/Фотосессия в центре ",
+      "files": [
+        "_MG_9819-compressed.webp",
+        "_MG_9835 2-compressed.webp",
+        "_MG_9838 2-compressed.webp",
+        "_MG_9839 2-compressed.webp",
+        "_MG_9842 2-compressed.webp",
+        "_MG_9844 2-compressed.webp",
+        "_MG_9850-compressed.webp",
+        "_MG_9854-compressed.webp",
+        "_MG_9874 2-compressed.webp",
+        "_MG_9877 2-compressed.webp",
+        "_MG_9880-compressed.webp",
+        "_MG_9881-compressed.webp",
+        "_MG_9882-compressed.webp",
+        "_MG_9883 2-compressed.webp",
+        "_MG_9887-compressed.webp",
+        "_MG_9898-compressed.webp",
+        "_MG_9899 2-compressed.webp",
+        "_MG_9933 2-compressed.webp",
+        "_MG_9935 2-compressed.webp",
+        "_MG_9937 2-compressed.webp",
+        "_MG_9938-compressed.webp",
+        "_MG_9940 2-compressed.webp"
+      ],
+      "dimensions": {
+        "_MG_9819-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9835 2-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9838 2-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9839 2-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9842 2-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9844 2-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9850-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9854-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9874 2-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9877 2-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9880-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9881-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9882-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9883 2-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9887-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9898-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9899 2-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9933 2-compressed.webp": [
+          1600,
+          1067
+        ],
+        "_MG_9935 2-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9937 2-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9938-compressed.webp": [
+          1067,
+          1600
+        ],
+        "_MG_9940 2-compressed.webp": [
+          1067,
+          1600
+        ]
+      },
+      "cover": "_MG_9887-compressed.webp"
+    }
+  ]
+}
