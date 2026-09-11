@@ -4,9 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="pxl_head — фотограф и видеограф. Фотопроекты, видео, сайты и контакты.">
+<meta name="theme-color" content="#f4f3ef">
+<link rel="canonical" href="https://pxl-head.github.io/pxl-head-portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="pxl_head — фото, видео и сайты">
+<meta property="og:description" content="Портфолио фотографа и видеографа pxl_head: фотопроекты, видео, сайты и контакты.">
+<meta property="og:url" content="https://pxl-head.github.io/pxl-head-portfolio/">
+<meta property="og:image" content="https://pxl-head.github.io/pxl-head-portfolio/web-media/logo-512.webp">
+<meta property="og:image:alt" content="Логотип pxl_head">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="pxl_head — фото, видео и сайты">
+<meta name="twitter:description" content="Портфолио фотографа и видеографа pxl_head: фотопроекты, видео, сайты и контакты.">
+<meta name="twitter:image" content="https://pxl-head.github.io/pxl-head-portfolio/web-media/logo-512.webp">
 <title>pxl_head — фото, видео и сайты</title>
-<link rel="icon" type="image/png" href="/assets/favicon-D2hjGXQl.png">
-<link rel="apple-touch-icon" href="/assets/apple-touch-icon-BtxnkMz2.png">
+<link rel="icon" type="image/png" href="web-media/favicon.png">
+<link rel="apple-touch-icon" href="web-media/apple-touch-icon.png">
 <style>
 :root { color-scheme:light; --paper:#f4f3ef; --ink:#20211f; --muted:#74756d; --line:#d7d8ce; --edge:clamp(20px,4vw,64px); --ease:cubic-bezier(.2,.7,.2,1); }
 * { box-sizing:border-box; }
@@ -110,11 +123,10 @@ body:has(dialog[open]) { overflow:hidden; }
 @media(max-width:520px) { .site-header { padding-top:20px; padding-bottom:20px; } .brand { font-size:22px; } .mode-panel { padding-top:36px; } .section-heading { display:block; margin-bottom:30px; } .section-note { margin-top:20px; max-width:none; font-size:11px; } #photo-section .case-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px 12px; } .case-group + .case-group { margin-top:45px; } #photo-section .case-caption { gap:5px 8px; padding-top:10px; } .case-title { font-size:14px; } .case-image { aspect-ratio:2/3; } #mode-switch { width:min(390px,calc(100vw - 32px)); bottom:calc(18px + env(safe-area-inset-bottom)); } .mode-tab { font-size:11px; } .video-copy { grid-template-columns:1fr; gap:14px; } .site-preview { min-height:230px; padding:20px; } .site-caption { display:block; } .site-caption h2 { margin-bottom:12px; } .site-caption p { margin-bottom:16px; } .site-links { justify-content:flex-start; } #viewer { padding:70px 14px; } .frame-arrow { top:auto; bottom:10px; transform:none; height:42px; } #viewer-close { right:12px; } }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none!important; animation:none!important; scroll-behavior:auto!important; } }
 </style>
-  <script type="module" crossorigin src="/assets/index-rmIoDBIO.js"></script>
 </head>
 <body data-mode="photo">
 <header class="site-header">
-<a class="brand" href="#photo" aria-label="pxl_head — на главную"><img src="/assets/logo-512-B-wg7S3E.webp" alt=""><span>pxl_head</span></a>
+<a class="brand" href="#photo" aria-label="pxl_head — на главную"><img src="web-media/logo-512.webp" alt=""><span>pxl_head</span></a>
 </header>
 <nav id="mode-switch" aria-label="Разделы портфолио" role="tablist">
 <span id="mode-indicator" aria-hidden="true"></span>
@@ -150,5 +162,252 @@ body:has(dialog[open]) { overflow:hidden; }
 <dialog id="gallery" aria-labelledby="gallery-title"><div class="dialog-toolbar"><button id="gallery-close" autofocus>← Все кейсы</button><span id="gallery-total"></span></div><header id="gallery-head"><h2 id="gallery-title"></h2><div id="gallery-group"></div></header><div id="gallery-grid"></div><button id="gallery-next" type="button"><span id="gallery-next-label">Следующий кейс</span><span aria-hidden="true">→</span></button></dialog>
 <dialog id="viewer" aria-label="Просмотр фотографии"><button id="viewer-close" autofocus>Закрыть ×</button><img id="viewer-img" alt=""><button id="view-prev" class="frame-arrow" aria-label="Предыдущее фото">←</button><button id="view-next" class="frame-arrow" aria-label="Следующее фото">→</button><div id="image-status" role="status"></div><div id="counter" aria-live="polite"></div></dialog>
 <noscript><p>Для просмотра фотокейсов включите JavaScript. Связаться: <a href="mailto:pxl_head@internet.ru">pxl_head@internet.ru</a>.</p></noscript>
+<script type="module">
+const $ = selector => document.querySelector(selector);
+const encodeSegment = value => encodeURIComponent(value).replace(/'/g, '%27');
+const absolute = path => new URL(path.split('/').map(encodeSegment).join('/'), document.baseURI).href;
+const modes = ['photo', 'video', 'sites', 'contacts'];
+const state = { projects:[], caseOrder:[], project:0, frame:0, mode:'photo' };
+const scrollPositions = { photo:0, video:0, sites:0, contacts:0 };
+const imageObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const image = entry.target;
+    imageObserver.unobserve(image);
+    startImageLoad(image, image.closest('.case-image, #gallery-grid button'), image.dataset.src);
+  });
+}, { rootMargin:'600px 0px', threshold:0.01 }) : null;
+function projectPhoto(project, file = project.cover) { return absolute(`${project.dir}/${file}`); }
+function photoDimensions(project, file) { return project.dimensions?.[file] || [2,3]; }
+function revealImage(image, target, success) {
+  if (!target) return;
+  target.classList.remove('is-loading');
+  target.classList.add(success ? 'is-loaded' : 'is-error');
+  image.classList.add('is-loaded');
+}
+function startImageLoad(image, target, url) {
+  if (!url || image.dataset.loading === 'true') return;
+  image.dataset.loading = 'true';
+  delete image.dataset.src;
+  const reveal = success => {
+    if (image.dataset.settled === 'true') return;
+    image.dataset.settled = 'true';
+    requestAnimationFrame(() => revealImage(image, target, success));
+  };
+  image.addEventListener('load', () => {
+    const decoded = typeof image.decode === 'function' ? image.decode() : Promise.resolve();
+    decoded.catch(() => {}).finally(() => reveal(true));
+  }, { once:true });
+  image.addEventListener('error', () => reveal(false), { once:true });
+  image.src = url;
+  if (image.complete) reveal(Boolean(image.naturalWidth));
+}
+function deferImageLoad(image, target, url) {
+  target.classList.add('is-loading');
+  image.dataset.src = url;
+  if (imageObserver) imageObserver.observe(image);
+  else startImageLoad(image, target, url);
+}
+function setMode(mode, position = null) {
+  const index = modes.indexOf(mode);
+  if (index < 0) return;
+  $('#mode-switch').style.setProperty('--mode-position', position === null ? index : position);
+  const changed = state.mode !== mode;
+  if (changed) scrollPositions[state.mode] = window.scrollY;
+  state.mode = mode;
+  document.body.dataset.mode = mode;
+  document.querySelectorAll('.mode-tab').forEach(button => {
+    const active = button.dataset.mode === mode;
+    button.setAttribute('aria-selected', String(active)); button.tabIndex = active ? 0 : -1;
+  });
+  document.querySelectorAll('.mode-panel').forEach(panel => { panel.hidden = panel.id !== `${mode}-section`; });
+  const player = $('.video-frame iframe');
+  if (mode === 'video' && !player.hasAttribute('src')) player.src = player.dataset.src;
+  else if (mode !== 'video' && player.hasAttribute('src')) player.removeAttribute('src');
+  if (changed) { history.replaceState(null, '', `#${mode}`); window.scrollTo(0, scrollPositions[mode]); }
+}
+function buildCases() {
+  const entries = state.projects.map((project, index) => ({ project, index }));
+  const piratovaTitles = new Set(['Проект unicorn', 'Съемка энджел блесс с блогерами']);
+  const groups = [
+    { title:"Проекты O'Soiel", items:entries.filter(({project}) => project.group === "Проекты O'Soiel") },
+    { title:'Проекты ATOMICKITTEN', items:entries.filter(({project}) => project.group === 'Проекты ATOMICKITTEN') },
+    { title:'Проекты Piratova', items:entries.filter(({project}) => piratovaTitles.has(project.title)) },
+    { title:'Остальные проекты', items:entries.filter(({project}) => project.group !== "Проекты O'Soiel" && project.group !== 'Проекты ATOMICKITTEN' && !piratovaTitles.has(project.title)) }
+  ];
+  state.caseOrder = groups.flatMap(group => group.items.map(({index}) => index));
+  $('#cases').replaceChildren();
+  groups.forEach(group => {
+    if (!group.items.length) return;
+    const section = document.createElement('section'); section.className = 'case-group';
+    const heading = document.createElement('div'); heading.className = 'group-heading';
+    const title = document.createElement('h2'); title.textContent = group.title;
+    const count = document.createElement('span'); count.textContent = String(group.items.length).padStart(2,'0');
+    heading.append(title,count);
+    const grid = document.createElement('div'); grid.className = 'case-grid';
+    group.items.forEach(({project,index}, order) => {
+      const card = document.createElement('button'); card.className = 'case-card';
+      card.setAttribute('aria-label', `Открыть кейс: ${project.title}`);
+      const frame = document.createElement('span'); frame.className = project.title === 'Фотосессия бекстейдж' ? 'case-image case-image--subject-right' : 'case-image';
+      const img = document.createElement('img'); img.alt = project.title;
+      img.loading = 'lazy'; img.decoding = 'async';
+      frame.append(img);
+      const caption = document.createElement('span'); caption.className = 'case-caption';
+      const name = document.createElement('span'); name.className = 'case-title'; name.textContent = project.title;
+      const meta = document.createElement('span'); meta.className = 'case-meta'; meta.textContent = `${project.files.length} фото`;
+      const arrow = document.createElement('span'); arrow.className = 'case-number'; arrow.textContent = '↗'; arrow.setAttribute('aria-hidden','true');
+      caption.append(name,meta,arrow); card.append(frame,caption); deferImageLoad(img, frame, projectPhoto(project));
+      card.addEventListener('click', () => openGallery(index)); grid.append(card);
+    });
+    section.append(heading,grid); $('#cases').append(section);
+  });
+  $('#project-count').textContent = `${state.projects.length} кейсов / ${state.projects.reduce((sum,p) => sum+p.files.length,0)} фото`;
+}
+function nextCaseIndex(index = state.project) {
+  const order = state.caseOrder.length ? state.caseOrder : state.projects.map((_, projectIndex) => projectIndex);
+  const current = order.indexOf(index);
+  return order[(current + 1) % order.length];
+}
+function openGallery(index) {
+  if (!state.projects[index]) return;
+  state.project = index; state.frame = 0;
+  const project = state.projects[index];
+  const nextProject = state.projects[nextCaseIndex(index)];
+  $('#gallery-title').textContent = project.title;
+  $('#gallery-group').textContent = project.group || 'Фотопроект';
+  $('#gallery-total').textContent = `${project.files.length} фото`;
+  $('#gallery-next-label').textContent = `Следующий кейс: ${nextProject.title}`;
+  $('#gallery-next').setAttribute('aria-label', `Открыть следующий кейс: ${nextProject.title}`);
+  const galleryGrid = $('#gallery-grid');
+  galleryGrid.querySelectorAll('img[data-src]').forEach(image => imageObserver?.unobserve(image));
+  galleryGrid.replaceChildren();
+  project.files.forEach((file, frame) => {
+    const button = document.createElement('button'); button.setAttribute('aria-label', `Открыть фото ${frame+1}`);
+    const image = document.createElement('img');
+    const [width,height] = photoDimensions(project, file);
+    image.alt = `${project.title}, фото ${frame+1}`; image.loading = 'lazy'; image.decoding = 'async'; image.width = width; image.height = height;
+    button.style.aspectRatio = `${width}/${height}`;
+    button.append(image); button.addEventListener('click', () => showFrame(frame)); galleryGrid.append(button);
+    deferImageLoad(image, button, projectPhoto(project,file));
+  });
+  if (!$('#gallery').open) $('#gallery').showModal(); $('#gallery').scrollTop = 0;
+}
+function showFrame(index) {
+  const project = state.projects[state.project];
+  state.frame = (index + project.files.length) % project.files.length;
+  $('#image-status').textContent = '';
+  $('#viewer-img').src = projectPhoto(project,project.files[state.frame]);
+  $('#viewer-img').alt = `${project.title}, фото ${state.frame+1}`;
+  $('#counter').textContent = `${state.frame+1} / ${project.files.length}`;
+  if (!$('#viewer').open) $('#viewer').showModal();
+}
+const modeSwitch = $('#mode-switch');
+let modeDrag = null;
+let suppressModeClick = false;
+let suppressModeClickTimer;
+
+function modePositionAt(clientX) {
+  const rect = modeSwitch.getBoundingClientRect();
+  const segmentWidth = (rect.width - 8) / modes.length;
+  return Math.max(0, Math.min(modes.length - 1,
+    (clientX - rect.left - 4 - segmentWidth / 2) / segmentWidth));
+}
+
+function updateModeDrag(event) {
+  if (!modeDrag) return;
+  const distance = Math.hypot(event.clientX - modeDrag.startX, event.clientY - modeDrag.startY);
+  if (!modeDrag.moved && distance > 6) {
+    modeDrag.moved = true;
+    modeSwitch.setPointerCapture(modeDrag.pointerId);
+    suppressModeClick = true;
+    clearTimeout(suppressModeClickTimer);
+    suppressModeClickTimer = setTimeout(() => { suppressModeClick = false; }, 600);
+  }
+  if (!modeDrag.moved) return;
+  event.preventDefault();
+  const position = modePositionAt(event.clientX);
+  modeSwitch.style.setProperty('--mode-position', position.toFixed(3));
+  const index = Math.round(position);
+  if (modes[index] !== state.mode) setMode(modes[index], position);
+}
+
+function finishModeDrag(event, cancelled = false) {
+  if (!modeDrag) return;
+  const drag = modeDrag;
+  modeDrag = null;
+  modeSwitch.classList.remove('is-dragging');
+  if (modeSwitch.hasPointerCapture(drag.pointerId)) modeSwitch.releasePointerCapture(drag.pointerId);
+  if (drag.moved) {
+    const position = cancelled ? modes.indexOf(state.mode) : modePositionAt(event.clientX);
+    setMode(modes[Math.round(position)]);
+  }
+}
+
+document.querySelectorAll('.mode-tab').forEach(button => {
+  button.addEventListener('click', event => {
+    if (suppressModeClick) {
+      event.preventDefault();
+      suppressModeClick = false;
+      clearTimeout(suppressModeClickTimer);
+      return;
+    }
+    setMode(button.dataset.mode);
+  });
+});
+modeSwitch.addEventListener('pointerdown', event => {
+  if (event.pointerType === 'mouse' && event.button !== 0) return;
+  modeDrag = { pointerId:event.pointerId, startX:event.clientX, startY:event.clientY, moved:false };
+  modeSwitch.classList.add('is-dragging');
+});
+modeSwitch.addEventListener('pointermove', updateModeDrag);
+modeSwitch.addEventListener('pointerup', event => finishModeDrag(event));
+modeSwitch.addEventListener('pointercancel', event => finishModeDrag(event, true));
+modeSwitch.addEventListener('lostpointercapture', event => finishModeDrag(event, true));
+modeSwitch.addEventListener('keydown', event => {
+  if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+  event.preventDefault(); event.stopPropagation();
+  const direction = event.key === 'ArrowRight' ? 1 : -1;
+  const index = (modes.indexOf(state.mode) + direction + modes.length) % modes.length;
+  setMode(modes[index]);
+  document.querySelector(`.mode-tab[data-mode="${modes[index]}"]`).focus();
+});
+
+$('#gallery-close').addEventListener('click', () => $('#gallery').close());
+$('#gallery-next').addEventListener('click', () => openGallery(nextCaseIndex()));
+$('#viewer-close').addEventListener('click', () => $('#viewer').close());
+$('#view-prev').addEventListener('click', () => showFrame(state.frame-1));
+$('#view-next').addEventListener('click', () => showFrame(state.frame+1));
+$('#viewer-img').addEventListener('error', () => { $('#image-status').textContent = 'Не удалось загрузить фото. Перейдите к следующему или откройте его снова.'; });
+$('#viewer').addEventListener('keydown', event => {
+  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); showFrame(state.frame + (event.key === 'ArrowRight' ? 1 : -1)); }
+});
+let swipeStart = null;
+$('#viewer-img').addEventListener('pointerdown', event => { swipeStart = {x:event.clientX,y:event.clientY}; });
+$('#viewer-img').addEventListener('pointerup', event => {
+  if (!swipeStart) return;
+  const dx = event.clientX-swipeStart.x, dy = event.clientY-swipeStart.y; swipeStart = null;
+  if (Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)) showFrame(state.frame + (dx<0 ? 1 : -1));
+});
+$('#viewer-img').addEventListener('pointercancel', () => { swipeStart = null; });
+addEventListener('hashchange', () => setMode(location.hash.slice(1)));
+document.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener('click', event => { event.preventDefault(); setMode(link.hash.slice(1)); }));
+async function init() {
+  $('#retry').hidden = true;
+  try {
+    const response = await fetch('portfolio-manifest.json', {cache:'no-store'});
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    if (!data.projects?.length) throw new Error('Нет проектов');
+    state.projects = data.projects; buildCases(); $('#load-status').hidden = true;
+  } catch (error) {
+    console.error(error);
+    $('#load-status').firstChild.textContent = 'Не удалось загрузить проекты. Проверьте подключение. ';
+    $('#retry').hidden = false;
+  }
+}
+$('#retry').addEventListener('click', init);
+setMode(modes.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'photo');
+init();
+</script>
 </body>
 </html>
