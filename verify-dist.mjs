@@ -20,15 +20,45 @@ if (/\b(?:src|href)=["']\/assets\//.test(html)) {
   fail('найдена ссылка на корневой /assets/');
 }
 
-for (const required of ['robots.txt', 'sitemap.xml', 'portfolio-manifest.json']) {
+for (const required of ['.nojekyll', 'robots.txt', 'sitemap.xml', 'portfolio-manifest.json']) {
   if (!existsSync(join(dist, required))) fail(`нет ${required}`);
+}
+
+const canonicalUrl = 'https://pxl-head.github.io/pxl-head-portfolio/';
+for (const requiredSeo of [
+  `<link rel="canonical" href="${canonicalUrl}">`,
+  '<meta name="robots" content="index,follow,max-image-preview:large,max-video-preview:-1,max-snippet:-1">',
+  '<meta property="og:site_name" content="pxl_head">',
+  '<meta name="twitter:image:alt" content="Логотип pxl_head">',
+]) {
+  if (!html.includes(requiredSeo)) fail(`нет SEO-разметки: ${requiredSeo}`);
+}
+
+const structuredDataMatch = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+if (!structuredDataMatch) fail('нет JSON-LD');
+const structuredData = JSON.parse(structuredDataMatch[1]);
+const structuredTypes = new Set(structuredData['@graph']?.map(item => item['@type']));
+if (!structuredTypes.has('WebSite') || !structuredTypes.has('Person')) {
+  fail('JSON-LD не описывает WebSite и Person');
+}
+
+const sitemap = readFileSync(join(dist, 'sitemap.xml'), 'utf8');
+if (!sitemap.includes(`<loc>${canonicalUrl}</loc>`) || !/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/.test(sitemap)) {
+  fail('sitemap.xml не содержит канонический URL и lastmod');
 }
 
 const manifest = JSON.parse(readFileSync(join(dist, 'portfolio-manifest.json'), 'utf8'));
 const projects = manifest.projects || [];
 const photoCount = projects.reduce((sum, project) => sum + project.files.length, 0);
-if (projects.length !== 14 || photoCount !== 452) {
-  fail(`ожидалось 14 кейсов и 452 фото, получено ${projects.length} и ${photoCount}`);
+if (projects.length !== 15 || photoCount !== 454) {
+  fail(`ожидалось 15 кейсов и 454 фото, получено ${projects.length} и ${photoCount}`);
+}
+
+for (const videoName of ['Fantasy Of Poison II.mp4', 'Съемка свадьбы.mp4', 'BASIA.mp4']) {
+  const requiredVideo = join(dist, 'web-media', 'Портфолио', 'Видео', videoName);
+  if (!existsSync(requiredVideo) || !statSync(requiredVideo).isFile()) {
+    fail(`нет видео ${videoName}`);
+  }
 }
 
 for (const project of projects) {

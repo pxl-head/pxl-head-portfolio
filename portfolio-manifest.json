@@ -1,6 +1,116 @@
 {
   "projects": [
     {
+      "title": "Fantasy Of Poison",
+      "group": "",
+      "dir": "web-media/Портфолио/Фото/Fantasy Of Poison",
+      "files": [
+        "IMG_8602.webp",
+        "IMG_8619.webp",
+        "IMG_8621.webp",
+        "IMG_8625.webp",
+        "IMG_8630.webp",
+        "IMG_8662.webp",
+        "IMG_8666.webp",
+        "IMG_8703.webp",
+        "IMG_8748.webp",
+        "IMG_8749.webp",
+        "IMG_8754.webp",
+        "IMG_8757.webp",
+        "IMG_8758.webp",
+        "IMG_8769.webp"
+      ],
+      "dimensions": {
+        "IMG_8602.webp": [
+          1067,
+          1600
+        ],
+        "IMG_8619.webp": [
+          1600,
+          1600
+        ],
+        "IMG_8621.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8625.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8630.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8662.webp": [
+          1067,
+          1600
+        ],
+        "IMG_8666.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8703.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8748.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8749.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8754.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8757.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8758.webp": [
+          1600,
+          1600
+        ],
+        "IMG_8769.webp": [
+          1600,
+          1067
+        ]
+      },
+      "cover": "IMG_8602.webp"
+    },
+    {
+      "title": "Fantasy Of Poison II",
+      "group": "",
+      "dir": "web-media/Портфолио/Фото/Fantasy Of Poison II",
+      "files": [
+        "IMG_8829.webp",
+        "IMG_8832.webp",
+        "IMG_8833.webp",
+        "IMG_8841.webp"
+      ],
+      "dimensions": {
+        "IMG_8829.webp": [
+          1067,
+          1600
+        ],
+        "IMG_8832.webp": [
+          1067,
+          1600
+        ],
+        "IMG_8833.webp": [
+          1600,
+          1067
+        ],
+        "IMG_8841.webp": [
+          1600,
+          1067
+        ]
+      },
+      "cover": "IMG_8829.webp"
+    },
+    {
       "title": "Мастеркласс шары",
       "group": "",
       "dir": "web-media/Портфолио/Фото/Мастеркласс шары",
@@ -721,106 +831,6 @@
       "cover": "Семка_Чекеры_-086-2-compressed.webp"
     },
     {
-      "title": "Проект unicorn",
-      "group": "",
-      "dir": "web-media/Портфолио/Фото/Проект unicorn",
-      "files": [
-        "IMG_8602.webp",
-        "IMG_8619.webp",
-        "IMG_8621.webp",
-        "IMG_8625.webp",
-        "IMG_8630.webp",
-        "IMG_8662.webp",
-        "IMG_8666.webp",
-        "IMG_8703.webp",
-        "IMG_8748.webp",
-        "IMG_8749.webp",
-        "IMG_8754.webp",
-        "IMG_8757.webp",
-        "IMG_8758.webp",
-        "IMG_8769.webp",
-        "IMG_8829.webp",
-        "IMG_8832.webp",
-        "IMG_8833.webp",
-        "IMG_8841.webp"
-      ],
-      "dimensions": {
-        "IMG_8602.webp": [
-          1067,
-          1600
-        ],
-        "IMG_8619.webp": [
-          1600,
-          1600
-        ],
-        "IMG_8621.webp": [
-          1600,
-          1067
-        ],
-        "IMG_8625.webp": [
-          1600,
-          1067
-        ],
-        "IMG_8630.webp": [
-          1600,
-          1067
-        ],
-        "IMG_8662.webp": [
-          1067,
-          1600
-        ],
-        "IMG_8666.webp": [
-          1600,
-          1067
-        ],
-        "IMG_8703.webp": [
-          1600,
-          1067
-        ],
-        "IMG_8748.webp": [
-          1600,
-          1067
-        ],
-        "IMG_8749.webp": [
-          1600,
-          1067
-        ],
-        "IMG_8754.webp": [
-          1600,
-          1067
-        ],
-        "IMG_8757.webp": [
-          1600,
-          1067
-        ],
-        "IMG_8758.webp": [
-          1600,
-          1600
-        ],
-        "IMG_8769.webp": [
-          1600,
-          1067
-        ],
-        "IMG_8829.webp": [
-          1067,
-          1600
-        ],
-        "IMG_8832.webp": [
-          1067,
-          1600
-        ],
-        "IMG_8833.webp": [
-          1600,
-          1067
-        ],
-        "IMG_8841.webp": [
-          1600,
-          1067
-        ]
-      },
-      "cover": "IMG_8602.webp"
-    },
-    {
       "title": "Проект SKINS",
       "group": "Проекты ATOMICKITTEN",
       "dir": "web-media/Портфолио/Фото/Проекты ATOMICKITTEN/Проект SKINS",
@@ -1190,6 +1200,8 @@
       "group": "Проекты O'Soiel",
       "dir": "web-media/Портфолио/Фото/Проекты O'Soiel/Каталог + обложка",
       "files": [
+        "00-akademia-mody-cover.webp",
+        "01-akademia-mody-spread.webp",
         "_MG_1509-compressed.webp",
         "_MG_1514-compressed.webp",
         "_MG_1519-compressed.webp",
@@ -1233,6 +1245,14 @@
         "_MG_2384-compressed.webp"
       ],
       "dimensions": {
+        "00-akademia-mody-cover.webp": [
+          917,
+          1280
+        ],
+        "01-akademia-mody-spread.webp": [
+          1280,
+          890
+        ],
         "_MG_1509-compressed.webp": [
           1067,
           1600
@@ -1398,7 +1418,7 @@
           1600
         ]
       },
-      "cover": "_MG_1509-compressed.webp"
+      "cover": "00-akademia-mody-cover.webp"
     },
     {
       "title": "Показ FABRIKATOR",

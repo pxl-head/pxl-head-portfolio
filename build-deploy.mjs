@@ -8,6 +8,7 @@ const dist = resolve(root, 'dist');
 const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 
 execFileSync(npm, ['exec', 'vite', '--', 'build'], { cwd: root, stdio: 'inherit' });
+copyFileSync(join(root, '.nojekyll'), join(dist, '.nojekyll'));
 copyFileSync(join(root, 'portfolio-manifest.json'), join(dist, 'portfolio-manifest.json'));
 copyFileSync(join(root, 'info.html'), join(dist, 'info.html'));
 // Retain source media locally, but publish only the portfolio and site assets.
