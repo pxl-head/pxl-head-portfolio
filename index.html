@@ -442,16 +442,18 @@ function buildCases() {
   ];
   state.caseOrder = groups.flatMap(group => group.items.map(({index}) => index));
   $('#cases').replaceChildren();
+  let groupNumber = 0;
   groups.forEach(group => {
     if (!group.items.length) return;
+    groupNumber += 1;
     const section = document.createElement('section'); section.className = 'case-group';
     const heading = document.createElement('div'); heading.className = 'group-heading';
     const title = document.createElement('h2');
     if (group.href) {
       const link = document.createElement('a'); link.className = 'group-heading-link'; link.href = group.href; link.target = '_blank'; link.rel = 'noopener noreferrer'; link.textContent = group.title; link.setAttribute('aria-label', group.title); title.append(link);
     } else title.textContent = group.title;
-    const count = document.createElement('span'); count.textContent = String(group.items.length).padStart(2,'0');
-    heading.append(title,count);
+    const number = document.createElement('span'); number.textContent = String(groupNumber).padStart(2,'0');
+    heading.append(title,number);
     const grid = document.createElement('div'); grid.className = 'case-grid';
     group.items.forEach(({project,index}) => {
       const detail = projectDetails(project);
