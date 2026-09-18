@@ -7,7 +7,8 @@
 <meta name="robots" content="index,follow,max-image-preview:large,max-video-preview:-1,max-snippet:-1">
 <meta name="theme-color" content="#f4f3ef">
 <link rel="canonical" href="https://pxl-head.github.io/pxl-head-portfolio/">
-<link rel="alternate" hreflang="ru-RU" href="https://pxl-head.github.io/pxl-head-portfolio/">
+<link rel="alternate" hreflang="ru-RU" href="https://pxl-head.github.io/pxl-head-portfolio/?lang=ru">
+<link rel="alternate" hreflang="en" href="https://pxl-head.github.io/pxl-head-portfolio/?lang=en">
 <link rel="alternate" hreflang="x-default" href="https://pxl-head.github.io/pxl-head-portfolio/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
@@ -71,6 +72,10 @@ button { background:none; border:0; padding:0; } img { display:block; max-width:
 .site-header { padding:26px var(--edge); display:flex; align-items:center; justify-content:space-between; gap:20px; border-bottom:1px solid var(--line); }
 .brand { display:flex; gap:12px; align-items:center; font-size:24px; font-weight:600; letter-spacing:-1.1px; }
 .brand img { width:29px; height:29px; object-fit:contain; }
+.language-switch { display:flex; align-items:center; gap:7px; color:var(--muted); font-size:11px; letter-spacing:.09em; }
+.language-option { min-width:28px; min-height:32px; color:inherit; }
+.language-option[aria-pressed="true"] { color:var(--ink); font-weight:600; }
+.language-option:hover { color:var(--ink); }
 #mode-switch { --mode-position:0; position:fixed; left:50%; bottom:28px; z-index:20; transform:translateX(-50%); isolation:isolate; display:grid; grid-template-columns:repeat(4,1fr); width:390px; height:54px; padding:4px; background:#eeeee7ed; border:1px solid #d0d1c5; border-radius:999px; box-shadow:0 6px 28px #00000012; backdrop-filter:blur(16px); touch-action:none; user-select:none; -webkit-user-select:none; }
 #mode-indicator { position:absolute; z-index:-1; left:4px; top:4px; bottom:4px; width:calc((100% - 8px)/4); background:var(--ink); border-radius:999px; transform:translateX(calc(var(--mode-position)*100%)); transition:transform .4s var(--ease); }
 .mode-tab { border-radius:999px; font-size:12px; transition:color .25s; }
@@ -184,55 +189,164 @@ body:has(dialog[open]) { overflow:hidden; }
 </head>
 <body data-mode="photo">
 <header class="site-header">
-<a class="brand" href="#photo" aria-label="pxl_head — на главную"><img src="web-media/logo-512.webp" alt=""><span>pxl_head</span></a>
+<a class="brand" href="#photo" aria-label="pxl_head — на главную" data-i18n-aria="brandHome"><img src="web-media/logo-512.webp" alt=""><span>pxl_head</span></a>
+<div class="language-switch" role="group" aria-label="Язык сайта" data-i18n-aria="languageLabel"><button class="language-option" type="button" data-language="ru" aria-pressed="true" aria-label="Русский">RU</button><span aria-hidden="true">/</span><button class="language-option" type="button" data-language="en" aria-pressed="false" aria-label="English">EN</button></div>
 </header>
-<nav id="mode-switch" aria-label="Разделы портфолио" role="tablist">
+<nav id="mode-switch" aria-label="Разделы портфолио" data-i18n-aria="portfolioSections" role="tablist">
 <span id="mode-indicator" aria-hidden="true"></span>
-<button id="mode-photo" class="mode-tab" role="tab" aria-selected="true" aria-controls="photo-section" data-mode="photo">Фото</button>
-<button id="mode-video" class="mode-tab" role="tab" aria-selected="false" aria-controls="video-section" data-mode="video" tabindex="-1">Видео</button>
-<button id="mode-sites" class="mode-tab" role="tab" aria-selected="false" aria-controls="sites-section" data-mode="sites" tabindex="-1">Сайты</button>
-<button id="mode-contacts" class="mode-tab" role="tab" aria-selected="false" aria-controls="contacts-section" data-mode="contacts" tabindex="-1">Контакты</button>
+<button id="mode-photo" class="mode-tab" role="tab" aria-selected="true" aria-controls="photo-section" data-mode="photo" data-i18n="photo">Фото</button>
+<button id="mode-video" class="mode-tab" role="tab" aria-selected="false" aria-controls="video-section" data-mode="video" data-i18n="video" tabindex="-1">Видео</button>
+<button id="mode-sites" class="mode-tab" role="tab" aria-selected="false" aria-controls="sites-section" data-mode="sites" data-i18n="sites" tabindex="-1">Сайты</button>
+<button id="mode-contacts" class="mode-tab" role="tab" aria-selected="false" aria-controls="contacts-section" data-mode="contacts" data-i18n="contacts" tabindex="-1">Контакты</button>
 </nav>
 <main>
 <section id="photo-section" class="mode-panel" role="tabpanel" aria-labelledby="mode-photo">
-<header class="section-heading"><div><p class="kicker">01 / Фотография</p><h1>Фото</h1></div></header>
-<div id="load-status" role="status">Загружаем проекты…<button id="retry" hidden>Попробовать ещё раз</button></div>
+<header class="section-heading"><div><p class="kicker" data-i18n="photoKicker">01 / Фотография</p><h1 data-i18n="photo">Фото</h1></div></header>
+<div id="load-status" role="status"><span id="load-message" data-i18n="loadingProjects">Загружаем проекты…</span><button id="retry" data-i18n="retry" hidden>Попробовать ещё раз</button></div>
 <div id="cases"></div>
 </section>
 <section id="video-section" class="mode-panel" role="tabpanel" aria-labelledby="mode-video" hidden>
-<header class="section-heading"><div><p class="kicker">02 / Движение</p><h1>Видео</h1></div></header>
-<article class="video-card"><div class="video-frame"><iframe data-src="https://www.youtube-nocookie.com/embed/DY0SAY92pFU?rel=0" title="XOLT – верить" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-<div class="video-copy"><div><p class="kicker">YouTube / X-REALiTY</p><h2>XOLT – верить</h2></div><div><p>Внешний материал. Ролик опубликован на YouTube каналом X-REALiTY и размещён здесь для просмотра; загрузка выполнена не мной.</p><a class="text-link" href="https://www.youtube.com/watch?v=DY0SAY92pFU" target="_blank" rel="noopener noreferrer">Смотреть на YouTube ↗</a></div></div></article>
+<header class="section-heading"><div><p class="kicker" data-i18n="videoKicker">02 / Движение</p><h1 data-i18n="video">Видео</h1></div></header>
+<article class="video-card"><div class="video-frame"><iframe data-src="https://www.youtube-nocookie.com/embed/DY0SAY92pFU?rel=0" title="XOLT – верить" data-i18n-title="xoltTitle" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div class="video-copy"><div><p class="kicker">YouTube / X-REALiTY</p><h2 data-i18n="xoltTitle">XOLT – верить</h2></div><div><p data-i18n="externalVideo">Внешний материал. Ролик опубликован на YouTube каналом X-REALiTY и размещён здесь для просмотра; загрузка выполнена не мной.</p><a class="text-link" href="https://www.youtube.com/watch?v=DY0SAY92pFU" target="_blank" rel="noopener noreferrer" data-i18n="watchYouTube">Смотреть на YouTube ↗</a></div></div></article>
 <article class="video-card video-card--portrait" hidden><div class="video-frame video-frame--portrait"><video controls playsinline preload="metadata" src="web-media/Портфолио/Видео/Fantasy Of Poison II.mp4" aria-label="Fantasy Of Poison II"></video></div>
-<div class="video-copy"><div><p class="kicker">Фото / видео-проект</p><h2><a class="video-title-link" href="https://pxl-head.github.io/vika_piratova/case/fantasy-of-poison-ll" target="_blank" rel="noopener noreferrer">Fantasy Of Poison II ↗</a></h2></div><div><p>Идея: <a href="https://www.instagram.com/avotarip?stkn=MWQ1OXN1eXNwMXp2bg%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer">@avotarip</a> · Основной фотограф: <a href="https://www.instagram.com/weirddy.y?stkn=bGp3cWY5MmhjaXk1" target="_blank" rel="noopener noreferrer">@weirddy.y</a> · Хадули: <a href="https://www.instagram.com/montan.me?stkn=bDY3aXpvNWQzajRi" target="_blank" rel="noopener noreferrer">@montan.me</a> · Модель: <a href="https://www.instagram.com/endy_marfa?stkn=cHQ4a3k2NHFzaXE3" target="_blank" rel="noopener noreferrer">@endy_marfa</a> · Меч: <a href="https://www.instagram.com/outside.inc?stkn=MWU3Ymt3bWs1N2Zqcg==" target="_blank" rel="noopener noreferrer">@outside.inc</a> · Видео: @pxl_head</p></div></div></article>
-<article class="video-card"><div class="video-frame"><video controls playsinline preload="metadata" src="web-media/Портфолио/Видео/Съемка свадьбы.mp4" aria-label="Съемка свадьбы"></video></div>
-<div class="video-copy"><div><p class="kicker">Видео-проект</p><h2>Съемка свадьбы</h2></div><div></div></div></article>
+<div class="video-copy"><div><p class="kicker" data-i18n="photoVideoProject">Фото / видео-проект</p><h2><a class="video-title-link" href="https://pxl-head.github.io/vika_piratova/case/fantasy-of-poison-ll" target="_blank" rel="noopener noreferrer">Fantasy Of Poison II ↗</a></h2></div><div><p><span data-i18n="concept">Идея</span>: <a href="https://www.instagram.com/avotarip?stkn=MWQ1OXN1eXNwMXp2bg%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer">@avotarip</a> · <span data-i18n="leadPhotographer">Основной фотограф</span>: <a href="https://www.instagram.com/weirddy.y?stkn=bGp3cWY5MmhjaXk1" target="_blank" rel="noopener noreferrer">@weirddy.y</a> · <span data-i18n="stilts">Хадули</span>: <a href="https://www.instagram.com/montan.me?stkn=bDY3aXpvNWQzajRi" target="_blank" rel="noopener noreferrer">@montan.me</a> · <span data-i18n="model">Модель</span>: <a href="https://www.instagram.com/endy_marfa?stkn=cHQ4a3k2NHFzaXE3" target="_blank" rel="noopener noreferrer">@endy_marfa</a> · <span data-i18n="sword">Меч</span>: <a href="https://www.instagram.com/outside.inc?stkn=MWU3Ymt3bWs1N2Zqcg==" target="_blank" rel="noopener noreferrer">@outside.inc</a> · <span data-i18n="videoCredit">Видео</span>: @pxl_head</p></div></div></article>
+<article class="video-card"><div class="video-frame"><video controls playsinline preload="metadata" src="web-media/Портфолио/Видео/Съемка свадьбы.mp4" aria-label="Съемка свадьбы" data-i18n-aria="weddingFilm"></video></div>
+<div class="video-copy"><div><p class="kicker" data-i18n="videoProject">Видео-проект</p><h2 data-i18n="weddingFilm">Съемка свадьбы</h2></div><div></div></div></article>
 <article class="video-card"><div class="video-frame"><video controls playsinline preload="metadata" src="web-media/Портфолио/Видео/BASIA.mp4" aria-label="BASIA"></video></div>
-<div class="video-copy"><div><p class="kicker">Видео-проект</p><h2><a class="video-title-link" href="https://www.instagram.com/reels/DbSq5g5toTI/" target="_blank" rel="noopener noreferrer">BASIA ↗</a></h2></div><div><p><a href="https://www.instagram.com/avotarip?stkn=MWQ1OXN1eXNwMXp2bg%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer">@avotarip</a> · <a href="https://www.instagram.com/ranoobis?stkn=MTQ5Y3FrazZvd2Ntdw==" target="_blank" rel="noopener noreferrer">@ranoobis</a> · <a href="https://www.instagram.com/pavlovamarieme/" target="_blank" rel="noopener noreferrer">@pavlovamarieme</a></p></div></div></article>
+<div class="video-copy"><div><p class="kicker" data-i18n="videoProject">Видео-проект</p><h2><a class="video-title-link" href="https://www.instagram.com/reels/DbSq5g5toTI/" target="_blank" rel="noopener noreferrer">BASIA ↗</a></h2></div><div><p><a href="https://www.instagram.com/avotarip?stkn=MWQ1OXN1eXNwMXp2bg%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer">@avotarip</a> · <a href="https://www.instagram.com/ranoobis?stkn=MTQ5Y3FrazZvd2Ntdw==" target="_blank" rel="noopener noreferrer">@ranoobis</a> · <a href="https://www.instagram.com/pavlovamarieme/" target="_blank" rel="noopener noreferrer">@pavlovamarieme</a></p></div></div></article>
 </section>
 <section id="sites-section" class="mode-panel" role="tabpanel" aria-labelledby="mode-sites" hidden>
-<header class="section-heading"><div><p class="kicker">03 / Веб-проекты</p><h1>Сайты</h1></div><p class="section-note"><a class="section-note-link" href="https://github.com/pxl-head" target="_blank" rel="noopener noreferrer">Сайты, собранные и опубликованные через GitHub.</a></p></header>
+<header class="section-heading"><div><p class="kicker" data-i18n="sitesKicker">03 / Веб-проекты</p><h1 data-i18n="sites">Сайты</h1></div><p class="section-note"><a class="section-note-link" href="https://github.com/pxl-head" target="_blank" rel="noopener noreferrer" data-i18n="sitesNote">Сайты, собранные и опубликованные через GitHub.</a></p></header>
 <div class="site-grid">
-<article class="site-card"><a class="site-preview" href="https://pxl-head.github.io/montan-me-portfolio/" target="_blank" rel="noopener noreferrer" aria-label="Открыть сайт MONTAN.ME"><div class="site-preview-bar" aria-hidden="true"><span></span><span></span><span></span></div><img class="site-preview-image" src="assets/site-previews/montan-home.webp" alt="" width="1440" height="900" loading="lazy" decoding="async"></a><div class="site-caption"><h2>MONTAN.ME</h2><div class="site-links"><a class="text-link" href="https://pxl-head.github.io/montan-me-portfolio/" target="_blank" rel="noopener noreferrer">Открыть сайт ↗</a><a class="text-link" href="https://github.com/pxl-head/montan-me-portfolio" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><p>Персональное визуальное портфолио с фотопроектами, видео и авторской подачей.</p></div></article>
-<article class="site-card"><a class="site-preview" href="https://pxl-head.github.io/vika_piratova/" target="_blank" rel="noopener noreferrer" aria-label="Открыть сайт PIRATOVA"><div class="site-preview-bar" aria-hidden="true"><span></span><span></span><span></span></div><img class="site-preview-image" src="assets/site-previews/vika-home.webp" alt="" width="1440" height="900" loading="lazy" decoding="async"></a><div class="site-caption"><h2>VIKA PIRATOVA</h2><div class="site-links"><a class="text-link" href="https://pxl-head.github.io/vika_piratova/" target="_blank" rel="noopener noreferrer">Открыть сайт ↗</a><a class="text-link" href="https://github.com/pxl-head/vika_piratova" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><p>Портфолио визуального художника и фотографа с каталогом проектов и фотокейсами.</p></div></article>
+<article class="site-card"><a class="site-preview" href="https://pxl-head.github.io/montan-me-portfolio/" target="_blank" rel="noopener noreferrer" aria-label="Открыть сайт MONTAN.ME" data-i18n-aria="openMontan"><div class="site-preview-bar" aria-hidden="true"><span></span><span></span><span></span></div><img class="site-preview-image" src="assets/site-previews/montan-home.webp" alt="" width="1440" height="900" loading="lazy" decoding="async"></a><div class="site-caption"><h2>MONTAN.ME</h2><div class="site-links"><a class="text-link" href="https://pxl-head.github.io/montan-me-portfolio/" target="_blank" rel="noopener noreferrer" data-i18n="openSite">Открыть сайт ↗</a><a class="text-link" href="https://github.com/pxl-head/montan-me-portfolio" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><p data-i18n="montanDescription">Персональное визуальное портфолио с фотопроектами, видео и авторской подачей.</p></div></article>
+<article class="site-card"><a class="site-preview" href="https://pxl-head.github.io/vika_piratova/" target="_blank" rel="noopener noreferrer" aria-label="Открыть сайт PIRATOVA" data-i18n-aria="openPiratova"><div class="site-preview-bar" aria-hidden="true"><span></span><span></span><span></span></div><img class="site-preview-image" src="assets/site-previews/vika-home.webp" alt="" width="1440" height="900" loading="lazy" decoding="async"></a><div class="site-caption"><h2>VIKA PIRATOVA</h2><div class="site-links"><a class="text-link" href="https://pxl-head.github.io/vika_piratova/" target="_blank" rel="noopener noreferrer" data-i18n="openSite">Открыть сайт ↗</a><a class="text-link" href="https://github.com/pxl-head/vika_piratova" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><p data-i18n="piratovaDescription">Портфолио визуального художника и фотографа с каталогом проектов и фотокейсами.</p></div></article>
 </div>
 </section>
 <section id="contacts-section" class="mode-panel" role="tabpanel" aria-labelledby="mode-contacts" hidden>
-<header class="section-heading"><div><p class="kicker">04 / На связи</p><h1>Контакты</h1></div></header>
-<div class="contacts-layout"><div><p class="about">Меня зовут pxl_head.<br>Я фотограф и видеограф из Москвы.</p><p class="about-detail">Снимаю показы и бекстейджи, каталоги для брендов, портреты в городе и предметку — всё, где важен свет и вовремя нажатая кнопка.</p><p class="about-detail">Работал с Московской неделей моды, брендами O'Soiel, Atomickitten, Angel Bless, Fabrikator.</p></div>
-<dl class="contact-list"><div><dt>Телеграм</dt><dd><a href="https://t.me/pxl_head" target="_blank" rel="noopener noreferrer">@pxl_head <span aria-hidden="true">↗</span></a></dd></div><div><dt>Почта</dt><dd><a href="mailto:pxl_head@internet.ru">pxl_head@internet.ru <span aria-hidden="true">↗</span></a></dd></div><div><dt>Город</dt><dd>Москва</dd></div></dl></div>
+<header class="section-heading"><div><p class="kicker" data-i18n="contactsKicker">04 / На связи</p><h1 data-i18n="contacts">Контакты</h1></div></header>
+<div class="contacts-layout"><div><p class="about"><span data-i18n="aboutName">Меня зовут pxl_head.</span><br><span data-i18n="aboutRole">Я фотограф и видеограф из Москвы.</span></p><p class="about-detail" data-i18n="aboutWork">Снимаю показы и бекстейджи, каталоги для брендов, портреты в городе и предметку — всё, где важен свет и вовремя нажатая кнопка.</p><p class="about-detail" data-i18n="aboutClients">Работал с Московской неделей моды, брендами O'Soiel, Atomickitten, Angel Bless, Fabrikator.</p></div>
+<dl class="contact-list"><div><dt data-i18n="telegram">Телеграм</dt><dd><a href="https://t.me/pxl_head" target="_blank" rel="noopener noreferrer">@pxl_head <span aria-hidden="true">↗</span></a></dd></div><div><dt data-i18n="email">Почта</dt><dd><a href="mailto:pxl_head@internet.ru">pxl_head@internet.ru <span aria-hidden="true">↗</span></a></dd></div><div><dt data-i18n="city">Город</dt><dd data-i18n="moscow">Москва</dd></div></dl></div>
 </section>
 </main>
-<dialog id="gallery" aria-labelledby="gallery-title"><div class="dialog-toolbar"><button id="gallery-close" autofocus>← Все кейсы</button><span id="gallery-total"></span></div><header id="gallery-head"><h2 id="gallery-title"></h2><div id="gallery-group"></div><div id="gallery-credits" hidden></div></header><div id="gallery-grid"></div><button id="gallery-next" type="button"><span id="gallery-next-label">Следующий кейс</span><span aria-hidden="true">→</span></button></dialog>
-<dialog id="viewer" aria-label="Просмотр фотографии"><button id="viewer-close" autofocus>Закрыть ×</button><img id="viewer-img" alt=""><button id="view-prev" class="frame-arrow" aria-label="Предыдущее фото">←</button><button id="view-next" class="frame-arrow" aria-label="Следующее фото">→</button><div id="image-status" role="status"></div><div id="counter" aria-live="polite"></div></dialog>
+<dialog id="gallery" aria-labelledby="gallery-title"><div class="dialog-toolbar"><button id="gallery-close" data-i18n="allCases" autofocus>← Все кейсы</button><span id="gallery-total"></span></div><header id="gallery-head"><h2 id="gallery-title"></h2><div id="gallery-group"></div><div id="gallery-credits" hidden></div></header><div id="gallery-grid"></div><button id="gallery-next" type="button"><span id="gallery-next-label" data-i18n="nextCase">Следующий кейс</span><span aria-hidden="true">→</span></button></dialog>
+<dialog id="viewer" aria-label="Просмотр фотографии" data-i18n-aria="photoViewer"><button id="viewer-close" data-i18n="close" autofocus>Закрыть ×</button><img id="viewer-img" alt=""><button id="view-prev" class="frame-arrow" aria-label="Предыдущее фото" data-i18n-aria="previousPhoto">←</button><button id="view-next" class="frame-arrow" aria-label="Следующее фото" data-i18n-aria="nextPhoto">→</button><div id="image-status" role="status"></div><div id="counter" aria-live="polite"></div></dialog>
 <noscript><p>Для просмотра фотокейсов включите JavaScript. Связаться: <a href="mailto:pxl_head@internet.ru">pxl_head@internet.ru</a>.</p></noscript>
 <script type="module">
 const $ = selector => document.querySelector(selector);
 const encodeSegment = value => encodeURIComponent(value).replace(/'/g, '%27').replace(/%2B/gi, '+');
 const absolute = path => new URL(path.split('/').map(encodeSegment).join('/'), document.baseURI).href;
 const modes = ['photo', 'video', 'sites', 'contacts'];
-const state = { projects:[], caseOrder:[], project:0, frame:0, mode:'photo' };
+const supportedLanguages = ['ru', 'en'];
+const requestedLanguage = new URLSearchParams(location.search).get('lang');
+let savedLanguage = null;
+try { savedLanguage = localStorage.getItem('pxl-head-language'); } catch {}
+const initialLanguage = supportedLanguages.includes(requestedLanguage) ? requestedLanguage : supportedLanguages.includes(savedLanguage) ? savedLanguage : 'ru';
+const state = { projects:[], caseOrder:[], project:0, frame:0, mode:'photo', language:initialLanguage };
 const scrollPositions = { photo:0, video:0, sites:0, contacts:0 };
+const copy = {
+  ru: {
+    brandHome:'pxl_head — на главную', languageLabel:'Язык сайта', portfolioSections:'Разделы портфолио',
+    photo:'Фото', video:'Видео', sites:'Сайты', contacts:'Контакты',
+    photoKicker:'01 / Фотография', videoKicker:'02 / Движение', sitesKicker:'03 / Веб-проекты', contactsKicker:'04 / На связи',
+    loadingProjects:'Загружаем проекты…', retry:'Попробовать ещё раз',
+    xoltTitle:'XOLT – верить', externalVideo:'Внешний материал. Ролик опубликован на YouTube каналом X-REALiTY и размещён здесь для просмотра; загрузка выполнена не мной.', watchYouTube:'Смотреть на YouTube ↗',
+    photoVideoProject:'Фото / видео-проект', videoProject:'Видео-проект', weddingFilm:'Съемка свадьбы',
+    concept:'Идея', leadPhotographer:'Основной фотограф', stilts:'Хадули', model:'Модель', sword:'Меч', videoCredit:'Видео',
+    sitesNote:'Сайты, собранные и опубликованные через GitHub.', openMontan:'Открыть сайт MONTAN.ME', openPiratova:'Открыть сайт PIRATOVA', openSite:'Открыть сайт ↗',
+    montanDescription:'Персональное визуальное портфолио с фотопроектами, видео и авторской подачей.', piratovaDescription:'Портфолио визуального художника и фотографа с каталогом проектов и фотокейсами.',
+    aboutName:'Меня зовут pxl_head.', aboutRole:'Я фотограф и видеограф из Москвы.', aboutWork:'Снимаю показы и бекстейджи, каталоги для брендов, портреты в городе и предметку — всё, где важен свет и вовремя нажатая кнопка.', aboutClients:"Работал с Московской неделей моды, брендами O'Soiel, Atomickitten, Angel Bless, Fabrikator.",
+    telegram:'Телеграм', email:'Почта', city:'Город', moscow:'Москва', allCases:'← Все кейсы', nextCase:'Следующий кейс', photoViewer:'Просмотр фотографии', close:'Закрыть ×', previousPhoto:'Предыдущее фото', nextPhoto:'Следующее фото',
+    models:'Модели', profile:'профиль', openLink:'открыть ссылку', openCase:'Открыть кейс', photoProject:'Фотопроект', nextCaseWith:'Следующий кейс', openNextCase:'Открыть следующий кейс', openPhoto:'Открыть фото', imageError:'Не удалось загрузить фото. Перейдите к следующему или откройте его снова.', emptyProjects:'Нет проектов', loadError:'Не удалось загрузить проекты. Проверьте подключение.', photoWord:'фото'
+  },
+  en: {
+    brandHome:'pxl_head — home', languageLabel:'Website language', portfolioSections:'Portfolio sections',
+    photo:'Photo', video:'Video', sites:'Sites', contacts:'Contact',
+    photoKicker:'01 / Photography', videoKicker:'02 / Motion', sitesKicker:'03 / Web projects', contactsKicker:'04 / Get in touch',
+    loadingProjects:'Loading projects…', retry:'Try again',
+    xoltTitle:'XOLT – Believe', externalVideo:'External material. This video was published on YouTube by the X-REALiTY channel and is embedded here for viewing; I did not upload it.', watchYouTube:'Watch on YouTube ↗',
+    photoVideoProject:'Photo / video project', videoProject:'Video project', weddingFilm:'Wedding Film',
+    concept:'Concept', leadPhotographer:'Lead photographer', stilts:'Stilts', model:'Model', sword:'Sword', videoCredit:'Video',
+    sitesNote:'Websites built and published through GitHub.', openMontan:'Open the MONTAN.ME website', openPiratova:'Open the PIRATOVA website', openSite:'Open site ↗',
+    montanDescription:'A personal visual portfolio of photo projects and video.', piratovaDescription:'A visual artist and photographer portfolio with a project catalogue and photo series.',
+    aboutName:'My name is pxl_head.', aboutRole:'I am a photographer and videographer based in Moscow.', aboutWork:'I shoot runway shows and backstage, brand catalogues, city portraits and product work — anything where light and timing matter.', aboutClients:"I have worked with Moscow Fashion Week and the brands O'Soiel, Atomickitten, Angel Bless and Fabrikator.",
+    telegram:'Telegram', email:'Email', city:'City', moscow:'Moscow', allCases:'← All projects', nextCase:'Next project', photoViewer:'Photo viewer', close:'Close ×', previousPhoto:'Previous photo', nextPhoto:'Next photo',
+    models:'Models', profile:'profile', openLink:'open link', openCase:'Open project', photoProject:'Photo project', nextCaseWith:'Next project', openNextCase:'Open next project', openPhoto:'Open photo', imageError:'The photo could not be loaded. Move to the next one or open it again.', emptyProjects:'No projects found', loadError:'Projects could not be loaded. Check your connection.', photoWord:'photo'
+  }
+};
+const englishTerms = {
+  'Ольга':'Olga', 'Галина':'Galina', 'Екатерина':'Ekaterina',
+  'владелица клиник Loser Love':'owner of the Loser Love clinics', 'основательница бренда Lady Gina':'founder of Lady Gina',
+  'ссылка 1':'link 1', 'ссылка 2':'link 2', 'Идея':'Concept', 'Основной фотограф':'Lead photographer', 'Модель':'Model', 'Модели':'Models', 'Меч':'Sword', 'Лошадь':'Horse', 'Хадули':'Stilts', 'Дизайнер коллекции':'Collection designer', 'Дизайнер':'Designer',
+  'Съемка для обложки журнала Академия моды':'Cover Shoot for Academy of Fashion Magazine', 'Серия фото в гостинице Ленинградское':'Photo Series at the Leningradskaya Hotel', 'Фотосессия в центре ':'City-Centre Photo Shoot', 'Фотосессия бекстейдж':'Backstage Photo Shoot', 'Показ FABRIKATOR':'FABRIKATOR Fashion Show', 'Показ Fabrikator':'Fabrikator Fashion Show', 'Съемка мастер класса для женского Клуба № 1':"Masterclass Shoot for Women's Club No. 1", 'Предметная съемка чокеров':'Choker Product Shoot', 'Проект SKINS':'SKINS Project', 'Проект в AGELBLESS':'AGELBLESS Project', 'Съемка в AGELBLESS':'Shoot at AGELBLESS', 'Москвоская неделя моды':'Moscow Fashion Week', 'Съемка в Крокус Сити Молл':'Shoot at Crocus City Mall',
+  'Заказчик скрыт':'Client withheld', 'Моделями являются дизайнеры, участники показов':'The models are designers participating in the shows', 'Модель скрыта':'Model withheld',
+  'Фотосессии для Мода&Красота':'Photo Shoots for Moda&Krasota', "Проекты O'Soiel":"O'Soiel Projects", 'Проекты ATOMICKITTEN':'ATOMICKITTEN Projects', 'Проекты Piratova':'Piratova Projects', 'Остальные проекты':'Other Projects', 'Фотопроект':'Photo project'
+};
+const metadata = {
+  ru: {
+    title:'Фотограф и видеограф в Москве — портфолио pxl_head', description:'Портфолио pxl_head — фотографа и видеографа из Москвы: показы, бекстейджи, каталоги брендов, портреты, видео и веб-проекты.', socialTitle:'Фотограф и видеограф в Москве — pxl_head', socialDescription:'Показы, бекстейджи, каталоги брендов, портреты, видео и веб-проекты в портфолио pxl_head.', imageAlt:'Логотип pxl_head', locale:'ru_RU', language:'ru-RU', websiteDescription:'Портфолио фотографа и видеографа из Москвы', jobTitle:'Фотограф и видеограф', personDescription:'Фотограф и видеограф из Москвы: показы, бекстейджи, каталоги брендов, портреты и предметная съёмка.', city:'Москва'
+  },
+  en: {
+    title:'Photographer and Videographer in Moscow — pxl_head Portfolio', description:'The portfolio of pxl_head, a Moscow-based photographer and videographer: runway shows, backstage, brand catalogues, portraits, video and web projects.', socialTitle:'Photographer and Videographer in Moscow — pxl_head', socialDescription:'Runway shows, backstage, brand catalogues, portraits, video and web projects by pxl_head.', imageAlt:'pxl_head logo', locale:'en_US', language:'en', websiteDescription:'Portfolio of a photographer and videographer based in Moscow', jobTitle:'Photographer and videographer', personDescription:'Moscow-based photographer and videographer working across runway shows, backstage, brand catalogues, portraits and product photography.', city:'Moscow'
+  }
+};
+const t = key => copy[state.language][key];
+const localizeTerm = value => state.language === 'en' ? englishTerms[value] || value : value;
+const photoCount = count => state.language === 'en' ? `${count} photo${count === 1 ? '' : 's'}` : `${count} фото`;
+
+function setMetaContent(selector, value) {
+  const element = document.querySelector(selector);
+  if (element) element.content = value;
+}
+
+function applyMetadata() {
+  const current = metadata[state.language];
+  document.title = current.title;
+  setMetaContent('meta[name="description"]', current.description);
+  setMetaContent('meta[property="og:locale"]', current.locale);
+  setMetaContent('meta[property="og:title"]', current.socialTitle);
+  setMetaContent('meta[property="og:description"]', current.socialDescription);
+  setMetaContent('meta[property="og:image:alt"]', current.imageAlt);
+  setMetaContent('meta[name="twitter:title"]', current.socialTitle);
+  setMetaContent('meta[name="twitter:description"]', current.socialDescription);
+  setMetaContent('meta[name="twitter:image:alt"]', current.imageAlt);
+  $('script[type="application/ld+json"]').textContent = JSON.stringify({
+    '@context':'https://schema.org',
+    '@graph':[
+      { '@type':'WebSite', '@id':'https://pxl-head.github.io/pxl-head-portfolio/#website', url:'https://pxl-head.github.io/pxl-head-portfolio/', name:'pxl_head', description:current.websiteDescription, inLanguage:current.language, about:{ '@id':'https://pxl-head.github.io/pxl-head-portfolio/#person' } },
+      { '@type':'Person', '@id':'https://pxl-head.github.io/pxl-head-portfolio/#person', name:'pxl_head', alternateName:'@pxl_head', jobTitle:current.jobTitle, description:current.personDescription, url:'https://pxl-head.github.io/pxl-head-portfolio/#contacts', email:'mailto:pxl_head@internet.ru', homeLocation:{ '@type':'City', name:current.city }, sameAs:['https://t.me/pxl_head','https://github.com/pxl-head'] }
+    ]
+  });
+}
+
+function setLanguage(language, updateUrl = true) {
+  if (!supportedLanguages.includes(language)) return;
+  const galleryWasOpen = $('#gallery').open;
+  const viewerWasOpen = $('#viewer').open;
+  const openFrame = state.frame;
+  state.language = language;
+  document.documentElement.lang = language;
+  try { localStorage.setItem('pxl-head-language', language); } catch {}
+  if (updateUrl) {
+    const url = new URL(location.href);
+    url.searchParams.set('lang', language);
+    history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
+  }
+  document.querySelectorAll('[data-i18n]').forEach(element => { element.textContent = t(element.dataset.i18n); });
+  document.querySelectorAll('[data-i18n-aria]').forEach(element => { element.setAttribute('aria-label', t(element.dataset.i18nAria)); });
+  document.querySelectorAll('[data-i18n-title]').forEach(element => { element.title = t(element.dataset.i18nTitle); });
+  document.querySelectorAll('[data-language]').forEach(button => { button.setAttribute('aria-pressed', String(button.dataset.language === language)); });
+  if (!$('#retry').hidden) $('#load-message').textContent = t('loadError');
+  applyMetadata();
+  if (state.projects.length) {
+    buildCases();
+    if (galleryWasOpen) {
+      const openProject = state.project;
+      openGallery(openProject);
+      if (viewerWasOpen) showFrame(openFrame);
+    }
+  }
+}
 const imageObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
@@ -288,7 +402,7 @@ function setMode(mode, position = null) {
   const player = $('.video-frame iframe');
   if (mode === 'video' && !player.hasAttribute('src')) player.src = player.dataset.src;
   else if (mode !== 'video' && player.hasAttribute('src')) player.removeAttribute('src');
-  if (changed) { history.replaceState(null, '', `#${mode}`); window.scrollTo(0, scrollPositions[mode]); }
+  if (changed) { history.replaceState(null, '', `${location.pathname}${location.search}#${mode}`); window.scrollTo(0, scrollPositions[mode]); }
 }
 const olgaModel = { name: 'Ольга', links: [
   { label: 'ссылка 1', href: 'https://clck.ru/3CNY8k' },
@@ -369,7 +483,7 @@ const caseDetails = {
   'Съемка в СитиМОЛЕ': { title: 'Съемка в Крокус Сити Молл', href: 'https://crocuscitymall.ru/', description: 'Модель скрыта' }
 };
 const projectDetails = project => caseDetails[project.title] || {};
-const projectDisplayTitle = project => projectDetails(project).title || project.title;
+const projectDisplayTitle = project => localizeTerm(projectDetails(project).title || project.title);
 
 function appendExternalLink(parent, href, label, ariaLabel = label) {
   const link = document.createElement('a');
@@ -380,23 +494,24 @@ function appendExternalLink(parent, href, label, ariaLabel = label) {
 }
 
 function appendCardCredits(caption, detail) {
-  const rows = detail.creditRows || (detail.models ? [{ label: detail.creditLabel || 'Модели', items: detail.models }] : []);
+  const rows = detail.creditRows || (detail.models ? [{ label: detail.creditLabel || t('models'), items: detail.models }] : []);
   if (rows.length) {
     const credits = document.createElement('span'); credits.className = 'case-credits';
     rows.forEach((row, rowIndex) => {
       if (rowIndex) credits.append(document.createTextNode(' · '));
-      if (row.label) credits.append(document.createTextNode(`${row.label}: `));
+      if (row.label) credits.append(document.createTextNode(`${localizeTerm(row.label)}: `));
       row.items.forEach((person, personIndex) => {
         if (personIndex) credits.append(document.createTextNode(' · '));
         const primary = person.links.find(link => link.primary) || person.links[0];
-        appendExternalLink(credits, primary.href, person.name, `${person.name} — профиль`);
-        if (person.description) credits.append(document.createTextNode(` (${person.description})`));
+        const personName = localizeTerm(person.name);
+        appendExternalLink(credits, primary.href, personName, `${personName} — ${t('profile')}`);
+        if (person.description) credits.append(document.createTextNode(` (${localizeTerm(person.description)})`));
       });
     });
     caption.append(credits);
   }
   if (detail.description) {
-    const description = document.createElement('span'); description.className = 'case-credits'; description.textContent = detail.description;
+    const description = document.createElement('span'); description.className = 'case-credits'; description.textContent = localizeTerm(detail.description);
     caption.append(description);
   }
 }
@@ -404,27 +519,28 @@ function appendCardCredits(caption, detail) {
 function renderGalleryCredits(project) {
   const credits = $('#gallery-credits'); credits.replaceChildren();
   const detail = projectDetails(project);
-  const rows = detail.creditRows || (detail.models ? [{ label: detail.creditLabel || 'Модели', items: detail.models }] : []);
+  const rows = detail.creditRows || (detail.models ? [{ label: detail.creditLabel || t('models'), items: detail.models }] : []);
   credits.hidden = !(rows.length || detail.description);
   if (rows.length) {
     rows.forEach((row, rowIndex) => {
       if (rowIndex) credits.append(document.createTextNode(' · '));
       const rowElement = document.createElement('span');
-      if (row.label) rowElement.append(document.createTextNode(`${row.label}: `));
+      if (row.label) rowElement.append(document.createTextNode(`${localizeTerm(row.label)}: `));
       row.items.forEach((person, personIndex) => {
         if (personIndex) rowElement.append(document.createTextNode(' · '));
         const personElement = document.createElement('span');
-        const name = document.createElement('strong'); name.textContent = person.name;
+        const personName = localizeTerm(person.name);
+        const name = document.createElement('strong'); name.textContent = personName;
         personElement.append(name);
-        if (person.description) personElement.append(document.createTextNode(` (${person.description})`));
-        person.links.forEach(link => appendExternalLink(personElement, link.href, `${link.label} ↗`, `${person.name}: ${link.label}`));
+        if (person.description) personElement.append(document.createTextNode(` (${localizeTerm(person.description)})`));
+        person.links.forEach(link => appendExternalLink(personElement, link.href, `${localizeTerm(link.label)} ↗`, `${personName}: ${localizeTerm(link.label)}`));
         rowElement.append(personElement);
       });
       credits.append(rowElement);
     });
   }
   if (detail.description) {
-    const description = document.createElement('span'); description.textContent = detail.description;
+    const description = document.createElement('span'); description.textContent = localizeTerm(detail.description);
     credits.append(description);
   }
 }
@@ -434,11 +550,11 @@ function buildCases() {
   const piratovaTitles = new Set(['Fantasy Of Poison', 'Fantasy Of Poison II', 'Съемка энджел блесс с блогерами']);
   const modaKrasotaTitles = new Set(['Каталог + обложка', 'Фотосесия "Хогвартс"', 'Фотосессия в центре ']);
   const groups = [
-    { title:'Фотосессии для Мода&Красота', href:'https://vk.ru/clubmodakrasa', items:entries.filter(({project}) => modaKrasotaTitles.has(project.title)) },
-    { title:"Проекты O'Soiel", href:'https://art-anfilatova.ru/', items:entries.filter(({project}) => project.group === "Проекты O'Soiel" && !modaKrasotaTitles.has(project.title)) },
-    { title:'Проекты ATOMICKITTEN', href:'https://www.instagram.com/weirddy.y?stkn=bGp3cWY5MmhjaXk1', items:entries.filter(({project}) => project.group === 'Проекты ATOMICKITTEN') },
-    { title:'Проекты Piratova', href:'https://www.instagram.com/avotarip?stkn=MWQ1OXN1eXNwMXp2bg%3D%3D&utm_source=qr', items:entries.filter(({project}) => piratovaTitles.has(project.title)) },
-    { title:'Остальные проекты', items:entries.filter(({project}) => project.group !== "Проекты O'Soiel" && project.group !== 'Проекты ATOMICKITTEN' && !piratovaTitles.has(project.title) && !modaKrasotaTitles.has(project.title)) }
+    { title:localizeTerm('Фотосессии для Мода&Красота'), href:'https://vk.ru/clubmodakrasa', items:entries.filter(({project}) => modaKrasotaTitles.has(project.title)) },
+    { title:localizeTerm("Проекты O'Soiel"), href:'https://art-anfilatova.ru/', items:entries.filter(({project}) => project.group === "Проекты O'Soiel" && !modaKrasotaTitles.has(project.title)) },
+    { title:localizeTerm('Проекты ATOMICKITTEN'), href:'https://www.instagram.com/weirddy.y?stkn=bGp3cWY5MmhjaXk1', items:entries.filter(({project}) => project.group === 'Проекты ATOMICKITTEN') },
+    { title:localizeTerm('Проекты Piratova'), href:'https://www.instagram.com/avotarip?stkn=MWQ1OXN1eXNwMXp2bg%3D%3D&utm_source=qr', items:entries.filter(({project}) => piratovaTitles.has(project.title)) },
+    { title:localizeTerm('Остальные проекты'), items:entries.filter(({project}) => project.group !== "Проекты O'Soiel" && project.group !== 'Проекты ATOMICKITTEN' && !piratovaTitles.has(project.title) && !modaKrasotaTitles.has(project.title)) }
   ];
   state.caseOrder = groups.flatMap(group => group.items.map(({index}) => index));
   $('#cases').replaceChildren();
@@ -465,20 +581,20 @@ function buildCases() {
       img.loading = 'lazy'; img.decoding = 'async';
       frame.append(img);
       const caption = document.createElement(structuredCard ? 'div' : 'span'); caption.className = 'case-caption';
-      const name = document.createElement(detail.href ? 'a' : detail.models ? 'button' : 'span'); name.className = detail.href ? 'case-title case-title-link' : 'case-title' + (detail.models ? ' case-title-button' : ''); name.textContent = detail.href ? titleText.replace(/№\s+(\d+)/g, '№\u00a0$1') : titleText;
+      const name = document.createElement(detail.href ? 'a' : detail.models ? 'button' : 'span'); name.className = detail.href ? 'case-title case-title-link' : 'case-title' + (detail.models ? ' case-title-button' : ''); name.textContent = detail.href ? titleText.replace(/№\s+(\d+)/g, '№\u00a0$1').replace(/No\.\s+(\d+)/g, 'No.\u00a0$1') : titleText;
       if (detail.href) {
-        name.href = detail.href; name.target = '_blank'; name.rel = 'noopener noreferrer'; name.setAttribute('aria-label', `${titleText} — открыть ссылку`);
+        name.href = detail.href; name.target = '_blank'; name.rel = 'noopener noreferrer'; name.setAttribute('aria-label', `${titleText} — ${t('openLink')}`);
         const titleArrow = document.createElement('span'); titleArrow.className = 'case-title-arrow'; titleArrow.setAttribute('aria-hidden', 'true'); titleArrow.textContent = '\u00a0↗'; name.append(titleArrow);
       }
       if (detail.models && !detail.href) { name.type = 'button'; name.addEventListener('click', () => openGallery(index)); }
-      const meta = document.createElement('span'); meta.className = 'case-meta'; meta.textContent = `${project.files.length} фото`;
+      const meta = document.createElement('span'); meta.className = 'case-meta'; meta.textContent = photoCount(project.files.length);
       const arrow = document.createElement('span'); arrow.className = 'case-number'; arrow.textContent = '↗'; arrow.setAttribute('aria-hidden','true');
       caption.append(name,meta,arrow); appendCardCredits(caption, detail);
       if (structuredCard) {
-        const openButton = document.createElement('button'); openButton.type = 'button'; openButton.className = 'case-card-button'; openButton.setAttribute('aria-label', `Открыть кейс: ${titleText}`); openButton.append(frame); openButton.addEventListener('click', () => openGallery(index));
+        const openButton = document.createElement('button'); openButton.type = 'button'; openButton.className = 'case-card-button'; openButton.setAttribute('aria-label', `${t('openCase')}: ${titleText}`); openButton.append(frame); openButton.addEventListener('click', () => openGallery(index));
         card.append(openButton,caption);
       } else {
-        card.setAttribute('aria-label', `Открыть кейс: ${titleText}`); card.append(frame,caption); card.addEventListener('click', () => openGallery(index));
+        card.setAttribute('aria-label', `${t('openCase')}: ${titleText}`); card.append(frame,caption); card.addEventListener('click', () => openGallery(index));
       }
       deferImageLoad(img, frame, projectPhoto(project)); grid.append(card);
     });
@@ -498,19 +614,19 @@ function openGallery(index) {
   const titleText = projectDisplayTitle(project);
   const nextTitleText = projectDisplayTitle(nextProject);
   $('#gallery-title').textContent = titleText;
-  $('#gallery-group').textContent = project.group || 'Фотопроект';
+  $('#gallery-group').textContent = localizeTerm(project.group || t('photoProject'));
   renderGalleryCredits(project);
-  $('#gallery-total').textContent = `${project.files.length} фото`;
-  $('#gallery-next-label').textContent = `Следующий кейс: ${nextTitleText}`;
-  $('#gallery-next').setAttribute('aria-label', `Открыть следующий кейс: ${nextTitleText}`);
+  $('#gallery-total').textContent = photoCount(project.files.length);
+  $('#gallery-next-label').textContent = `${t('nextCaseWith')}: ${nextTitleText}`;
+  $('#gallery-next').setAttribute('aria-label', `${t('openNextCase')}: ${nextTitleText}`);
   const galleryGrid = $('#gallery-grid');
   galleryGrid.querySelectorAll('img[data-src]').forEach(image => imageObserver?.unobserve(image));
   galleryGrid.replaceChildren();
   project.files.forEach((file, frame) => {
-    const button = document.createElement('button'); button.setAttribute('aria-label', `Открыть фото ${frame+1}`);
+    const button = document.createElement('button'); button.setAttribute('aria-label', `${t('openPhoto')} ${frame+1}`);
     const image = document.createElement('img');
     const [width,height] = photoDimensions(project, file);
-    image.alt = `${titleText}, фото ${frame+1}`; image.loading = 'lazy'; image.decoding = 'async'; image.width = width; image.height = height;
+    image.alt = `${titleText}, ${t('photoWord')} ${frame+1}`; image.loading = 'lazy'; image.decoding = 'async'; image.width = width; image.height = height;
     button.style.aspectRatio = `${width}/${height}`;
     button.append(image); button.addEventListener('click', () => showFrame(frame)); galleryGrid.append(button);
     deferImageLoad(image, button, projectPhoto(project,file));
@@ -522,7 +638,7 @@ function showFrame(index) {
   state.frame = (index + project.files.length) % project.files.length;
   $('#image-status').textContent = '';
   $('#viewer-img').src = projectPhoto(project,project.files[state.frame]);
-  $('#viewer-img').alt = `${projectDisplayTitle(project)}, фото ${state.frame+1}`;
+  $('#viewer-img').alt = `${projectDisplayTitle(project)}, ${t('photoWord')} ${state.frame+1}`;
   $('#counter').textContent = `${state.frame+1} / ${project.files.length}`;
   if (!$('#viewer').open) $('#viewer').showModal();
 }
@@ -579,6 +695,9 @@ document.querySelectorAll('.mode-tab').forEach(button => {
     setMode(button.dataset.mode);
   });
 });
+document.querySelectorAll('[data-language]').forEach(button => {
+  button.addEventListener('click', () => setLanguage(button.dataset.language));
+});
 modeSwitch.addEventListener('pointerdown', event => {
   if (event.pointerType === 'mouse' && event.button !== 0) return;
   modeDrag = { pointerId:event.pointerId, startX:event.clientX, startY:event.clientY, moved:false };
@@ -602,7 +721,7 @@ $('#gallery-next').addEventListener('click', () => openGallery(nextCaseIndex()))
 $('#viewer-close').addEventListener('click', () => $('#viewer').close());
 $('#view-prev').addEventListener('click', () => showFrame(state.frame-1));
 $('#view-next').addEventListener('click', () => showFrame(state.frame+1));
-$('#viewer-img').addEventListener('error', () => { $('#image-status').textContent = 'Не удалось загрузить фото. Перейдите к следующему или откройте его снова.'; });
+$('#viewer-img').addEventListener('error', () => { $('#image-status').textContent = t('imageError'); });
 $('#viewer').addEventListener('keydown', event => {
   if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); showFrame(state.frame + (event.key === 'ArrowRight' ? 1 : -1)); }
 });
@@ -617,20 +736,23 @@ $('#viewer-img').addEventListener('pointercancel', () => { swipeStart = null; })
 addEventListener('hashchange', () => setMode(location.hash.slice(1)));
 document.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener('click', event => { event.preventDefault(); setMode(link.hash.slice(1)); }));
 async function init() {
+  $('#load-status').hidden = false;
+  $('#load-message').textContent = t('loadingProjects');
   $('#retry').hidden = true;
   try {
     const response = await fetch('portfolio-manifest.json', {cache:'no-store'});
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
-    if (!data.projects?.length) throw new Error('Нет проектов');
+    if (!data.projects?.length) throw new Error(t('emptyProjects'));
     state.projects = data.projects; buildCases(); $('#load-status').hidden = true;
   } catch (error) {
     console.error(error);
-    $('#load-status').firstChild.textContent = 'Не удалось загрузить проекты. Проверьте подключение. ';
+    $('#load-message').textContent = `${t('loadError')} `;
     $('#retry').hidden = false;
   }
 }
 $('#retry').addEventListener('click', init);
+setLanguage(initialLanguage, false);
 setMode(modes.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'photo');
 init();
 </script>
