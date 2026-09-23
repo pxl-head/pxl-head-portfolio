@@ -54,6 +54,8 @@
       "homeLocation": { "@type": "City", "name": "Москва" },
       "sameAs": [
         "https://t.me/pxl_head",
+        "https://www.instagram.com/pxl_head?stkn=MW5oYnZyODR0OWpvcw%3D%3D&utm_source=qr",
+        "https://pin.it/7jOytdqt0",
         "https://github.com/pxl-head"
       ]
     }
@@ -182,6 +184,24 @@ body:has(dialog[open]) { overflow:hidden; }
 #retry { margin-left:14px; text-decoration:underline; }
 #image-status { position:absolute; bottom:50px; left:20px; right:20px; text-align:center; font-size:12px; }
 @media(min-width:1300px) { .case-grid { gap:42px 32px; } }
+@media(min-width:1024px) {
+  :root { --desktop-content:min(86vw,1400px); }
+  .site-header { padding:20px calc((100vw - var(--desktop-content))/2); }
+  .brand { font-size:22px; }
+  .mode-panel { width:var(--desktop-content); max-width:none; padding:44px 0 56px; }
+  .section-heading { margin-bottom:32px; }
+  h1 { font-size:clamp(60px,6vw,88px); }
+  .case-group + .case-group { margin-top:56px; }
+  .case-grid { gap:28px 20px; }
+  .case-caption { padding-top:12px; }
+  .video-card { column-gap:clamp(28px,4vw,64px); }
+  .video-copy h2 { font-size:clamp(26px,3vw,40px); }
+  .site-caption h2 { font-size:clamp(24px,2.5vw,32px); }
+  .about { font-size:clamp(21px,2vw,30px); }
+  .contact-list dd { font-size:clamp(18px,2vw,28px); }
+  #gallery { padding-inline:calc((100vw - var(--desktop-content))/2); }
+  #gallery-title { font-size:clamp(32px,4vw,60px); }
+}
 @media(max-width:800px) { #photo-section .case-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 16px; } .contacts-layout { grid-template-columns:1fr; gap:36px; } .site-grid { grid-template-columns:1fr; } #gallery-grid { columns:2; column-gap:12px; } #gallery-grid button { margin-bottom:12px; } }
 @media(max-width:520px) { .site-header { padding-top:20px; padding-bottom:20px; } .brand { font-size:22px; } .mode-panel { padding-top:36px; } .section-heading { display:block; margin-bottom:30px; } .section-note { margin-top:20px; max-width:none; font-size:11px; } #photo-section .case-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px 12px; } .case-group + .case-group { margin-top:45px; } #photo-section .case-caption { gap:5px 8px; padding-top:10px; } .case-title { font-size:14px; } .case-image { aspect-ratio:2/3; } #mode-switch { width:min(390px,calc(100vw - 32px)); bottom:calc(18px + env(safe-area-inset-bottom)); } .mode-tab { font-size:11px; } .video-card { display:block; } .video-card + .video-card { margin-top:30px; } .video-card > .video-copy { display:grid; grid-column:auto; grid-row:auto; gap:14px; padding-top:24px; max-width:none; } .video-card--portrait .video-frame--portrait { width:min(100%,300px); } .site-preview { padding-top:34px; } .site-caption { display:block; } .site-caption h2 { margin-bottom:12px; } .site-caption p { margin-bottom:16px; } .site-links { justify-content:flex-start; } #viewer { padding:70px 14px; } .frame-arrow { top:auto; bottom:10px; transform:none; height:42px; } #viewer-close { right:12px; } }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none!important; animation:none!important; scroll-behavior:auto!important; } }
@@ -226,7 +246,13 @@ body:has(dialog[open]) { overflow:hidden; }
 <section id="contacts-section" class="mode-panel" role="tabpanel" aria-labelledby="mode-contacts" hidden>
 <header class="section-heading"><div><p class="kicker" data-i18n="contactsKicker">04 / На связи</p><h1 data-i18n="contacts">Контакты</h1></div></header>
 <div class="contacts-layout"><div><p class="about"><span data-i18n="aboutName">Меня зовут pxl_head.</span><br><span data-i18n="aboutRole">Я фотограф и видеограф из Москвы.</span></p><p class="about-detail" data-i18n="aboutWork">Снимаю показы и бекстейджи, каталоги для брендов, портреты в городе и предметку — всё, где важен свет и вовремя нажатая кнопка.</p><p class="about-detail" data-i18n="aboutClients">Работал с Московской неделей моды, брендами O'Soiel, Atomickitten, Angel Bless, Fabrikator.</p></div>
-<dl class="contact-list"><div><dt data-i18n="telegram">Телеграм</dt><dd><a href="https://t.me/pxl_head" target="_blank" rel="noopener noreferrer">@pxl_head <span aria-hidden="true">↗</span></a></dd></div><div><dt data-i18n="email">Почта</dt><dd><a href="mailto:pxl_head@internet.ru">pxl_head@internet.ru <span aria-hidden="true">↗</span></a></dd></div><div><dt data-i18n="city">Город</dt><dd data-i18n="moscow">Москва</dd></div></dl></div>
+<dl class="contact-list">
+<div><dt data-i18n="telegram">Телеграм</dt><dd><a href="https://t.me/pxl_head" target="_blank" rel="noopener noreferrer">@pxl_head <span aria-hidden="true">↗</span></a></dd></div>
+<div><dt data-i18n="email">Почта</dt><dd><a href="mailto:pxl_head@internet.ru">pxl_head@internet.ru <span aria-hidden="true">↗</span></a></dd></div>
+<div><dt>Instagram</dt><dd><a href="https://www.instagram.com/pxl_head?stkn=MW5oYnZyODR0OWpvcw%3D%3D&amp;utm_source=qr" target="_blank" rel="me noopener noreferrer" aria-label="Instagram pxl_head">@pxl_head <span aria-hidden="true">↗</span></a></dd></div>
+<div><dt>Pinterest</dt><dd><a href="https://pin.it/7jOytdqt0" target="_blank" rel="me noopener noreferrer" aria-label="Pinterest pxl_head">@pxl_head <span aria-hidden="true">↗</span></a></dd></div>
+<div><dt data-i18n="city">Город</dt><dd data-i18n="moscow">Москва</dd></div>
+</dl></div>
 </section>
 </main>
 <dialog id="gallery" aria-labelledby="gallery-title"><div class="dialog-toolbar"><button id="gallery-close" data-i18n="allCases" autofocus>← Все кейсы</button><span id="gallery-total"></span></div><header id="gallery-head"><h2 id="gallery-title"></h2><div id="gallery-group"></div><div id="gallery-credits" hidden></div></header><div id="gallery-grid"></div><button id="gallery-next" type="button"><span id="gallery-next-label" data-i18n="nextCase">Следующий кейс</span><span aria-hidden="true">→</span></button></dialog>
@@ -314,7 +340,7 @@ function applyMetadata() {
     '@context':'https://schema.org',
     '@graph':[
       { '@type':'WebSite', '@id':'https://pxl-head.github.io/pxl-head-portfolio/#website', url:'https://pxl-head.github.io/pxl-head-portfolio/', name:'pxl_head', description:current.websiteDescription, inLanguage:current.language, about:{ '@id':'https://pxl-head.github.io/pxl-head-portfolio/#person' } },
-      { '@type':'Person', '@id':'https://pxl-head.github.io/pxl-head-portfolio/#person', name:'pxl_head', alternateName:'@pxl_head', jobTitle:current.jobTitle, description:current.personDescription, url:'https://pxl-head.github.io/pxl-head-portfolio/#contacts', email:'mailto:pxl_head@internet.ru', homeLocation:{ '@type':'City', name:current.city }, sameAs:['https://t.me/pxl_head','https://github.com/pxl-head'] }
+      { '@type':'Person', '@id':'https://pxl-head.github.io/pxl-head-portfolio/#person', name:'pxl_head', alternateName:'@pxl_head', jobTitle:current.jobTitle, description:current.personDescription, url:'https://pxl-head.github.io/pxl-head-portfolio/#contacts', email:'mailto:pxl_head@internet.ru', homeLocation:{ '@type':'City', name:current.city }, sameAs:['https://t.me/pxl_head','https://www.instagram.com/pxl_head?stkn=MW5oYnZyODR0OWpvcw%3D%3D&utm_source=qr','https://pin.it/7jOytdqt0','https://github.com/pxl-head'] }
     ]
   });
 }
