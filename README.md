@@ -1,34 +1,34 @@
 # pxl_head — Portfolio
 
-Авторское портфолио фотографа и видеографа с уникальным UI для разделов Photo, Video и Sites, созданное лично с помощью Codex в ChatGPT.
+A personal portfolio for photographer and videographer pxl_head, with a bespoke interface for Photo, Video and Sites. I designed and built the website myself with Codex in ChatGPT.
 
-## Особенности
+## Features
 
-- Уникальный интерфейс с тремя основными направлениями: Photo, Video и Sites.
-- Фотопроекты объединены в тематические группы и открываются в адаптивных галереях.
-- Отдельные видео-кейсы и каталог созданных сайтов.
-- Русская и английская версии с сохранением выбранного языка в браузере.
-- Естественные пропорции изображений и фокус на визуальном материале без лишнего декора.
-- SEO-метаданные, sitemap и адаптация для компьютеров и мобильных устройств.
+- A bespoke interface built around three areas of work: Photo, Video and Sites.
+- Photography projects arranged in thematic collections and presented in responsive galleries.
+- Dedicated video project pages and a catalogue of websites I have created.
+- Russian and English versions, with the language preference saved in the browser.
+- Images shown in their original proportions, with a restrained layout that gives the work room to breathe.
+- SEO metadata, a sitemap and layouts adapted for desktop and mobile.
 
-## Технологии
+## Technology
 
-Статический HTML, CSS и JavaScript. Каталог проектов формируется из манифеста, а production-версия публикуется через GitHub Pages.
+Static HTML, CSS and JavaScript. A manifest defines the project catalogue, and the production site is published through GitHub Pages.
 
-## Сайт
+## Live website
 
-https://pxl-head.github.io/pxl-head-portfolio/
+[View the portfolio](https://pxl-head.github.io/pxl-head-portfolio/).
 
-## Структура репозитория
+## Repository structure
 
-- Ветка `source` содержит исходники, инструменты сборки и генератор манифеста.
-- Ветка `main` содержит готовую статическую версию для GitHub Pages.
-- `portfolio-manifest.json` описывает опубликованные проекты и медиафайлы.
-- `assets/` и `web-media/` содержат изображения, обложки и видео.
+- The `source` branch contains the source files, build tools and manifest generator.
+- The `main` branch contains the finished static site for GitHub Pages.
+- `portfolio-manifest.json` describes the published projects and their media files.
+- `assets/` and `web-media/` contain images, covers and videos.
 
-## Локальная разработка
+## Local development
 
-Работа с исходниками выполняется в ветке `source`:
+Work on the source files in the `source` branch:
 
 ```bash
 git switch source
@@ -38,14 +38,14 @@ npm run build
 npm run verify
 ```
 
-## Публикация
+## Deployment
 
-Production-сборка подготавливает статические файлы для ветки `main`. Публичную версию обслуживает GitHub Pages.
+The production build prepares the static files for the `main` branch. GitHub Pages serves the public website.
 
-## Авторство
+## Authorship
 
-Сайт лично разработан мной с помощью Codex в ChatGPT.
+I designed and built this website myself with Codex in ChatGPT.
 
-## Лицензия и материалы
+## Rights and materials
 
-Фотографии, видео, тексты и другие авторские материалы принадлежат соответствующим авторам и используются в рамках портфолио.
+Photographs, videos, texts and other original materials belong to their respective creators and are presented as part of this portfolio.
