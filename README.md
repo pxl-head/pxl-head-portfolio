@@ -1,25 +1,25 @@
 # pxl_head portfolio
 
-Исходники портфолио фотографа и видеографа pxl_head. Публичная версия: <https://pxl-head.github.io/pxl-head-portfolio/>.
+Source files for photographer and videographer pxl_head's portfolio. [View the live website](https://pxl-head.github.io/pxl-head-portfolio/).
 
-## Локальная разработка
+## Local development
 
-Требования: Node.js 20.19+ или 22.12+ и Python 3.
+Requires Node.js 20.19+ or 22.12+ and Python 3.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-## Проверка и сборка
+## Checks and build
 
 ```sh
 npm run check
 npm run build
 ```
 
-`npm run check` сверяет каталог фотографий с `portfolio-manifest.json`. Сборка повторяет эту проверку, создаёт `dist/` и проверяет базовый URL, Unicode-пути и сигнатуры всех 452 WebP-файлов.
+`npm run check` checks the photography catalogue against `portfolio-manifest.json`. The build repeats this check, creates `dist/` and validates the base URL, Unicode paths and the file signatures of all 452 WebP images.
 
-GitHub Pages публикуется по адресу `/pxl-head-portfolio/`; этот путь задан в `vite.config.mjs`. Ветка `main` содержит готовый статический сайт, а исходники хранятся в ветке `source`.
+GitHub Pages serves the site at `/pxl-head-portfolio/`, as configured in `vite.config.mjs`. The `main` branch contains the finished static site; the `source` branch holds the source files.
 
-Фотографии, логотип и другие авторские материалы не предоставляются для повторного использования без разрешения правообладателя.
+Photographs, the logo and other original materials may not be reused without permission from the rights holder.
