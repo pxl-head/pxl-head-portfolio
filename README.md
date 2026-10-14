@@ -18,7 +18,7 @@ npm run check
 npm run build
 ```
 
-`npm run check` checks the photography catalogue against `portfolio-manifest.json`. The build repeats this check, creates `dist/` and validates the base URL, Unicode paths and the file signatures of all 452 WebP images.
+`npm run check` checks the photography catalogue against `portfolio-manifest.json`. The build repeats this check, creates `dist/` and validates the base URL, Unicode paths and the file signatures of all 485 WebP images.
 
 GitHub Pages serves the site at `/pxl-head-portfolio/`, as configured in `vite.config.mjs`. The `main` branch contains the finished static site; the `source` branch holds the source files.
 

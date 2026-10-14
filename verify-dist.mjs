@@ -50,8 +50,8 @@ if (!sitemap.includes(`<loc>${canonicalUrl}</loc>`) || !/<lastmod>\d{4}-\d{2}-\d
 const manifest = JSON.parse(readFileSync(join(dist, 'portfolio-manifest.json'), 'utf8'));
 const projects = manifest.projects || [];
 const photoCount = projects.reduce((sum, project) => sum + project.files.length, 0);
-if (projects.length !== 15 || photoCount !== 454) {
-  fail(`ожидалось 15 кейсов и 454 фото, получено ${projects.length} и ${photoCount}`);
+if (projects.length !== 17 || photoCount !== 485) {
+  fail(`ожидалось 17 кейсов и 485 фото, получено ${projects.length} и ${photoCount}`);
 }
 
 for (const videoName of ['Fantasy Of Poison II.mp4', 'Съемка свадьбы.mp4', 'BASIA.mp4']) {
